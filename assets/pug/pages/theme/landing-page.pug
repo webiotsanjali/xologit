@@ -1,0 +1,454 @@
+- var landing_sticky        = true;
+- var jarallax_libs         = true;
+- var scrollpy_landing      = true;
+- var animate               = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        // page-wrapper Start
+        .page-wrapper
+            // Page Body Start
+            .page-body-wrapper.landing-main
+                .bg-sky-blue#home.highlight-on-scroll
+                    .sticky-header
+                      header
+                        .container-modify
+                         nav#mainNav.navbar.navbar-b.navbar-trans.navbar-expand-xl.fixed-top.nav-padding
+                                a.navbar-brand(href='#')
+                                  img.img-fluid(src='../assets/images/Xolo-logo.png', alt='')
+                                button.navbar-toggler.navabr_btn-set.custom_nav(type='button', data-toggle='collapse', data-target='#navbarDefault', aria-controls='navbarDefault', aria-expanded='false', aria-label='Toggle navigation')
+                                  span
+                                  span
+                                  span
+                                #navbarDefault.navbar-collapse.justify-content-end.collapse.hidenav(style='')
+                                  ul.navbar-nav.navbar_nav_modify#scroll-spy
+                                    li.nav-item
+                                      a.nav-link.js-scroll.active(href='#home') Home
+                                    li.nav-item
+                                      a.nav-link.js-scroll(href='#layout') Layouts
+                                    li.nav-item
+                                      a.nav-link.js-scroll(href='#dashboards') Dashboards
+                                    li.nav-item
+                                      a.nav-link.js-scroll(href='#Components') Components
+                                    li.nav-item
+                                      a.nav-link.js-scroll(href='#applications') Applications
+                                    li.nav-item
+                                      form.form-inline.support-res(target='_blank', action='https://themeforest.net/user/pixelstrap/portfolio')
+                                        button.nav-link.js-scroll Support
+                                    li.nav-item
+                                       form.form-inline.support-res(target='_blank', action='https://themeforest.net/user/pixelstrap/portfolio')
+                                                                               button.btn.btn-pill.btn-light Buy Now
+                    .main-landing.text-center
+                      .container
+                        .landing-main-content
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          img.img-fluid.d-block.mt-3.text-image(src='../assets/images/landing/Xolo-txt.png', alt='')
+                          h6.mt-2 Admin Template
+                          img.img-fluid.d-block.icons-group(src='../assets/images/landing/3-title.png', alt='')
+                          .position-cards
+                            img.img-fluid.landing-card-3(src='../assets/images/landing/3.jpg', alt='')
+                            img.img-fluid.landing-card-1(src='../assets/images/landing/1.jpg', alt='')
+                            img.img-fluid.landing-card-2(src='../assets/images/landing/2.jpg', alt='')
+                            img.img-fluid.landing-card-4(src='../assets/images/landing/6.jpg', alt='')
+                            img.img-fluid.landing-card-5(src='../assets/images/landing/7.jpg', alt='')
+                            img.img-fluid.landing-card-6(src='../assets/images/landing/9.jpg', alt='')
+                            img.img-fluid.landing-card-7(src='../assets/images/landing/4.jpg', alt='')
+                            img.img-fluid.landing-card-8(src='../assets/images/landing/5.jpg', alt='')
+                            img.img-fluid.landing-card-9(src='../assets/images/landing/10.jpg', alt='')
+                            img.img-fluid.landing-card-10(src='../assets/images/landing/8.jpg', alt='')
+                        
+            section.section-space.Xolo-demo-section#layout.highlight-on-scroll
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting
+                            h2 6+ Unique Layouts
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                          .layouts-btn.mt-3
+                            a.btn.btn-secondary(href="index.html" target="_blank") HTML
+                .container.container-modify
+                    .row
+                      .col-md-6
+                        .img-effect
+                            a(href='../theme/index.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/light-Xolo-demo.png', alt='')
+                            .cretive_img_content
+                              h4 Light Layout
+                              p 
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='layout-dark.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/dark-Xolo-demo.png',  alt='')
+                            .cretive_img_content
+                              h4 Dark Layout
+                              p 
+                                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='compact.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/compact-Xolo-demo.png', alt='')
+                            .cretive_img_content
+                              h4 Compact Layout
+                              p 
+                                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='layout-rtl.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/rtl-Xolo-demo.png', alt='')
+                            .cretive_img_content
+                              h4 RTL Layout
+                              p 
+                                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6.offset-md-3
+                        .img-effect
+                            a(href='box-layout.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/box-Xolo-demo.png', alt='')
+                            .cretive_img_content
+                              h4 Box Layout
+                              p 
+                                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+            section.section-space.Xolo-demo-section.bg-Widget.pb-0
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting  
+                            h2 Widgets
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                .container-modify
+                    img.img-fluid(src='../assets/images/landing/widget.png', alt='')
+
+            section.section-space.Xolo-demo-section.app_bg#applications.highlight-on-scroll.pb-0
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50.custom_animation
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting
+                            h2 Useful Application
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                .container.container-modify
+                    .row
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/social-app.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/social-app.png', alt='')
+                            .cretive_img_content
+                              h4 Social App
+                      .col-md-4
+                        .img-effect 
+                          a(href='../theme/knowledgebase.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/knowlagebase-app.png', alt='')
+                            .cretive_img_content
+                                h4 knowledgebase
+                      .col-md-4
+                        .img-effect 
+                          a(href='../theme/support-ticket.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/support-ticket-app.png', alt='')
+                            .cretive_img_content
+                                h4 Support Ticket
+                      .col-md-4
+                        .img-effect 
+                          a(href='../theme/email-application.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/mail-app.png', alt='')
+                            .cretive_img_content
+                                h4 Email Dashboard
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/to-do.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/To-Do-app.png', alt='')
+                            .cretive_img_content
+                                h4 To-Do
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/job-details.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/job-search-app.png', alt='')
+                            .cretive_img_content
+                                h4 Job Search
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/chartist.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/Chat-app.png', alt='')
+                            .cretive_img_content
+                                h4 Chat
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/ecommerce-templates.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/ecommerce-app.png', alt='')
+                            .cretive_img_content
+                                h4 Ecommerce
+                      .col-md-4
+                        .img-effect
+                          a(href='../theme/blog.html' target='_blank')
+                            img.img-fluid.Xolo-img(src='../assets/images/landing/Blog-app.png', alt='')
+                            .cretive_img_content
+                                h4 Blog
+                    .many-more-root
+                      .and-many-more And Many More
+                      .and-more And Many More...
+            section.section-space.Xolo-demo-section.app_bg#dashboards.highlight-on-scroll
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting 
+                            h2 4+ Dashboard
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                .container.container-modify
+                    .row
+                      .col-md-6
+                        .img-effect
+                            a(href='index.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/default-dashboard.png', alt='')
+                                .cretive_img_content
+                                  h4 Default Dashboard
+                                  p
+                                      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='../theme/dashboard-crm.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/crm-dashboard.png', alt='')
+                                .cretive_img_content
+                                  h4 Crm Dashboard
+                                  p
+                                      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='../theme/dashboard-crypto.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/crypto-dashboard.png', alt='')
+                                .cretive_img_content
+                                  h4 Crypto Dashboard
+                                  p
+                                      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6
+                        .img-effect
+                            a(href='../theme/dashboard-hospital.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/hospital-dashboard.png', alt='')
+                                .cretive_img_content
+                                  h4 Hospital Dashboard
+                                  p
+                                      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+                      .col-md-6.offset-md-3
+                        .img-effect
+                            a(href='../theme/dashboard-sass.html' target='_blank')
+                                img.img-fluid.Xolo-img(src='../assets/images/landing/sass-dashboard.png', alt='')
+                                .cretive_img_content
+                                  h4 Sass Dashboard
+                                  p
+                                      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum
+            section.section-space.Xolo-demo-section.bg-gallery
+                .container
+                    .row
+                      .col-sm-12
+                        .gallery_content.round_circle1_bg_sky.mt50
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting
+                            h2 Gallery
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                .container-fluid
+                    .landing_gallery_section_img  
+                        .img-gallery-set1(data-jarallax-element='-100')
+                            img.img-fluid(src='../assets/images/landing/1-gallery.png', alt='')
+                            .gallery-img-blur-div
+                        .img-gallery-set2(data-jarallax-element='-80')
+                            img.img-fluid(src='../assets/images/landing/2-gallery.png', alt='')
+                            .gallery-img-blur-div
+                        .img-gallery-set3(data-jarallax-element='-60')
+                            img.img-fluid(src='../assets/images/landing/main-gallery.png', alt='')
+                            .gallery-img-blur-div
+                        .img-gallery-set4(data-jarallax-element='-80')
+                            img.img-fluid(src='../assets/images/landing/3-gallery.png', alt='')
+                            .gallery-img-blur-div
+                        .img-gallery-set5(data-jarallax-element='-100')
+                            img.img-fluid(src='../assets/images/landing/4-gallery.png', alt='')
+                            .gallery-img-blur-div
+            
+            section.section-space.Xolo-demo-section.email_bg
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50
+                          img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                          .couting
+                            h2 Email Templates
+                          p  
+                            |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                            |demos & light - dark versions.
+                img.img-fluid(src='../assets/images/landing/email_section_img.jpg', alt='')
+            section.section-space.Xolo-demo-section.components-section#Components.highlight-on-scroll
+                .container
+                    .row
+                      .col-sm-12
+                        .Xolo-demo-content.mt50
+                            img.img-fluid.d-block(src='../assets/images/landing/icon-1.png', alt='')
+                            .couting 
+                                h2 Components
+                            p  
+                              |Xolo is beautifully crafted, clean & modern designed admin theme with 6 different 
+                              |demos & light - dark versions.
+                .container.container-modify
+                    .row.component_responsive
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/idea.png', alt='')
+                          h6.m-0.Pt-4 SweetAlert2
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/user.png', alt='')
+                          h6.m-0 Avatar
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/zoom.png', alt='')
+                          h6.m-0 Scrollable
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/cloud.png', alt='')
+                          h6.m-0 Tree view
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/padlock.png', alt='')
+                          h6.m-0 Bootstrap notify
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/battery.png', alt='')
+                          h6.m-0 Rating 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/cloud-computing.png', alt='')
+                          h6.m-0 Dropzone
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/rocket.png', alt='')
+                          h6.m-0 Tour
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/monitor.png', alt='')
+                          h6.m-0 Animated modal
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/calendar.png', alt='')
+                          h6.m-0 Owl Carousel
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/chat-6.png', alt='')
+                          h6.m-0 Ribbons 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/chat.png', alt='')
+                          h6.m-0 Pagination 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/chat-10.png', alt='')
+                          h6.m-0 Steps 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/envelope-1.png', alt='')
+                          h6.m-0 Breadcrumb  
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/folder.png', alt='')
+                          h6.m-0 Range Slider 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/checked.png', alt='')
+                          h6.m-0 image cropper 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/chat-9.png', alt='')
+                          h6.m-0 Sticky 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/loading.png', alt='')
+                          h6.m-0 Progress 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/music.png', alt='')
+                          h6.m-0 Tooltip 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/cancel.png', alt='')
+                          h6.m-0 Spinners 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/hourglass.png', alt='')
+                          h6.m-0 Dropdown 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/document.png', alt='')
+                          h6.m-0 Tabs 
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/settings.png', alt='')
+                          h6.m-0 Accordion  
+                      .col-md-2.col-sm-4.col-6.component-col-set.component-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/cursor.png', alt='')
+                          h6.m-0 Navs
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/chat-1.png', alt='')
+                          h6.m-0 Shadow
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/tablet.png', alt='')
+                          h6.m-0 state color
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/video-player.png', alt='')
+                          h6.m-0 List  
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/mouse.png', alt='')
+                          h6.m-0 Grid 
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/stopwatch.png', alt='')
+                          h6.m-0 Helper classes 
+                      .col-md-2.col-sm-4.col-6.component-col-set
+                        .component-hover-effect
+                          img(src='../assets/images/landing/keyboard.png', alt='')
+                          h6.m-0 Typography
+            section.footer-bg
+                .square1
+                .square2
+                .bg_circle4
+                .square
+                .cross2
+                .triangle_set
+                  .triangle
+                    .empty
+                .bg_circle1
+                .bg_circle2
+                .bg_circle3
+                .container
+                    .landing-center.ptb50
+                        .title
+                          img.img-fluid(src='../assets/images/other-images/Xolo-logo1.png', alt='')
+                          .footer-pattern-root
+                            .footer-line-pattern
+                        .footer-content
+                            h1
+                                | The Xolo Bootstrap Admin Theme Trusted By Many Developers World Wide.
+                            p
+                                | If You like Our Theme So Please Rate Us.
+                            a.btn.mrl5.btn-md(target='_blank', href='index.html') Check Now
+                            a.btn.mrl5.btn-md.btn-md-res(target='_blank', href='https://themeforest.net/user/pixelstrap/portfolio') Buy Now
+            .tap-top
+              i.fa.fa-angle-double-up
+        include ../../components/footer-files
