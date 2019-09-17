@@ -48,18 +48,18 @@ gulp.task('image', function () {
 //         .pipe(through2.obj(handleFile));
 // });
 
-gulp.task('watch', function () {
-    gulp.watch('assets/scss/**/*.scss', ['sass']);
-    gulp.watch('assets/pug/pages/**/*.pug', ['pug']);
-    gulp.watch('assets/virtual_images/*/*.*', ['image']);
-    //gulp.watch('ltr/*.html', ['validateHtml']);
-    gulp.watch("*.html").on('change', bs.reload);
-});
+// gulp.task('watch', function () {
+//     gulp.watch('assets/scss/**/*.scss', ['sass']);
+//     gulp.watch('assets/pug/pages/**/*.pug', ['pug']);
+//     // gulp.watch('assets/virtual_images/*/*.*', ['image']);
+//     //gulp.watch('ltr/*.html', ['validateHtml']);
+//     gulp.watch("*.html").on('change', bs.reload);
+// });
 
-gulp.task('browser-sync',['watch'], function() {
+gulp.task('browser-sync', function() {
     bs.init({
-        proxy: "home/savan/Desktop/xologit/theme/index.html#"});
+        proxy: "home/savan/Desktop/xologit/theme/alert.html"});
 });
 
 //gulp.task('default', [ 'sass', 'pug', 'image', 'watch', 'browser-sync', 'validateHtml' ]);
-gulp.task('default', [ 'sass', 'pug', 'watch', 'browser-sync']);
+gulp.task('default', [ 'sass', 'pug', 'browser-sync']);
