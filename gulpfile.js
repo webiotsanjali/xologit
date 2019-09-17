@@ -57,7 +57,7 @@ function htmlminify() {
 // Watch function
 function watch(){
   browserSync.init({
-      proxy: 'localhost/xolo/theme/dashboard-02.html'
+      proxy: 'localhost/xologit/theme/dashboard-02.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('assets/pug/pages/theme/dashboard-02.pug', html);
