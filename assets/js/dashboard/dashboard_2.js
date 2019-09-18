@@ -317,3 +317,27 @@ var options1 = {
         );
 
         chart1.render();
+// bar chart
+var data = {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100', '120', '130'],
+  series: [
+    [1, 5, 7, 6, -5, -6, -9, -6, 4, 5, 6, 5, 2],
+    [3, 2.6, 9, 3, -3, -4, -7, -4, 6, 8.5, 10, 3, 1],
+  ]
+};
+
+var options = {
+  high: 10,
+  low: -10,
+  seriesBarDistance: 25,
+  axisY: {
+        showGrid: true,
+        showLabel: false,
+        offset: 0
+  },
+  axisX: {
+    showGrid: false,
+  }
+};
+
+new Chartist.Bar('.ct-chartbar', data, options);

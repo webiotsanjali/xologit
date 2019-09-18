@@ -5,7 +5,7 @@
   p {
     font-family: $font-roboto, $font-serif;
     margin-top: 10px;
-    width: 85%;
+    width: 84%;
     color: $semi-dark;
   }
   .media {
@@ -376,6 +376,130 @@
       &:first-child {
         td {
             padding-top: 0;
+        }
+      }
+    }
+  }
+}
+.timeline-recent {
+  .media {
+    .timeline-line {
+      height: 49%;
+      position: absolute;
+      width: 1px;
+      border: 1px dashed #ddd;
+      margin: 0 auto;
+      left: 50px;
+      z-index: 1;
+    }
+    + .media {
+      margin-top: 30px;
+    }
+    .media-body {
+      margin-left: 20px;
+      p, .light-font {
+        font-size: 11px;
+        font-family: $font-roboto, $font-serif;
+      }
+      p {
+        margin-top: 3px;
+        margin-bottom: 5px;
+        + p {
+          color: $semi-dark;
+          width: 65%;
+        }
+      }
+    }
+    @each $timeline-dot-name, $timeline-dot-color in (primary, $primary-color),
+            (secondary, $secondary-color) ,
+            (success, $success-color),
+            (danger, $danger-color),
+            (info, $info-color),
+            (light, $light-color),
+            (dark, $dark-color),
+            (warning, $warning-color) {
+      .timeline-dot-#{$timeline-dot-name}{
+        width: 42px;
+        height: 42px;
+        background-color: $timeline-dot-color;
+        border-radius: 100%;
+        border: 15px solid lighten($timeline-dot-color, 38%);
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
+@each $round-light-icon-name, $round-light-icon-color in (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+  .round-light-icon-#{$round-light-icon-name}{
+    width: 42px;
+    height: 42px;
+    background-color: lighten($round-light-icon-color, 35%);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    i {
+      color: $round-light-icon-color;
+      font-size: 20px;
+    }
+  }
+}
+.transaction-table {
+  table {
+    tbody {
+      tr {
+        td {
+          vertical-align: middle;
+          .media {
+            align-items: center;
+          }
+          .btn {
+            font-size: 12px;
+          }
+          .round-light-icon-primary {
+            background-color: rgba($primary-color, 0.2);
+          }
+          .round-light-icon-success {
+            background-color: rgba($success-color, 0.2);
+          }
+          .badge-warning {
+            color: $white;
+          }
+          &:last-child {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.tickets-bar {
+  .flot-chart-container {
+    height: 290px;
+    &.ct-chartbar {
+      svg {
+        -webkit-box-reflect: below -311px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255,255,255,0.4)));
+        .ct-bar {
+          stroke-width: 20px !important;
+        }
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: lighten($primary-color, 28%);
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: $primary-color;
+          }
         }
       }
     }
