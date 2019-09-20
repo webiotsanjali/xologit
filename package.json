@@ -1,29 +1,25 @@
 {
-  "name": "theme",
+  "name": "gulp_setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
-    "check": "^1.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-livereload": "^4.0.1",
-    "gulp-livereload-2": "^3.8.1",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-w3c-html-validator": "^1.4.2",
-    "jade": "^1.11.0",
-    "livereload": "^0.7.0",
-    "npm": "^6.5.0"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-w3c-html-validator": "^1.4.3",
+    "through2": "^3.0.1"
   }
 }
