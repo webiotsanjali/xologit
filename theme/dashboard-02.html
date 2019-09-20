@@ -615,7 +615,7 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row">
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-50">
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card card-with-border resolve-complain">
@@ -652,7 +652,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-50">
                 <div class="card card-with-border customer-satisfied">
                   <div class="card-header card-no-border resolve-complain">
                     <h5>Customer Satisfaction</h5>
@@ -745,7 +745,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-100">
                 <div class="card card-with-border tickets o-hidden">
                   <div class="card-header card-no-border">
                     <div class="d-flex">
@@ -753,18 +753,24 @@
                       <button class="btn btn-outline-light" type="button">Last Week <i class="fa fa-caret-down"></i></button>
                     </div>
                     <p class="f-12">Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......</p>
-                    <h4 class="mb-0">198</h4><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
+                    <h4 class="mb-0">198</h4>
+                    <div class="chart-value-box pull-right ticket-legend">
+                      <div class="value-square-box-primary"></div><span>Approval</span>
+                      <div class="value-square-box-danger ml-3"></div><span>Cancel</span>
+                      <div class="value-square-box-light ml-3"></div><span>Other</span>
+                    </div><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
                   </div>
                   <div class="card-body p-0">
                     <div class="apex-complain">
                       <div id="mix1"></div>
                     </div>
+                    <div class="small-mix"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-8">
+              <div class="col-xl-8 xl-100">
                 <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-xl-6">
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="card card-with-border resolve-complain average-radial">
@@ -788,7 +794,7 @@
                           </div>
                           <div class="card-body rating-box p-0">
                             <div class="row m-0">
-                              <div class="col-6 p-0 main-rating">
+                              <div class="col-sm-6 p-0 main-rating">
                                 <div class="rating-box">
                                   <h3>4.6</h3>
                                   <div class="rating-container">
@@ -807,7 +813,7 @@
                                   <p>Measures the quality or your support team’s efforts.</p>
                                 </div>
                               </div>
-                              <div class="col-6 p-0">
+                              <div class="col-sm-6 p-0">
                                 <ul class="small-rating">
                                   <li>
                                     <h6>4.6<span class="stars-small pl-2"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></span><span class="f-12 pull-right">95%</span></h6>
@@ -826,7 +832,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-xl-6">
                     <div class="card card-with-border overall-rating">
                       <div class="card-header resolve-complain card-no-border">
                         <h5 class="d-inline-block">Agent Performance Points</h5><span class="setting-round pull-right d-inline-block mt-0"><i class="fa fa-spin fa-cog"></i></span>
@@ -930,6 +936,151 @@
                           </table>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="card card-with-border current-tickets tickets">
+                      <div class="card-header card-no-border">
+                        <div class="d-flex">
+                          <h5>Current Ticket Status</h5>
+                          <button class="btn btn-outline-light" type="button">Last Week <i class="fa fa-caret-down"></i></button>
+                        </div>
+                        <p class="f-12 mb-0">Lorem Ipsum is simply dummy text of the Loren dummy text of......</p>
+                        <div class="chart-value-box pull-right current-legend">
+                          <div class="value-square-box-primary"></div><span>Open Tickets</span>
+                          <div class="value-square-box-light ml-3"></div><span>Solved Ticket</span>
+                        </div>
+                      </div>
+                      <div class="card-body pt-0">
+                        <h4 class="mb-0">198</h4><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
+                        <div class="tickets-bar">
+                          <div class="ct-chartbar flot-chart-container"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 xl-100">
+                <div class="card card-with-border overall-rating">
+                  <div class="card-header resolve-complain card-no-border">
+                    <h5 class="d-inline-block">Recent Activities</h5><span class="setting-round pull-right d-inline-block mt-0"><i class="fa fa-spin fa-cog"></i></span>
+                    <p class="f-12 mb-0">Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......</p>
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="timeline-recent">
+                      <div class="media">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot-danger"></div>
+                        <div class="media-body"><span class="d-block f-w-600">Natalie reassigned ticket<span class="pull-right light-font f-w-400">2 hour ago</span></span>
+                          <p> <span class="font-danger">Elisse Joson San </span>Francisco, CA</p>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="timeline-dot-secondary"></div>
+                        <div class="media-body"><span class="d-block f-w-600">Katherine submitted new ticket<span class="pull-right light-font f-w-400">5 hour ago</span></span>
+                          <p> <span class="font-secondary">Elisse Joson San </span>Francisco, CA</p>
+                          <p class="f-12 mb-0">Lorem Ipsum is simply dummy text of the text of the Loren dummy printing......</p>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="timeline-dot-success"></div>
+                        <div class="media-body"><span class="d-block f-w-600">Natalie reassigned ticket<span class="pull-right light-font f-w-400">8 hour ago</span></span>
+                          <p> <span class="font-success">Elisse Joson San </span>Francisco, CA</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-with-border">
+                  <div class="card-header card-no-border tickets">
+                    <div class="d-flex">
+                      <h5>Transaction History</h5>
+                      <button class="btn btn-outline-light" type="button">Last Week <i class="fa fa-caret-down"></i></button>
+                    </div>
+                    <p class="f-12 mb-0">Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......</p>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="transaction-table table-responsive agent-performance-table">
+                      <table class="table table-bordernone">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="media">
+                                <div class="round-light-icon-primary"><i class="icon-money"></i></div>
+                                <div class="media-body"><span class="f-12 f-w-600">Process refund to 51451</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="f-w-600">Mar 14,2019</p>
+                            </td>
+                            <td>
+                              <div class="badge badge-primary">Completed</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="media">
+                                <div class="round-light-icon-warning"><i class="icon-wallet"></i></div>
+                                <div class="media-body"><span class="f-12 f-w-600">Payment from 95362</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="f-w-600">Apr 20,2019</p>
+                            </td>
+                            <td>
+                              <div class="badge badge-warning">For Pickup</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="media">
+                                <div class="round-light-icon-secondary"><i class="icon-money"></i></div>
+                                <div class="media-body"><span class="f-12 f-w-600">Process refund to 20135</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="f-w-600">Apr 20,2019</p>
+                            </td>
+                            <td>
+                              <div class="badge badge-secondary">Completed</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="media">
+                                <div class="round-light-icon-danger"><i class="icon-wallet"></i></div>
+                                <div class="media-body"><span class="f-12 f-w-600">Payment from 15485</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="f-w-600">Jan 05,2019</p>
+                            </td>
+                            <td>
+                              <div class="badge badge-danger">10,125 Point</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="media">
+                                <div class="round-light-icon-success"><i class="icon-money"></i></div>
+                                <div class="media-body"><span class="f-12 f-w-600">Process refund to 95685</span></div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="f-w-600">Mar 21,219</p>
+                            </td>
+                            <td>
+                              <div class="badge badge-success">Declined</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center" colspan="12">
+                              <button class="btn btn-light" type="button">View All Transactions</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
