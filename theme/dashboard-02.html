@@ -38,7 +38,9 @@
   </head>
   <body>
     <!-- Loader starts-->
-    <div class="loader-wrapper"><span class="loaderSpan span1"></span><span class="loaderSpan span2"></span><span class="loaderSpan span3"></span><span class="loaderSpan span4"></span><span class="loaderSpan span5"></span><span class="loaderSpan span6"></span><span class="loaderSpan span7"></span><span class="loaderSpan span8"></span><span class="loaderSpan span9"></span></div>
+    <div class="loader-wrapper">
+      <div class="theme-loader"></div>
+    </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper horizontal-wrapper" id="pageWrapper">
@@ -613,7 +615,7 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row">
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-50">
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card card-with-border resolve-complain">
@@ -650,7 +652,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-50">
                 <div class="card card-with-border customer-satisfied">
                   <div class="card-header card-no-border resolve-complain">
                     <h5>Customer Satisfaction</h5>
@@ -743,7 +745,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-100">
                 <div class="card card-with-border tickets o-hidden">
                   <div class="card-header card-no-border">
                     <div class="d-flex">
@@ -751,18 +753,24 @@
                       <button class="btn btn-outline-light" type="button">Last Week <i class="fa fa-caret-down"></i></button>
                     </div>
                     <p class="f-12">Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......</p>
-                    <h4 class="mb-0">198</h4><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
+                    <h4 class="mb-0">198</h4>
+                    <div class="chart-value-box pull-right ticket-legend">
+                      <div class="value-square-box-primary"></div><span>Approval</span>
+                      <div class="value-square-box-danger ml-3"></div><span>Cancel</span>
+                      <div class="value-square-box-light ml-3"></div><span>Other</span>
+                    </div><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
                   </div>
                   <div class="card-body p-0">
                     <div class="apex-complain">
                       <div id="mix1"></div>
                     </div>
+                    <div class="small-mix"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-8">
+              <div class="col-xl-8 xl-100">
                 <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-xl-6">
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="card card-with-border resolve-complain average-radial">
@@ -786,7 +794,7 @@
                           </div>
                           <div class="card-body rating-box p-0">
                             <div class="row m-0">
-                              <div class="col-6 p-0 main-rating">
+                              <div class="col-sm-6 p-0 main-rating">
                                 <div class="rating-box">
                                   <h3>4.6</h3>
                                   <div class="rating-container">
@@ -805,7 +813,7 @@
                                   <p>Measures the quality or your support team’s efforts.</p>
                                 </div>
                               </div>
-                              <div class="col-6 p-0">
+                              <div class="col-sm-6 p-0">
                                 <ul class="small-rating">
                                   <li>
                                     <h6>4.6<span class="stars-small pl-2"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></span><span class="f-12 pull-right">95%</span></h6>
@@ -824,7 +832,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-xl-6">
                     <div class="card card-with-border overall-rating">
                       <div class="card-header resolve-complain card-no-border">
                         <h5 class="d-inline-block">Agent Performance Points</h5><span class="setting-round pull-right d-inline-block mt-0"><i class="fa fa-spin fa-cog"></i></span>
@@ -938,6 +946,10 @@
                           <button class="btn btn-outline-light" type="button">Last Week <i class="fa fa-caret-down"></i></button>
                         </div>
                         <p class="f-12 mb-0">Lorem Ipsum is simply dummy text of the Loren dummy text of......</p>
+                        <div class="chart-value-box pull-right current-legend">
+                          <div class="value-square-box-primary"></div><span>Open Tickets</span>
+                          <div class="value-square-box-light ml-3"></div><span>Solved Ticket</span>
+                        </div>
                       </div>
                       <div class="card-body pt-0">
                         <h4 class="mb-0">198</h4><small class="f-w-600"> This Week <span class="font-primary">3.56% <i class="fa fa-caret-up"></i></span></small>
@@ -949,7 +961,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-4 xl-100">
                 <div class="card card-with-border overall-rating">
                   <div class="card-header resolve-complain card-no-border">
                     <h5 class="d-inline-block">Recent Activities</h5><span class="setting-round pull-right d-inline-block mt-0"><i class="fa fa-spin fa-cog"></i></span>

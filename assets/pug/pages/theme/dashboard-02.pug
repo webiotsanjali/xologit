@@ -38,7 +38,7 @@ html(lang='en')
                     // Container-fluid starts
                     .container-fluid
                       .row
-                        .col-xl-4
+                        .col-xl-4.xl-50
                           .row
                             .col-sm-12
                               .card.card-with-border.resolve-complain
@@ -66,7 +66,7 @@ html(lang='en')
                                     p.f-12 The total number of complaints that have been received.
                                   .apex-complain
                                     #complain
-                        .col-xl-4
+                        .col-xl-4.xl-50
                           .card.card-with-border.customer-satisfied
                             .card-header.card-no-border.resolve-complain
                               h5 Customer Satisfaction
@@ -147,7 +147,7 @@ html(lang='en')
                                       td
                                         .number-radial
                                           .radial-bar.radial-bar-20.radial-bar-danger(data-label='20%')
-                        .col-xl-4
+                        .col-xl-4.xl-100
                           .card.card-with-border.tickets.o-hidden
                             .card-header.card-no-border
                               .d-flex
@@ -156,15 +156,23 @@ html(lang='en')
                                   i.fa.fa-caret-down
                               p.f-12 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
                               h4.mb-0 198
+                              .chart-value-box.pull-right.ticket-legend
+                                .value-square-box-primary
+                                span Approval
+                                .value-square-box-danger.ml-3
+                                span Cancel
+                                .value-square-box-light.ml-3
+                                span Other
                               small.f-w-600  This Week 
                                 span.font-primary 3.56% 
                                   i.fa.fa-caret-up
                             .card-body.p-0
                               .apex-complain
                                 #mix1
-                        .col-xl-8
+                              .small-mix
+                        .col-xl-8.xl-100
                           .row
-                            .col-sm-6
+                            .col-xl-6
                               .row
                                 .col-sm-12
                                   .card.card-with-border.resolve-complain.average-radial
@@ -185,7 +193,7 @@ html(lang='en')
                                       p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
                                     .card-body.rating-box.p-0
                                       .row.m-0
-                                        .col-6.p-0.main-rating
+                                        .col-sm-6.p-0.main-rating
                                           .rating-box
                                             h3 4.6
                                             .rating-container
@@ -199,7 +207,7 @@ html(lang='en')
                                                     option(value='5') 5
                                             p Measures the quality or your support team’s efforts.
                                         
-                                        .col-6.p-0
+                                        .col-sm-6.p-0
                                           ul.small-rating
                                             li
                                               h6 4.6
@@ -228,7 +236,7 @@ html(lang='en')
                                                   span.fa.fa-star
                                                   span.fa.fa-star
                                                 span.f-12.pull-right 64%
-                            .col-sm-6
+                            .col-xl-6
                               .card.card-with-border.overall-rating
                                 .card-header.resolve-complain.card-no-border
                                   h5.d-inline-block Agent Performance Points
@@ -317,6 +325,11 @@ html(lang='en')
                                     button.btn.btn-outline-light(type='button') Last Week 
                                       i.fa.fa-caret-down
                                   p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of......
+                                  .chart-value-box.pull-right.current-legend
+                                    .value-square-box-primary
+                                    span Open Tickets
+                                    .value-square-box-light.ml-3
+                                    span Solved Ticket
                                 .card-body.pt-0
                                   h4.mb-0 198
                                   small.f-w-600  This Week 
@@ -324,7 +337,7 @@ html(lang='en')
                                       i.fa.fa-caret-up
                                   .tickets-bar
                                     .ct-chartbar.flot-chart-container
-                        .col-xl-4
+                        .col-xl-4.xl-100
                           .card.card-with-border.overall-rating
                             .card-header.resolve-complain.card-no-border
                               h5.d-inline-block Recent Activities
