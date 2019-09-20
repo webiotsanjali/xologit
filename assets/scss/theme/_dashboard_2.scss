@@ -265,6 +265,11 @@
   .apex-complain {
     margin-bottom: -19px;
   }
+  .ticket-legend {
+    position: absolute;
+    bottom: 54px;
+    right: 30px;
+  }
 }
 .setting-round {
   i {
@@ -384,7 +389,7 @@
 .timeline-recent {
   .media {
     .timeline-line {
-      height: 49%;
+      height: 55%;
       position: absolute;
       width: 1px;
       border: 1px dashed #ddd;
@@ -403,7 +408,7 @@
       }
       p {
         margin-top: 3px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         + p {
           color: $semi-dark;
           width: 65%;
@@ -484,10 +489,10 @@
 }
 .tickets-bar {
   .flot-chart-container {
-    height: 290px;
+    height: 278px;
     &.ct-chartbar {
       svg {
-        -webkit-box-reflect: below -311px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255,255,255,0.4)));
+        -webkit-box-reflect: below -297px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255,255,255,0.4)));
         .ct-bar {
           stroke-width: 20px !important;
         }
@@ -501,6 +506,389 @@
             stroke: $primary-color;
           }
         }
+      }
+    }
+  }
+}
+.small-mix {
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90px !important;
+    .ct-series-a {
+      .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+        stroke: rgba($primary-color, 0.2);
+      }
+    }
+  }
+}
+.current-tickets {
+  .current-legend {
+     position: absolute;
+     right: 25%;
+     top: 25%;
+  }
+}
+// responsive
+@media only screen and (max-width: 1366px) {
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+          &:first-child {
+            min-width: 200px;
+          }
+        }
+      }
+    }
+  }
+  .customer-satisfied {
+    .card-header {
+      p {
+        width: 85%;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            &:first-child {
+              min-width: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .resolve-complain {
+    p {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .resolve-complain {
+    .media {
+      .small-bar {
+        height: 85px;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+              min-width: 130px;
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        p {
+          width: 83%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .resolve-complain {
+    .media {
+      .small-bar, .radial-bar {
+        margin-right: 20px;
+      }
+    }
+  }
+  .complain-details {
+    padding-left: 20px;
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+  .tickets {
+    .ticket-legend {
+      right: 20px;
+      bottom: 44px;
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        .rating-box {
+          padding: 20px;
+        }
+      }
+    }
+    .small-rating {
+      li {
+        padding: 12px;
+      }
+    }
+  }
+  .timeline-recent {
+    .media {
+      +.media {
+        margin-top: 20px;
+      }
+      .timeline-line {
+        left: 40px;
+      }
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+           padding: 20px;
+           padding-right: 0;
+           + td {
+            min-width: 156px;
+           }
+           .progress-showcase {
+              .progress {
+                width: 50%;
+              }
+            }
+        }
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+             min-width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .overall-rating {
+    .small-rating {
+      li {
+        padding: 14px;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            min-width: 98px;
+          }
+        }
+      }
+    }
+  }
+  .current-tickets {
+     .current-legend {
+      display: none;
+     }
+  }
+  .tickets-bar {
+    .flot-chart-container {
+      &.ct-chartbar {
+        svg {
+          .ct-bar {
+            stroke-width: 10px !important;
+          }
+        }
+      }
+    }
+  }
+  .tickets {
+    p {
+      width: 80%;
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+          &:first-child {
+            min-width: 245px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .resolve-complain {
+    .media {
+      .small-bar, .radial-bar {
+        margin-right: 15px;
+      }
+    }
+  }
+  .customer-satisfied {
+    .card-header {
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .tickets, .complaints {
+    .d-flex, .card-header {
+      .btn {
+        display: none;
+      }
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .complain-details {
+    padding-left: 15px;
+    p {
+      width: 70%;
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            &:first-child {
+              min-width: 202px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        border-right: none;
+        border-bottom: 1px solid $light-gray;
+        p {
+          width: 100%;
+        }
+        .rating-box {
+          padding: 15px;
+        }
+      }
+    }
+    .small-rating {
+      li {
+        padding: 15px;
+      }
+    }
+  }
+  .timeline-recent {
+    .media {
+      +.media {
+        margin-top: 15px;
+      }
+      @each $timeline-dot-name, $timeline-dot-color in (primary, $primary-color),
+            (secondary, $secondary-color) ,
+            (success, $success-color),
+            (danger, $danger-color),
+            (info, $info-color),
+            (light, $light-color),
+            (dark, $dark-color),
+            (warning, $warning-color) {
+      .timeline-dot-#{$timeline-dot-name}{
+        width: 36px;
+        height: 36px;
+        border: 12px solid lighten($timeline-dot-color, 38%);
+      }
+    }
+      .media-body {
+          margin-left: 15px;
+          p {
+            +p {
+              width: 100%;
+            }
+          }
+          .d-block {
+            .pull-right {
+              display: none;
+            }
+          }
+      }
+      .timeline-line {
+        left: 32px;
+      }
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+           padding: 15px;
+           padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .resolve-complain {
+    .media {
+      display: block;
+      .small-bar {
+        height: 134px;
+        margin-right: 0;
+        margin-top: -16px;
+        .small-chart {
+          &.flot-chart-container {
+            svg {
+              position: relative;
+            }
+          }
+        }
+      }
+      .radial-bar {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+  .customer-satisfied {
+    .customers-details {
+      display: block !important;
+      .complain-details {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .tickets-bar {
+    .flot-chart-container {
+      &.ct-chartbar {
+        svg {
+          .ct-bar {
+            stroke-width: 6px !important;
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .setting-round {
+      i {
+        display: none;
       }
     }
   }
