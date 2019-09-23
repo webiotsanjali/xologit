@@ -441,14 +441,12 @@ $header-size: 135px;
 /**======Main Header css Ends ======**/
 
 /** ===== Vertical Menu css Start=====**/
-
-.page-wrapper.horizontal-wrapper .vertical-menu-main {
+.vertical-menu-main{
+  background: white;
   position: fixed;
-  top: 95px;
-  width: 100%;
-  z-index: 9;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-  background-color: $white;
+  top: 88px;
+  z-index: 1;
+  width: 100%
 }
 .vertical-menu-mt{
   margin-top: 148px !important;
@@ -609,8 +607,9 @@ $header-size: 135px;
   .drilldown-back { font-weight: bold; }
 }
 /*=======Mega menu css end=======*/
-// responsive header
 
+
+// responsive header
 @media only screen and (max-width: 1366px) {
   .profile-dropdown {
     &.onhover-show-div {

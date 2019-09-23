@@ -14,23 +14,22 @@ html(lang='en')
         #pageWrapper.page-wrapper.horizontal-wrapper
             include ../../components/header
             // Page Body Start
-            .page-body-wrapper
+            .page-body-wrapper.horizontal-menu
                 include ../../components/starter-kit-sidebar
-                
                 .page-body
                     .container-fluid
                         .page-header
                             .row
                                 .col-lg-6
                                     h3
-                                      | Layout Dark
+                                      | Layout dark
                                     ol.breadcrumb
                                         li.breadcrumb-item
                                           a(href='../ltr/index.html')
                                             | Home
                                         li.breadcrumb-item Starter Kit
                                         li.breadcrumb-item Color Version
-                                        li.breadcrumb-item.active Layout Dark
+                                        li.breadcrumb-item.active Layout dark
                                 .col-lg-6
                                     include ../../components/bookmark
                     // Container-fluid starts
@@ -224,7 +223,7 @@ html(lang='en')
                                   p
                                     | Add a heading to card with 
                                     code .card-header
-                                    |  class 
+                                    |  class
                                   p
                                     | You may also include any &lt;h1&gt;-&lt;h6&gt; with a 
                                     code .card-header 

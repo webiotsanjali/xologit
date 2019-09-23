@@ -358,14 +358,15 @@ $theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
 // ----------------------------------------------------------
 
 @media (min-width: $theme-deafult__desktop-vp) {
+
 .page-wrapper{
     .mega-menu-header{
       .vertical-menu-main{
         position: absolute;
         width: auto;
-        top: -9px;
         box-shadow: none;
-        right: 390px;
+        right: 630px;
+        top: 0;
       }
     }
     .page-main-header{

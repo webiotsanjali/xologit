@@ -25,6 +25,7 @@ function html() {
   .pipe(pug({ pretty: true }))
   .on('error', console.error.bind(console))
   .pipe(gulp.dest('theme'))
+
   .pipe(browserSync.reload({stream: true}));
 }
 
@@ -57,7 +58,7 @@ function htmlminify() {
 // Watch function
 function watch(){
   browserSync.init({
-      proxy: 'home/savan/Desktop/xologit/theme/vertical.html'
+      proxy: 'home/savan/Desktop/xologit/starter-kit/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('assets/pug/pages/theme/**.pug', html);
@@ -70,7 +71,7 @@ exports.html = html;
 exports.watch = watch;
 exports.image = image;
 exports.validateHtml = validateHtml;
-exports.htmlminify = htmlminify;                
+exports.htmlminify = htmlminify;
 
 const build = gulp.series(watch);
 gulp.task('default', build, 'browser-sync');
