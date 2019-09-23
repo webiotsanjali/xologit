@@ -17,6 +17,7 @@ footer{
   padding: 15px;
   bottom: 0;
   left: 0;
+  margin-left: 255px;
   a{
     font-weight: 600;
   }
@@ -41,16 +42,16 @@ footer{
   }
 
 .footer-fix{
+  width: 100%;
   position: fixed;
-  width: calc(100% - 255px);
 }
 .page-wrapper.horizontal-wrapper{
   .page-body-wrapper{
-    footer{      
-      margin-left: 255px;
+    footer{
       transition: all 0.3s ease;
       bottom: 0;
       z-index: 8;
+      margin-left: 0;
       p{
         color: $theme-body-font-color;
         i{
@@ -60,9 +61,7 @@ footer{
       }
     }
   }
-
 }
 /**=====================
      47. Footer CSS Ends
 ==========================**/
-
