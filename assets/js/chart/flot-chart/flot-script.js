@@ -51,7 +51,7 @@
         grid: {
             borderWidth: 0
         },
-            colors: ["#544fff"]
+            colors: ["#655af3"]
     });
     function update() {
         plot.setData([getRandomData()]);
@@ -62,7 +62,7 @@
 })(jQuery);
 if ($("#flot-categories").length > 0) {
     var a = {
-        color: "#544fff",
+        color: "#655af3",
         data: [
         ["Jan", 25],
         ["Feb", 8],
@@ -107,7 +107,7 @@ if ($("#annotations-chart").length > 0) {
         var c = [{
             data: a,
             label: "Pressure",
-            color: "#158df7"
+            color: "#655af3"
         }],
         d = [{
             color: "#ffffff",
@@ -169,7 +169,7 @@ if ($("#annotations-chart").length > 0) {
 if ($("#flot-basic-chart").length > 0) {
     for (var a = [], b = 0; b < 14; b += .5) a.push([b, Math.sin(b)]);
         var c = {
-            color: "#158df7",
+            color: "#148df6",
             data: [
             [0, 3],
             [4, 8],
@@ -178,7 +178,7 @@ if ($("#flot-basic-chart").length > 0) {
             ]
         },
         d = {
-            color: "#544fff",
+            color: "#655af3",
             data: [
             [0, 12],
             [7, 0],
@@ -203,7 +203,7 @@ if ($("#flot-basic-chart").length > 0) {
                     }]
                 }
             },
-            colors: ["#fb2e63", "#fb2e63" ,"#fb2e63" ,"#fb2e63"]
+            colors: ["#fd2e64", "#fd2e64" ,"#fd2e64" ,"#fd2e64"]
         })
 }
 
@@ -271,7 +271,7 @@ $(function() {
 
                         borderWidth: 0
                     },
-                    colors: ["#544fff", "#158df7" ,"#158df7" ,"#fb2e63" ,"#544fff", "#158df7" ,"#544fff"]
+                    colors: ["#655af3", "#148df6" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#fd2e64" ,"#655af3"]
 
                 });
             }
@@ -307,13 +307,13 @@ $(function() {
                 h = !1,
                 i = !1,
                 j = [{
-                    color: "#544fff",
+                    color: "#7a15f7",
                     data: b
                 }, {
-                    color: "#158df7",
+                    color: "#655af3",
                     data: d
                 }, {
-                    color: "#544fff",
+                    color: "#148df6",
                     data: e
                 }];
                 a(), $(".stackControls button").click( function(b) {
@@ -393,11 +393,11 @@ $(function() {
         }
 
         var data = [
-            {color: "#544fff", points: data1_points, data: data1, label: "data1"},
-            {color: "#fb2e63",  points: data2_points, data: data2, label: "data2"},
-            {color: "#544fff", lines: {show: true}, points: data3_points, data: data3, label: "data3"},
-            {color: "#158df7", bars: {show: true, align: "center", barWidth: 0.25}, data: data4, label: "data4"},
-            {color: "#544fff", points: data3_points, data: data4_errors}
+            {color: "#7a15f7", points: data1_points, data: data1, label: "data1"},
+            {color: "#fd2e64",  points: data2_points, data: data2, label: "data2"},
+            {color: "#7a15f7", lines: {show: true}, points: data3_points, data: data3, label: "data3"},
+            {color: "#655af3", bars: {show: true, align: "center", barWidth: 0.25}, data: data4, label: "data4"},
+            {color: "#148df6", points: data3_points, data: data4_errors}
             ];
 
         $.plot($("#error-flot-chart"), data , {
@@ -445,7 +445,7 @@ $(function() {
                 show: true
             }
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#default-pie-legend-flot-chart', data, {
         series: {
@@ -456,7 +456,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#hidden-label-radius-flot-chart', data, {
         series: {
@@ -473,7 +473,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: ["#007bff", "#1ea6ec" ,"#4466f2" ,"#ff5a75" ,"#007bff", "#1ea6ec" ,"#4466f2"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#default-pie-flot-chart-hover', data, {
         series: {
@@ -485,7 +485,7 @@ $(function() {
             hoverable: true,
             clickable: true
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#custom-label1pie', data, {
         series: {
@@ -504,7 +504,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#label-radius-flot-chart', data, {
         series: {
@@ -523,7 +523,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#title-pie-flot-chart', data, {
         series: {
@@ -547,7 +547,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
     $.plot('#dount-hole-flot-chart', data, {
         series: {
@@ -556,7 +556,7 @@ $(function() {
                 show: true
             }
         },
-        colors: ["#158df7", "#fb2e63" ,"#51bb25" ,"#544fff" ,"#fb740d", "#ff3f70" ,"#e8f4fe"]
+        colors: ["#655af3", "#fd2e64" ,"#51bb25" ,"#7a15f7" ,"#ff5f24", "#148df6" ,"#51bb25"]
     });
 });
 
@@ -608,7 +608,7 @@ if ($("#multiple-real-timeupdate ").length > 0) {
         grid: {
             borderWidth: 0
         },
-        colors: ["#544fff", "#158df7"]
+        colors: ["#655af3", "#fd2e64"]
     }),
     k = function() {
         j.setData([c(), e()]), j.draw(), setTimeout(k, f)

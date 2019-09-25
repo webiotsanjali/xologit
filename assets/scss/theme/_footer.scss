@@ -30,7 +30,7 @@ footer{
       .footer-dark{
         background-color: $footer_dark_color;
         p{
-          color: #a5a5a5;
+          color: $white !important;
         }
         li{
           a{
