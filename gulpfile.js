@@ -21,11 +21,10 @@ function style() {
 
 // pug to html
 function html() {
-  return gulp.src('assets/pug/pages/theme/**.pug')
+  return gulp.src('assets/pug/pages/theme/chart-google.pug')
   .pipe(pug({ pretty: true }))
   .on('error', console.error.bind(console))
   .pipe(gulp.dest('theme'))
-
   .pipe(browserSync.reload({stream: true}));
 }
 
@@ -58,7 +57,7 @@ function htmlminify() {
 // Watch function
 function watch(){
   browserSync.init({
-      proxy: 'home/savan/Desktop/xologit/starter-kit/index.html'
+      proxy: 'home/savan/Desktop/xologit/theme/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('assets/pug/pages/theme/**.pug', html);

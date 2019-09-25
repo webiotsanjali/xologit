@@ -22,7 +22,7 @@ function drawBasic() {
         },
         height: 400,
         width:'100%',
-          colors: ["#544fff", "#fb2e63", "#158df7"]
+          colors: ["#655af3", "#fd2e64", "#51bb25"]
 
 
       },
@@ -48,7 +48,7 @@ function drawBasic() {
         },
         height: 400,
         width:'100%',
-        colors: ["#544fff", "#fb2e63", "#158df7"]
+        colors: ["#655af3", "#fd2e64", "#51bb25"]
       },
       c = new google.charts.Bar(document.getElementById("column-chart2"));
       c.draw(a, google.charts.Bar.convertOptions(b))
@@ -65,8 +65,8 @@ function drawBasic() {
       var options = {
         title: 'My Daily Activities',
         width:'100%',
-        height: 400,
-       colors: ["#544fff", "#158df7", "#51bb25", "#544fff", "#fb2e63"]
+        height: 300,
+       colors: ["#51bb25", "#655af3", "#fd2e64", "#148df6", "#ff5f24"]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart1'));
       chart.draw(data, options);
@@ -84,8 +84,8 @@ function drawBasic() {
         title: 'My Daily Activities',
         is3D: true,
         width:'100%',
-        height: 400,
-        colors: ["#544fff", "#158df7", "#51bb25", "#544fff", "#fb2e63"]
+        height: 300,
+        colors: ["#51bb25", "#655af3", "#fd2e64", "#148df6", "#ff5f24"]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart2'));
       chart.draw(data, options);
@@ -103,8 +103,8 @@ function drawBasic() {
         title: 'My Daily Activities',
         pieHole: 0.4,
         width:'100%',
-        height: 400,
-        colors: ["#544fff", "#158df7", "#51bb25", "#544fff", "#fb2663", "#fb2663"]
+        height: 300,
+        colors: ["#51bb25", "#655af3", "#fd2e64", "#148df6", "#ff5f24"]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart3'));
       chart.draw(data, options);
@@ -113,26 +113,26 @@ function drawBasic() {
       var data = google.visualization.arrayToDataTable([
         ['Language', 'Speakers (in millions)'],
         ['Assamese', 13],
-        ['Bengali', 83], 
+        ['Bengali', 83],
         ['Bodo', 1.4],
-        ['Dogri', 2.3], 
-        ['Gujarati', 46], 
+        ['Dogri', 2.3],
+        ['Gujarati', 46],
         ['Hindi', 300],
-        ['Kannada', 38], 
-        ['Kashmiri', 5.5], 
+        ['Kannada', 38],
+        ['Kashmiri', 5.5],
         ['Konkani', 5],
-        ['Maithili', 20], 
-        ['Malayalam', 33], 
+        ['Maithili', 20],
+        ['Malayalam', 33],
         ['Manipuri', 1.5],
-        ['Marathi', 72], 
-        ['Nepali', 2.9], 
+        ['Marathi', 72],
+        ['Nepali', 2.9],
         ['Oriya', 33],
-        ['Punjabi', 29], 
-        ['Sanskrit', 0.01], 
+        ['Punjabi', 29],
+        ['Sanskrit', 0.01],
         ['Santhali', 6.5],
-        ['Sindhi', 2.5], 
-        ['Tamil', 61], 
-        ['Telugu', 74], 
+        ['Sindhi', 2.5],
+        ['Tamil', 61],
+        ['Telugu', 74],
         ['Urdu', 52]
       ]);
       var options = {
@@ -147,7 +147,7 @@ function drawBasic() {
           15: {offset: 0.5},
         },
           // colors: ["#ab8ce4", "#26c6da"]
-          colors: ["#544fff", "#158df7", "#fb740d", "#fb2e63", "#544fff", "#158df7","#51bb25", "#544fff", "#fb740d", "#544fff", "#158df7", "#51bb25","#544fff", "#51bb25", "#158df7", "#51bb25", "#544fff", "#fb740d", "#544fff", "#158df7","#158df7", "#ff9f40"]
+          colors: ["#7a15f7", "#655af3", "#51bb25", "#ff5f24", "#51bb25", "#fd2e64","#655af3", "#7a15f7", "#fd2e64", "#51bb25", "#ff5f24", "#148df6","#655af3", "#51bb25", "#fd2e64", "#51bb25", "#ff5f24", "#fd2e64", "#7a15f7", "#655af3","#fd2e64", "#51bb25"]
         };
         var chart = new google.visualization.PieChart(document.getElementById('pie-chart4'));
         chart.draw(data, options);
@@ -177,7 +177,7 @@ function drawBasic() {
           title: 'Box Office Earnings in First Two Weeks of Opening',
           subtitle: 'in millions of dollars (USD)'
         },
-        colors: ["#544fff", "#158df7", "#fb2e63"],
+        colors: ["#655af3", "#fd2e64", "#51bb25"],
         height: 500,
         width:'100%',
       };
@@ -201,7 +201,7 @@ function drawBasic() {
         series: {5: {type: 'line'}},
         height: 500,
         width:'100%',
-        colors: ["#544fff", "#158df7", "#51bb25", "#fb2e63", "#544fff"]
+        colors: ["#148df6", "#655af3", "#fd2e64", "#51bb25", "#ff5f24"]
     };
     var chart = new google.visualization.ComboChart(document.getElementById('combo-chart'));
     chart.draw(data, options);
@@ -220,7 +220,7 @@ function drawBasic() {
         vAxis: {minValue: 0},
         width:'100%',
         height: 400,
-        colors: ["#544fff", "#158df7"]
+        colors: ["#655af3", "#fd2e64"]
       };
       var chart = new google.visualization.AreaChart(document.getElementById('area-chart1'));
       chart.draw(data, options);
@@ -239,7 +239,7 @@ function drawBasic() {
       vAxis: {minValue: 0},
       width:'100%',
       height: 400,
-      colors: ["#544fff", "#158df7", "#ff3f70", "#544fff"]
+      colors: ["#655af3", "#fd2e64", "#51bb25", "#ff5f24"]
     };
     var chart = new google.visualization.AreaChart(document.getElementById('area-chart2'));
     chart.draw(data, options);
@@ -283,10 +283,10 @@ function drawBasic() {
                 ["Element", "Density", {
                     role: "style"
                 }],
-                ["Copper", 10, "#544fff"],
-                ["Silver", 12, "#158df7"],
+                ["Copper", 10, "#655af3"],
+                ["Silver", 12, "#fd2e64"],
                 ["Gold", 14, "#51bb25"],
-                ["Platinum", 16, "color: #544fff"]
+                ["Platinum", 16, "color: #ff5f24"]
             ]),
             d = new google.visualization.DataView(a);
         d.setColumns([0, 1, {
@@ -350,15 +350,15 @@ function drawChart() {
             arrow: {
                 angle: 100,
                 width: 5,
-                color: '#544df7',
+                color: '#655af3',
                 radius: 0
             },
 
                 palette: [
                     {
-                        "color": "#fb2e63",
-                        "dark": "#544fff",
-                        "light": "#158df7"
+                        "color": "#fd2e64",
+                        "dark": "#655af3",
+                        "light": "#655af3"
                     }
                 ]
 
@@ -406,4 +406,3 @@ function drawChart1() {
     var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
     chart.draw(data, options);
 }
-
