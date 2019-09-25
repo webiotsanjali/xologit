@@ -14,22 +14,21 @@ html(lang='en' , dir='rtl')
         #pageWrapper.page-wrapper.horizontal-wrapper
             include ../../components/header
             // Page Body Start
-            .page-body-wrapper
+            .page-body-wrapper.horizontal-menu
                 include ../../components/starter-kit-sidebar
-                
                 .page-body
                     .container-fluid
                         .page-header
                             .row
                                 .col-lg-6
                                     h3
-                                     | Layout RTL
+                                      | Layout RTL
                                     ol.breadcrumb
                                         li.breadcrumb-item
                                           a(href='../ltr/index.html')
                                             | Home
                                         li.breadcrumb-item Starter Kit
-                                        li.breadcrumb-item Page Layout
+                                        li.breadcrumb-item Page layout
                                         li.breadcrumb-item.active Layout RTL
                                 .col-lg-6
                                     include ../../components/bookmark
@@ -223,8 +222,8 @@ html(lang='en' , dir='rtl')
                                   h5 Content title
                                   p
                                     | Add a heading to card with 
-                                    code .card-header 
-                                    |  class 
+                                    code .card-header
+                                    |  class
                                   p
                                     | You may also include any &lt;h1&gt;-&lt;h6&gt; with a 
                                     code .card-header 

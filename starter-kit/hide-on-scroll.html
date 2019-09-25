@@ -11,9 +11,8 @@
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <title>Xolo - Premium Admin Template</title>
     <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700&amp;display=swap&quot; rel=&quot;stylesheet">
     <!-- Font Awesome-->
     <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
     <!-- ico-font-->
@@ -31,297 +30,159 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
   </head>
   <body>
     <!-- Loader starts-->
-    <div class="loader-wrapper"><span class="loaderSpan span1"></span><span class="loaderSpan span2"></span><span class="loaderSpan span3"></span><span class="loaderSpan span4"></span><span class="loaderSpan span5"></span><span class="loaderSpan span6"></span><span class="loaderSpan span7"></span><span class="loaderSpan span8"></span><span class="loaderSpan span9"></span></div>
+    <div class="loader-wrapper">
+      <div class="theme-loader"></div>
+    </div>
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
-    <div class="page-wrapper">
+    <div class="page-wrapper horizontal-wrapper" id="pageWrapper">
       <!-- Page Header Start-->
       <div class="page-main-header">
-        <div class="main-header-right row">
-          <div class="main-header-left d-lg-none">
-            <div class="logo-wrapper"><a href="index.html"><img src="../assets/images/Xolo-logo1.png" alt=""></a></div>
+        <div class="main-header-right">
+          <div class="main-header-left">
+            <div class="logo-wrapper"><a href="index.html"><img src="../assets/images/logo/logo.png" alt=""></a></div>
           </div>
-          <div class="mobile-sidebar d-block">
+          <div class="mobile-sidebar">
             <div class="media-body text-right switch-sm">
               <label class="switch">
-                <input id="sidebar-toggle" type="checkbox" checked="checked"><span class="switch-state"></span>
+                <input id="sidebar-toggle" type="checkbox" data-toggle=".container" checked="checked"><span class="switch-state"></span>
               </label>
             </div>
           </div>
-          <div class="vertical-mobile-sidebar"><i class="fa fa-bars sidebar-bar"></i></div>
-          <div class="nav-right col left-menu-header">
-            <ul class="click-menu nav-menus-left">
-              <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
-              <li>
-                <input id="check01" type="checkbox" name="click-menu">
-                <label for="check01">Category <span class="mx-2 badge badge-pill badge-primary">2</span></label>
-                <ul class="category-dropdown submenu">
-                  <li><a href="#"> Admin</a></li>
-                  <li><a href="#"> Shopify</a></li>
-                  <li><a href="#"> Ecommerce</a></li>
-                  <li><a href="#"> Prestashop</a></li>
-                </ul>
-              </li>
-              <li>
-                <input id="check02" type="checkbox" name="click-menu">
-                <label for="check02">Status<span class="mx-2 badge badge-pill badge-primary">7</span></label>
-                <ul class="submenu status-dropdown">
-                  <li>
-                    <h6 class="mb-0">Ongoing Projects</h6>
-                  </li>
-                  <li>
-                    <p class="mb-0">HTML5 Validation Report</p>
-                    <div class="progress sm-progress-bar">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <p class="mb-0">Bootstrap Admin Templates</p>
-                    <div class="progress sm-progress-bar">
-                      <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <p class="mb-0">Goggle Crome Extension</p>
-                    <div class="progress sm-progress-bar">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <p class="mb-0">Clients Projects</p>
-                    <div class="progress sm-progress-bar">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <input id="check03" type="checkbox" name="click-menu">
-                <label for="check03">Order<span class="mx-2 badge badge-pill badge-primary">1</span></label>
-                <ul class="category-dropdown submenu p-20">
-                  <li><a href="#"> Paypal</a></li>
-                  <li><a href="#"> Credit Card</a></li>
-                  <li><a href="#"> Visa</a></li>
-                  <li><a href="#"> Paytm</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="d-xl-none mobile-toggle-left pull-right"><i data-feather="more-horizontal"></i></div>
-          </div>
+          <div class="d-xl-none mobile-vertical-sidebar pull-right toggle-nav"><i data-feather="align-justify"></i></div>
           <div class="nav-right col pull-right right-menu">
-            <ul class="nav-menus click-menu">
-              <li>
-                <form class="form-inline search-form"><span class="mobile-search search-icon"><i class="fa fa-search"></i></span></form>
+            <ul class="nav-menus">
+              <li class="px-0">
+                <form class="form-inline search-form">
+                  <input class="form-control-plaintext" placeholder="Search....."><i class="fa fa-search"></i>
+                </form><span class="d-sm-none mobile-search"><i data-feather="search"></i></span>
               </li>
-              <li> 
-                <input id="check04" type="checkbox" name="click-menu">
-                <label for="check04"><span class="media user-header"><img class="mr-2 rounded-circle img-35" src="../assets/images/dashboard/user.png" alt=""><span class="media-body"><span class="f-12 f-w-600">Elana Saint</span><span class="d-block">Admin</span></span></span></label>
-                <ul class="profile-dropdown submenu">
-                  <li class="gradient-primary-1">
-                    <h6 class="mb-0">Elana Saint</h6><span>Web Designer</span>
-                  </li>
-                  <li><i data-feather="user"> </i>Profile</li>
-                  <li><i data-feather="message-square"> </i>Inbox</li>
-                  <li><i data-feather="file-text"> </i>Taskboard</li>
-                  <li><i data-feather="settings"> </i>Settings</li>
-                </ul>
-              </li>
-              <li>
-                <input id="check05" type="checkbox" name="click-menu">
-                <label for="check05"><i data-feather="bell"></i><span class="notification badge badge-pill badge-danger f-10">2</span></label>
-                <ul class="notification-dropdown submenu">
-                  <li class="gradient-primary-1">
-                    <h6>Notifications</h6><span>You have 6 unread messages</span>
+              <li class="onhover-dropdown"><i data-feather="bell"></i>
+                <ul class="notification-dropdown onhover-show-div">
+                  <li>
+                    <h6 class="f-w-600">Notifications</h6><span class="f-12">You have 2 unread messages</span>
                   </li>
                   <li>
-                    <div class="media">
-                      <div class="notification-icons bg-success mr-3"><i class="mt-0" data-feather="thumbs-up"></i></div>
-                      <div class="media-body">
-                        <h6>Someone Likes Your Posts</h6>
-                        <p class="mb-0"> 2 Hours Ago</p>
-                      </div>
-                    </div>
+                    <p class="mb-0"><i class="fa fa-circle-o mr-3 font-primary"> </i>Delivery processing <span class="pull-right">10 min.</span></p>
                   </li>
-                  <li class="pt-0">
-                    <div class="media">
-                      <div class="notification-icons bg-info mr-3"><i class="mt-0" data-feather="message-circle"></i></div>
-                      <div class="media-body">
-                        <h6>3 New Comments</h6>
-                        <p class="mb-0"> 1 Hours Ago</p>
-                      </div>
-                    </div>
+                  <li>
+                    <p class="mb-0"><i class="fa fa-circle-o mr-3 font-success"></i>Order Complete<span class="pull-right">1 hr</span></p>
+                  </li>
+                  <li>
+                    <p class="mb-0"><i class="fa fa-circle-o mr-3 font-info"></i>Tickets Generated<span class="pull-right">3 hr</span></p>
+                  </li>
+                  <li>
+                    <p class="mb-0"><i class="fa fa-circle-o mr-3 font-warning"></i>Delivery Complete<span class="pull-right">6 hr</span></p>
                   </li>
                   <li class="bg-light txt-dark"><a href="#">All </a> notification</li>
                 </ul>
               </li>
-              <li><a class="right_side_toggle" href="#"><i data-feather="message-square"></i></a></li>
-              <li>
-                <input id="check06" type="checkbox" name="click-menu">
-                <label for="check06"><i data-feather="droplet"></i></label>
-                <ul class="droplet-dropdown submenu">
-                  <li class="gradient-primary-1 text-center">
-                    <h6>Grid Dashboard</h6><span>Easy Grid inside dropdown</span>
-                  </li>
+              <li class="onhover-dropdown"><i data-feather="message-circle"></i>
+                <ul class="chat-dropdown onhover-show-div p-t-20 p-b-20">
                   <li>
-                    <div class="row">
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="file-text"></i><span class="d-block">Content</span></div>
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="activity"></i><span class="d-block">Activity</span></div>
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="users"></i><span class="d-block">Contacts</span></div>
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="clipboard"></i><span class="d-block">Reports</span></div>
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="anchor"></i><span class="d-block">Automation</span></div>
-                      <div class="col-sm-4 col-6 droplet-main"><i data-feather="settings"></i><span class="d-block">Settings</span></div>
+                    <div class="media"><img class="img-fluid rounded-circle mr-3" src="../assets/images/user/2.jpg" alt="">
+                      <div class="status-circle online"></div>
+                      <div class="media-body"><span class="f-w-600">Erica Hughes</span>
+                        <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                        <p class="f-12 mb-0 font-primary">1 hr ago</p>
+                      </div>
                     </div>
                   </li>
-                  <li class="text-center">
-                    <button class="btn btn-primary btn-air-primary">Follows Up</button>
+                  <li>
+                    <div class="media"><img class="img-fluid rounded-circle mr-3" src="../assets/images/user/1.jpg" alt="">
+                      <div class="status-circle away"></div>
+                      <div class="media-body"><span class="f-w-600">Kori Thomas</span>
+                        <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                        <p class="f-12 mb-0 font-primary">58 mins ago</p>
+                      </div>
+                    </div>
                   </li>
+                  <li>
+                    <div class="media"><img class="img-fluid rounded-circle mr-3" src="../assets/images/user/4.jpg" alt="">
+                      <div class="status-circle offline"></div>
+                      <div class="media-body"><span class="f-w-600">Ain Chavez</span>
+                        <p class="f-12 mb-0 light-font">There are many variations of passages...</p>
+                        <p class="f-12 mb-0 font-primary">32 mins ago</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="light-font text-center">Mark all as read      </li>
+                </ul>
+              </li>
+              <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
+              <li><i data-feather="settings"></i></li>
+              <li class="onhover-dropdown px-0"><span class="media user-header"><img class="mr-2 rounded-circle img-35" src="../assets/images/dashboard/user.png" alt=""><span class="media-body"><span class="f-12 f-w-600">Elana Saint</span><span class="d-block">Admin</span></span></span>
+                <ul class="profile-dropdown onhover-show-div">
+                  <li><i data-feather="user"> </i>Profile</li>
+                  <li class="f-w-600">Home</li>
+                  <li class="f-12"><i data-feather="chevron-right"> </i>Inbox</li>
+                  <li class="f-12"><i data-feather="chevron-right"> </i>Taskboard</li>
+                  <li class="f-12"><i data-feather="chevron-right"> </i>Settings</li>
+                  <li><i data-feather="log-in"></i>Log in  </li>
                 </ul>
               </li>
             </ul>
           </div>
-          <form class="form-inline search-full">
-            <div class="form-group form-control-plaintext">
-              <input type="search" placeholder="Search.."><i class="icon-close close-search"></i>
-            </div>
-          </form>
           <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
         </div>
       </div>
       <!-- Page Header Ends                              -->
       <!-- Page Body Start-->
-      <div class="page-body-wrapper">
+      <div class="page-body-wrapper horizontal-menu">
         <!-- Page Sidebar Start-->
-        <div class="page-sidebar">
-          <div class="main-header-left d-none d-lg-block">
-            <div class="logo-wrapper"><a href="../theme/index.html"><img src="../assets/images/Xolo-logo.png" alt=""></a></div>
-          </div>
-          <div class="sidebar custom-scrollbar">
-            <ul class="sidebar-menu">
-              <li><a class="sidebar-header" href="../theme/index.html" target="_blank"><i data-feather="home"></i><span>Dashboard</span></a></li>
-              <li class="active"><a class="sidebar-header" href="#"><i data-feather="anchor"></i><span>Starter Kit</span><i class="fa fa-angle-right pull-right"></i></a>
-                <ul class="sidebar-submenu">
-                  <li class="active"><a href="#"><i class="fa fa-circle"></i>color version<i class="fa fa-angle-down pull-right"></i></a>
-                    <ul class="sidebar-submenu">
-                      <li><a class="active" href="layout-light.html"><i class="fa fa-circle"></i>Layout Light</a></li>
-                      <li><a href="layout-dark.html"><i class="fa fa-circle"></i>Layout Dark</a></li>
+        <header class="main-nav">
+          <nav>
+            <div class="main-navbar">
+              <div id="mainnav">
+                <ul class="nav-menu custom-scrollbar">
+                  <li class="back-btn">
+                    <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
+                  </li>
+                  <li class="dropdown"><a class="nav-link menu-title" href="../theme/index.html" target="_blank"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather="anchor"></i><span>Starter kit</span></a>
+                    <ul class="nav-submenu menu-content">
+                      <li><a class="submenu-title" href="#">color version<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="layout-light.html">Layout Light</a></li>
+                          <li><a href="layout-dark.html">Layout Dark</a></li>
+                        </ul>
+                      </li>
+                      <li>     <a class="submenu-title" href="#">Page layout<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="boxed.html">Boxed</a></li>
+                          <li><a href="layout-rtl.html">RTL</a></li>
+                        </ul>
+                      </li>
+                      <li>     <a class="submenu-title" href="#">Menu Options<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="hide-on-scroll.html">Hide menu on Scroll</a></li>
+                          <li><a href="vertical.html">Vertical Menu</a></li>
+                          <li><a href="mega-menu.html">Mega Menu</a></li>
+                        </ul>
+                      </li>
+                      <li>     <a class="submenu-title" href="#">Footers<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="footer-light.html">Footer Light</a></li>
+                          <li><a href="footer-dark.html">Footer Dark</a></li>
+                          <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#"><i class="fa fa-circle"></i>Sidebar<i class="fa fa-angle-down pull-right"></i></a>
-                    <ul class="sidebar-submenu">
-                      <li><a href="compact.html"><i class="fa fa-circle"></i>Compact Sidebar</a></li>
-                      <li><a href="sidebar-fixed.html"><i class="fa fa-circle"></i>Sidebar Fixed</a></li>
-                      <li><a class="disabled" href="" onclick="return false;"><i class="fa fa-circle"></i>Disable</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#"><i class="fa fa-circle"></i>Page layout<i class="fa fa-angle-down pull-right"></i></a>
-                    <ul class="sidebar-submenu">
-                      <li><a href="boxed.html"><i class="fa fa-circle"></i>Boxed</a></li>
-                      <li><a href="layout-rtl.html"><i class="fa fa-circle"></i>RTL</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#"><i class="fa fa-circle"></i>Menu Options<i class="fa fa-angle-down pull-right"></i></a>
-                    <ul class="sidebar-submenu">
-                      <li><a href="hide-on-scroll.html"><i class="fa fa-circle"></i>Hide menu on Scroll</a></li>
-                      <li><a href="vertical.html"><i class="fa fa-circle"></i>Vertical Menu</a></li>
-                      <li><a href="mega-menu.html"><i class="fa fa-circle"></i>Mega Menu</a></li>
-                      <li><a href="fix-header.html"><i class="fa fa-circle"></i>Fix Header</a></li>
-                      <li><a href="fix-header-sidebar.html"><i class="fa fa-circle"></i>Fix Header & Sidebar                </a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#"><i class="fa fa-circle"></i>Footers<i class="fa fa-angle-down pull-right"></i></a>
-                    <ul class="sidebar-submenu">
-                      <li><a href="footer-light.html"><i class="fa fa-circle"></i>Footer Light</a></li>
-                      <li><a href="footer-dark.html"><i class="fa fa-circle"></i>Footer Dark</a></li>
-                      <li><a href="footer-fixed.html"><i class="fa fa-circle"></i>Footer Fixed                                </a></li>
-                    </ul>
-                  </li>
+                  <li class="dropdown"><a class="nav-link menu-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
+                  <li class="dropdown"><a class="nav-link menu-title" href="../document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation                                    </span></a></li>
                 </ul>
-              </li>
-              <li><a class="sidebar-header" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
-              <li><a class="sidebar-header" href="../document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation</span></a></li>
-            </ul>
-          </div>
-        </div>
+              </div>
+            </div>
+          </nav>
+        </header>
         <!-- Page Sidebar Ends-->
-        <!-- Right sidebar Start-->
-        <div class="right-sidebar" id="right_side_bar">
-          <div>
-            <div class="container p-0">
-              <div class="modal-header p-l-20 p-r-20">
-                <div class="col-sm-8 p-0">
-                  <h6 class="modal-title font-weight-bold">Contacts Status</h6>
-                </div>
-                <div class="col-sm-4 text-right p-0"><i class="mr-2" data-feather="settings"></i></div>
-              </div>
-            </div>
-            <div class="friend-list-search mt-0">
-              <input type="text" placeholder="search friend"><i class="fa fa-search"></i>
-            </div>
-            <div class="p-l-30 p-r-30">
-              <div class="chat-box">
-                <div class="people-list friend-list custom-scrollbar">
-                  <ul class="list">
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/2.jpg" alt="">
-                      <div class="status-circle online"></div>
-                      <div class="about">
-                        <div class="name">Vincent Porter</div>
-                        <div class="status"> Online</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/3.jpg" alt="">
-                      <div class="status-circle away"></div>
-                      <div class="about">
-                        <div class="name">Ain Chavez</div>
-                        <div class="status"> 28 minutes ago</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/10.jpg" alt="">
-                      <div class="status-circle online"></div>
-                      <div class="about">
-                        <div class="name">Kori Thomas</div>
-                        <div class="status"> Online</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/11.jpg" alt="">
-                      <div class="status-circle online"></div>
-                      <div class="about">
-                        <div class="name">Erica Hughes</div>
-                        <div class="status"> Online</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/11.png" alt="">
-                      <div class="status-circle offline"></div>
-                      <div class="about">
-                        <div class="name">Ginger Johnston</div>
-                        <div class="status"> 2 minutes ago</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/6.jpg" alt="">
-                      <div class="status-circle away"></div>
-                      <div class="about">
-                        <div class="name">Prasanth Anand</div>
-                        <div class="status"> 2 hour ago</div>
-                      </div>
-                    </li>
-                    <li class="clearfix"><img class="rounded-small user-image" src="./../assets/images/user/7.jpg" alt="">
-                      <div class="status-circle online"></div>
-                      <div class="about">
-                        <div class="name">Hileri Jecno</div>
-                        <div class="status"> Online</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Right sidebar Ends-->
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-header">
@@ -581,11 +442,11 @@
     <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
     <!-- Sidebar jquery-->
     <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/config.js"></script>
     <!-- Plugins JS start-->
     <script src="../assets/js/prism/prism.min.js"></script>
     <script src="../assets/js/clipboard/clipboard.min.js"></script>
     <script src="../assets/js/custom-card/custom-card.js"></script>
-    <script src="../assets/js/chat-menu.js"></script>
     <script src="../assets/js/hide-on-scroll.js"></script>
     <script src="../assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
