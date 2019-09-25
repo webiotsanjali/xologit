@@ -10,6 +10,13 @@
     margin-right: 30px;
     margin-left: unset;
   }
+  .page-wrapper.horizontal-wrapper{
+    .page-body-wrapper{
+      footer{
+        margin-right: 0;
+      }
+    }
+  }
   // default page
   .chart-value-box {
     @each $value-square-box-name, $value-square-box-color in (primary, $primary-color),

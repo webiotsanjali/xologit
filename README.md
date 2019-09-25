@@ -1,2 +1,0 @@
-# xologit
-html gulp theme

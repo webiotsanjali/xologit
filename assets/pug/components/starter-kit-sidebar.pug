@@ -1,93 +1,73 @@
 // Page Sidebar Start
-- var status = (sidebar_open ? 'open' : (sidebar_image ? 'native-image-bg' : ''));
-.page-sidebar(class=status)
+header.main-nav
+  nav
+    .main-navbar
+      #mainnav
+        ul.nav-menu.custom-scrollbar
+          li.back-btn
+            .mobile-back.text-right
+              span Back
+              i.fa.fa-angle-right.pl-2(aria-hidden='true')
+          li.dropdown
+            a.nav-link.menu-title(href='../theme/index.html', target='_blank')
+              i(data-feather='home')
+              span Dashboard
+          li.dropdown
+            a.nav-link.menu-title(href='#')
+              i(data-feather='anchor')
+              span Starter kit
+            ul.nav-submenu.menu-content
+              li
+                a.submenu-title(href='#')
+                  | color version
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='layout-light.html') Layout Light
+                  li
+                    a(href='layout-dark.html') Layout Dark
+              li      
+                a.submenu-title(href='#')
+                  | Page layout
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='boxed.html') Boxed
+                  li
+                    a(href='layout-rtl.html') RTL
+              li      
+                a.submenu-title(href='#')
+                  | Menu Options
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='hide-on-scroll.html') Hide menu on Scroll
+                  li
+                    a(href='vertical.html') Vertical Menu
+                  li
+                    a(href='mega-menu.html') Mega Menu
+              li      
+                a.submenu-title(href='#')
+                  | Footers
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='footer-light.html') Footer Light
+                  li
+                    a(href='footer-dark.html') Footer Dark
+                  li
+                    a(href='footer-fixed.html') Footer Fixed
+          li.dropdown
+            a.nav-link.menu-title(href='http://support.pixelstrap.com/help-center', target='_blank')
+              i(data-feather='headphones')
+              span Raise Support
+          li.dropdown
+            a.nav-link.menu-title(href='../document/index.html', target='_blank')
+              i(data-feather='file-text')
+              span Documentation                                    
 
-                    .main-header-left.d-none.d-lg-block
-                        .logo-wrapper
-                            a(href='../theme/index.html')
-                                img(src='../assets/images/logo/logo.png', alt='')
-                    div.sidebar.custom-scrollbar
-                        ul.sidebar-menu
-                            li
-                                a.sidebar-header(href='../theme/index.html', target='_blank')
-                                    i(data-feather='home')
-                                    span Dashboard
-                            li.active
-                                a.sidebar-header(href='#')
-                                    i(data-feather='anchor')
-                                    span Starter Kit
-                                    i.fa.fa-angle-right.pull-right
-                                ul.sidebar-submenu
-                                    li.active
-                                        a(href='#')
-                                            i.fa.fa-circle
-                                            | color version
-                                            i.fa.fa-angle-down.pull-right
-                                        ul.sidebar-submenu
-                                            li
-                                                a.active(href='layout-light.html')
-                                                    i.fa.fa-circle
-                                                    | Layout Light
-                                            li
-                                                a(href='layout-dark.html')
-                                                    i.fa.fa-circle
-                                                    | Layout Dark
-                                    li
-                                        a(href='#')
-                                            i.fa.fa-circle
-                                            | Page layout
-                                            i.fa.fa-angle-down.pull-right
-                                        ul.sidebar-submenu
-                                            li
-                                                a(href='boxed.html')
-                                                    i.fa.fa-circle
-                                                    | Boxed
-                                            li
-                                                a(href='layout-rtl.html')
-                                                    i.fa.fa-circle
-                                                    | RTL
-                                    li
-                                        a(href='#')
-                                            i.fa.fa-circle
-                                            | Menu Options
-                                            i.fa.fa-angle-down.pull-right
-                                        ul.sidebar-submenu
-                                            li
-                                                a(href='hide-on-scroll.html')
-                                                    i.fa.fa-circle
-                                                    | Hide menu on Scroll
-                                            li
-                                                a(href='vertical.html')
-                                                    i.fa.fa-circle
-                                                    | Vertical Menu
-                                            li
-                                                a(href='mega-menu.html')
-                                                    i.fa.fa-circle
-                                                    | Mega Menu
-                                    li
-                                        a(href='#')
-                                            i.fa.fa-circle
-                                            | Footers
-                                            i.fa.fa-angle-down.pull-right
-                                        ul.sidebar-submenu
-                                            li
-                                                a(href='footer-light.html')
-                                                    i.fa.fa-circle
-                                                    | Footer Light
-                                            li
-                                                a(href='footer-dark.html')
-                                                    i.fa.fa-circle
-                                                    | Footer Dark
-                                            li
-                                                a(href='footer-fixed.html')
-                                                    i.fa.fa-circle
-                                                    | Footer Fixed                                
-                            li
-                              a.sidebar-header(href='http://support.pixelstrap.com/help-center', target='_blank')
-                                i(data-feather='headphones')
-                                span Raise Support
-                            li
-                                a.sidebar-header(href='../document/index.html', target='_blank')
-                                    i(data-feather='file-text')
-                                    span Documentation
 // Page Sidebar Ends

@@ -11,25 +11,24 @@ html(lang='en')
     body(main-theme-layout='box-layout')
         include ../../components/loader
         // page-wrapper Start
-      .page-wrapper.box-layout
+        #pageWrapper.page-wrapper.horizontal-wrapper
             include ../../components/header
             // Page Body Start
-            .page-body-wrapper
+            .page-body-wrapper.horizontal-menu
                 include ../../components/starter-kit-sidebar
-                
                 .page-body
                     .container-fluid
                         .page-header
                             .row
                                 .col-lg-6
                                     h3
-                                     | Box Layout
+                                      | Box Layout
                                     ol.breadcrumb
                                         li.breadcrumb-item
                                           a(href='../ltr/index.html')
                                             | Home
                                         li.breadcrumb-item Starter Kit
-                                        li.breadcrumb-item Page Layout
+                                        li.breadcrumb-item Page layout
                                         li.breadcrumb-item.active Boxed
                                 .col-lg-6
                                     include ../../components/bookmark
