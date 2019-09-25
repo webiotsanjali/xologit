@@ -4769,6 +4769,22 @@
     p, .comments-box {
       margin-top: 15px;
     }
+    .comments-box {
+      .media {
+        .m-r-20 {
+          margin-right: 10px;
+        }
+        .media-body {
+          .input-group {
+            .input-group-append {
+              .btn {
+                padding: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
     .comment-number{
       i {
         margin-right: 15px;

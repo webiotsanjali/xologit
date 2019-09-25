@@ -1,5 +1,5 @@
 /**=====================
-     81. social app css start
+     79. social app css start
 ==========================**/
 .user-profile{
   .hovercard {
@@ -150,14 +150,12 @@
     .input-group{
       margin-top: 6px;
       .input-txt-bx{
-        background-color: $light-color;
         border: none;
         &::placeholder{
           color: $light-text;
         }
       }
       .input-group-append{
-        background-color: $light-color;
         .btn{
           i{
             font-size: 20px;
@@ -351,5 +349,5 @@
   }
 }
 /**=====================
-     81. social app CSS end
+     79. social app CSS end
 ==========================**/
