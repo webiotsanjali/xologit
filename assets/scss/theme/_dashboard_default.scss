@@ -62,7 +62,7 @@
   .chart-data-set {
     position: absolute;
     right: 105px;
-    top: 30px;
+    top: 29px;
     .value-square-box-light {
       background-color: #c9d5fa;
     }
@@ -118,7 +118,7 @@
     }
   }
 }
-.total-users-lists {
+.total-users-lists, .project-card {
   .dashboard-btn-groups {
     position: absolute;
     left: 0;
@@ -1539,10 +1539,10 @@ footer{
   }
   .monthly-growth {
     .chart-data-set {
-      top: 32px;
+      top: 18px;
     }
   }
-  .total-users-lists {
+  .total-users-lists, .project-card {
     .dashboard-btn-groups {
       top: 25px;
     }

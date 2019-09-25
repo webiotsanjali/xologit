@@ -21,7 +21,7 @@ function style() {
 
 // pug to html
 function html() {
-  return gulp.src('assets/pug/pages/theme/dashboard-02.pug')
+  return gulp.src('assets/pug/pages/theme/dashboard-03.pug')
   .pipe(pug({ pretty: true }))
   .on('error', console.error.bind(console))
   .pipe(gulp.dest('theme'))
@@ -57,10 +57,10 @@ function htmlminify() {
 // Watch function
 function watch(){
   browserSync.init({
-      proxy: 'localhost/xologit/theme/dashboard-02.html'
+      proxy: 'localhost/xologit/theme/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
-  gulp.watch('assets/pug/pages/theme/dashboard-02.pug', html);
+  gulp.watch('assets/pug/pages/theme/dashboard-03.pug', html);
   gulp.watch('./*.html').on('change', browserSync.reload);
   gulp.watch('assets/css/*.css').on('change', browserSync.reload);
 }
