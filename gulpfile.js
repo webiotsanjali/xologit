@@ -1,76 +1,65 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const pug = require('gulp-pug');
-const imagemin = require('gulp-imagemin');
-const htmlValidator = require('gulp-w3c-html-validator');
-const   through2 =      require('through2');
-const htmlmin = require('gulp-htmlmin');
-const browserSync = require('browser-sync').create();
+'use strict';
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    pug = require('gulp-pug'),
+    autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin'),
+    htmlValidator = require('gulp-w3c-html-validator'),
+    through2 =      require('through2'),
+    bs = require('browser-sync').create();
+sass.compiler = require('node-sass');
 
-//scss to css
-function style() {
-  return gulp.src('assets/scss/**/*.scss')
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('assets/css'));
-}
+// Scss to css
+gulp.task('sass', function () {
+    return gulp.src('assets/scss/**/*.scss')
+        .pipe(sass({
+            //outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer('last 2 versions'))
+        .pipe(gulp.dest('assets/css'))
+        .pipe(bs.reload({stream: true}));
+});
 
 // pug to html
-function html() {
-  return gulp.src('assets/pug/pages/theme/chart-google.pug')
-  .pipe(pug({ pretty: true }))
-  .on('error', console.error.bind(console))
-  .pipe(gulp.dest('theme'))
-  .pipe(browserSync.reload({stream: true}));
-}
+gulp.task('pug', function () {
+      return gulp.src('assets/pug/pages/ltr/general-widget.pug')
+        .pipe(pug({ pretty: true }))
+        .on('error', console.error.bind(console))
+        .pipe(gulp.dest('ltr'))
+        .pipe(bs.reload({stream: true}));
+});
+
+//compress images
+gulp.task('image', function () {
+    gulp.src('assets/virtual_images/*/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('assets/images'))
+});
 
 //Html validator
-function validateHtml() {
-    function handleFile(file, encoding, callback) {
-        callback(null, file);
-        if (!file.w3cjs.success)
-            throw new Error('HTML validation error(s) found');
-    };
-    return gulp.src('pages/*.html')
-        .pipe(htmlValidator())
-        .pipe(through2.obj(handleFile));
-}
+// gulp.task('validateHtml', function () {
+//     function handleFile(file, encoding, callback) {
+//         callback(null, file);
+//         if (!file.w3cjs.success)
+//             throw new Error('HTML validation error(s) found');
+//     };
+//     return gulp.src('ltr/*.html')
+//         .pipe(htmlValidator())
+//         .pipe(through2.obj(handleFile));
+// });
 
-// minify images
-function image() {
-    return gulp.src('assets/virtual_images/*.*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('assets/images'));
-}
+gulp.task('watch', function () {
+    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/pug/pages/**/*.pug', ['pug']);
+    gulp.watch('assets/virtual_images/*/*.*', ['image']);
+    //gulp.watch('ltr/*.html', ['validateHtml']);
+    gulp.watch("*.html").on('change', bs.reload);
+});
 
-// minify html
-function htmlminify() {
-  return gulp.src('html/index.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('html/minify'));
-}
+gulp.task('browser-sync',['watch'], function() {
+    bs.init({
+        proxy: "http://localhost/project/ltr/index.html"});
+});
 
-// Watch function
-function watch(){
-  browserSync.init({
-      proxy: 'home/savan/Desktop/xologit/theme/index.html'
-  });
-  gulp.watch('assets/scss/**/*.scss', style);
-  gulp.watch('assets/pug/pages/theme/**.pug', html);
-  gulp.watch('./*.html').on('change', browserSync.reload);
-  gulp.watch('assets/css/*.css').on('change', browserSync.reload);
-}
-
-exports.style = style;
-exports.html = html;
-exports.watch = watch;
-exports.image = image;
-exports.validateHtml = validateHtml;
-exports.htmlminify = htmlminify;
-
-const build = gulp.series(watch);
-gulp.task('default', build, 'browser-sync');
+//gulp.task('default', [ 'sass', 'pug', 'image', 'watch', 'browser-sync', 'validateHtml' ]);
+gulp.task('default', [ 'sass', 'pug', 'watch', 'browser-sync']);
