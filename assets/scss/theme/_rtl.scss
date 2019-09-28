@@ -2,21 +2,151 @@
     60. RTL CSS Start
 ==========================**/
 [main-theme-layout= "rtl"] {
-  .form-check-input {
-    margin-left: unset;
-    margin-right: -1.25rem;
-  }
-  .vertical-mobile-sidebar {
-    margin-right: 30px;
-    margin-left: unset;
-  }
-  .page-wrapper.horizontal-wrapper{
-    .page-body-wrapper{
-      footer{
-        margin-right: 0;
+  .page-wrapper{
+    &.compact-wrapper{
+      .page-body-wrapper{
+        &.sidebar-icon{
+          header {
+            &.main-nav {
+              position: fixed;
+              border-bottom: none;
+              top: 81px;
+              z-index: 3;
+              height: auto;
+              line-height: inherit;
+              background: $white;
+              width: 255px;
+              text-align: right;
+              transition: 0.5s;
+              &.close_icon {
+                margin-right: 0;
+                transform: translate(180px);
+                ~ .page-body {
+                  margin-left: 0;
+                  margin-right: 78px;
+                  transition: 0.5s;
+                }
+                ~ footer {
+                  margin-left: 0;
+                  margin-right: 78px;
+                  transition: 0.5s;
+                }
+                .main-navbar {
+                  .nav-menu {
+                    >li {
+                      a {
+                        svg {
+                          float: left;
+                          margin-right: 10px;
+                        }
+                      }
+                    }
+                    .dropdown {
+                      .menu-title {
+                        &.active {
+                          ~ .menu-content {
+                            display: none !important;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .according-menu {
+                  display: none;
+                }
+              }
+              &:hover {
+                transform: translate(0px);
+                .main-navbar {
+                  .nav-menu {
+                    .dropdown {
+                      .menu-title {
+                        &.active {
+                          ~ .menu-content {
+                            display: block !important;
+                          }
+                        }
+                      }
+                    }
+                    >li {
+                      a {
+                        svg {
+                          float: none;
+                          margin-right: 15px;
+                        }
+                      }
+                    }
+                  }
+                }
+                .according-menu {
+                  display: block;
+                }
+              }
+            }
+          }
+          .page-body{
+              margin-left: unset;
+              margin-right: 255px;
+            }
+            .main-nav{
+              text-align: right;
+              .main-navbar{
+                .nav-menu{
+                  > li{
+                    a{
+                      svg{
+                        margin-right: unset;
+                        margin-left: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .according-menu{
+              right: unset;
+              left: 20px;
+            }
+        }
       }
     }
   }
+//horizontal-sidebar
+  .page-wrapper{
+    &.horizontal-wrapper{
+      .page-body-wrapper{
+        .page-body{
+          margin-right: 0;
+        }
+        footer{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .page-main-header{
+    .main-header-right{
+      .nav-right{
+        > ul{
+          .search-form{
+            i{
+              right: unset;
+              left: 13px;
+            }
+          }
+          > li{
+              margin-right: 20px;
+          }
+        }
+      }
+      .main-header-left{
+        margin-left: 30px;
+        margin-right: unset;
+      }
+    }
+  }
+
   // default page
   .chart-value-box {
     @each $value-square-box-name, $value-square-box-color in (primary, $primary-color),
@@ -348,7 +478,7 @@
       }
     }
   }
-.page-wrapper {
+  .page-wrapper {
     .page-body-wrapper {
       .page-header {
         .breadcrumb {
@@ -915,284 +1045,155 @@
       margin-right: unset;
     }
   }
-  // dashboard css
-  .dashboard-chat {
-    .chat {
-      .left-side-chat {
-        .media-body {
-          p{
-            &:before {
-              right: unset;
-              left: 100%;
-              border-right: unset;
-              border-left: 7px solid $light-body-bg-color;
-            }
-          }
-        }
-      }
-      .right-side-chat {
-        .media-body {
-          p{
-            &:before {
-              right: 100%;
-              left: unset;
-              border-right: 7px solid $light-body-bg-color;
-              border-left: unset;
-            }
-          }
-        }
+  // dashboard-01 css
+  .monthly-growth{
+    .chart-data-set{
+      position: absolute;
+      top: 29px;
+      right: unset;
+      left: 105px;
+    }
+  }
+  // dashboard-02 css
+  .card{
+    .card-header{
+      h5{
+        float: none !important;
       }
     }
   }
-  .chat-footer {
-    i {
-      padding-right: unset;
+  .resolve-complain{
+    .media{
+      .small-bar{
+        margin-right: unset;
+        margin-left: -40px;
+      }
+    }
+    p{
+      width: 60%;
+    }
+    .radial-bar-danger{
+      margin-right: unset;
+      margin-left: 30px;
+    }
+  }
+  .agent-performance-table{
+    .rounded-circle{
+      margin-right: 20px;
+    }
+  }
+  .timeline-recent{
+    .media{
+      .timeline-line{
+        left: unset;
+        right: 50px;
+      }
+      .media-body{
+        margin-right: 20px;
+      }
+    }
+  }
+  .satisfaction-table{
+    .number-radial{
       padding-left: 20px;
     }
-    svg {
-      margin-right: 20px;
-      margin-left: unset;
-    }
   }
-  .logs-element {
-    span {
-      margin-right: 30px;
-      margin-left: unset;
-    }
-    .circle-double-odd{
-      &:before {
-        left: unset;
-        right: 0;
-      }
-    }
-    .circle-double-even{
-      &:before {
-        left: unset;
-        right: 0;
-      }
-    }
-  }
-  .recent-notification {
-    .media {
-      .media-body {
-        padding-right: 50px;
-        padding-left: unset;
-        &:before {
-          left: unset;
-          right: 28px;
-        }
-      }
-    }
-  }
-  .user-card {
-    .online-user{
-      &:before {
-        left: unset;
-        right: -30px;
-      }
-    }
-    .user-badge {
-      .badge {
-        margin-right: unset;
-        margin-left: 10px;
-        &:last-child{
-          margin-left: 0;
-        }
-      }
-    }
-    .card-footer {
-      > div{
-        &:first-child {
-          border-left: 1px solid $light-gray;
-          border-right: unset;
-        }
-      }
-    }
-  }
-  .alert-theme, .alert-copy {
-    i {
-      margin-right: 0 !important;
-    }
-    button {
-      left: 30px !important;
-      right: unset !important;
-    }
-  }
-  .status-circle {
-    right: 40px;
-    left: unset;
-  }
-  // ecommerce dashboard page
-  .ecommerce-knob {
-    input {
-      margin-right: -231px !important;
-      margin-left: unset !important;
-    }
-  }
-  .todo {
-    .todo-list-wrapper {
-      .todo-list-footer {
-        .card-header-add {
-          right: unset;
-          left: 0;
-        }
-      }
-    }
-  }
-  .feather-main {
-    .feather-icon-block {
-      margin-left: 30px;
-      margin-right: unset;
-    }
-  }
-  .small-bar {
-    .flot-chart-container {
-      left: -14px;
+  .tickets{
+    .ticket-legend{
       right: unset;
+      left: 30px;
     }
   }
-  .professor-table {
-    table {
-      tbody {
-        tr {
-          td {
-            label {
-              .radio_animated {
-                margin-left: 7px;
-                margin-right: unset;
-              }
+  .complain-details{
+    padding-left: unset;
+    padding-right: 30px
+  }
+  .complaints{
+    .apex-complain{
+      margin-top: 0;
+    }
+  }
+  .overall-rating{
+    .rating-box{
+      .main-rating{
+        border-left: 1px solid #e8ebf2;
+        .rating-box{
+          padding: 30px 22px;
+        }
+      }
+    }
+    .rating-container{
+      .star-ratings{
+        .stars{
+          text-align: right;
+        }
+      }
+    }
+  }
+  .agent-performance-table{
+    table{
+      tr{
+        td{
+          padding: 20px 15px;
+          .media-body{
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .current-tickets{
+    .current-legend{
+      right: unset;
+      left: 25%;
+    }
+  }
+  // dashboard-03 css
+  .joined-status{
+    position: absolute;
+    top: 23px;
+    right: unset;
+    left: 85px;
+  }
+  .likes-page{
+    padding-right: 30px;
+  }
+  .activity-social{
+    .border-recent-success{
+      border-right: 3px solid $success-color;
+      border-left: None;
+    }
+    .border-recent-warning{
+      border-right: 3px solid $warning-color;
+      border-left: None;
+    }
+    .border-recent-info{
+      border-right: 3px solid $info-color;
+      border-left: None;
+    }
+    .border-recent-danger{
+      border-right: 3px solid $danger-color;
+      border-left: None;
+    }
+    .border-recent-secondary{
+      border-right: 3px solid $secondary-color;
+      border-left: None;
+    }
+    ul{
+      li{
+        padding-right: 15px;
+      }
+    }
+  }
+  .social-user-card{
+    .social-user-top-content{
+      .customers{
+        ul{
+          li{
+            &:last-child{
+              margin-right: 30px;
             }
           }
-        }
-      }
-    }
-  }
-  .notifiaction-media {
-    .media {
-      .media-body {
-        h6 {
-          padding-right: 30px;
-          padding-left: unset;
-        }
-      }
-    }
-  }
-  .statistics {
-    text-align: left;
-  }
-  .card-gradient {
-    .knob-header {
-      .d-inline-block {
-        right: unset;
-        left: 29px;
-      }
-    }
-  }
-  .topper-lists {
-    table {
-      tbody {
-        tr {
-          td {
-            .d-inline-block {
-              .check-dot {
-                left: 28px;
-                right: unset;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // bitcoin dashboard css
-  .bitcoin-graph {
-    .top-bitcoin {
-      margin-right: 10px;
-      margin-left: unset;
-    }
-  }
-  .markets {
-    .media-body {
-      margin-right: 20px;
-      margin-left: unset;
-    }
-  }
-  .customers {
-    ul {
-      li {
-        + li {
-          margin-right: -22px;
-          margin-left: unset;
-        }
-        &:nth-child(4) {
-          margin-right: -1px;
-          margin-left: unset;
-        }
-      }
-    }
-  }
-  .show-value-top {
-    .value-third {
-      margin-right: 30px;
-      margin-left: unset;
-    }
-  }
-  .chat-box {
-    .chat-right-aside {
-      .chat {
-        .chat-msg-box {
-          .my-message {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 0;
-          }
-          .other-message {
-            border-top-left-radius: 0;
-            border-top-right-radius: 10px;
-          }
-        }
-      }
-    }
-    .bitcoin-chat {
-      .chat {
-        .bitcoin-message {
-          .smiley-box {
-            border-top-right-radius: 0.25rem;
-            border-bottom-right-radius: 0.25rem;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-          }
-          .text-box {
-            .input-group-append {
-              .btn {
-                border-top-left-radius: 0.25rem;
-                border-bottom-left-radius: 0.25rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // server dashboard css
-  .server-widgets {
-    .media {
-      .top-server {
-        margin-right: 10px;
-        margin-left: unset;
-      }
-    }
-  }
-  .server-chart {
-    margin-left: unset;
-    margin-right: -16px;
-  }
-  // project dashboard css
-  .tabs-project {
-    .nav-item {
-      .nav-link {
-        svg {
-          margin-left: 5px;
-          margin-right: unset;
         }
       }
     }
@@ -3346,7 +3347,7 @@
     }
   }
   @media only screen and (max-width: 1199px){
-  .page-wrapper {
+    .page-wrapper {
       .page-main-header {
         .main-header-right {
           .nav-right {
