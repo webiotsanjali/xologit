@@ -59,24 +59,27 @@ html(lang='en')
                                               .modal-body
                                                 form.form-bookmark#bookmark-form.needs-validation(novalidate='')
                                                   .form-row
-                                                    .form-group.col-md-6
+                                                    .form-group.col-md-12
                                                       label Name
-                                                      input.form-control(type='text', required='', placeholder='First Name', autocomplete='off')
-                                                    .form-group.col-md-6
-                                                      label 
-                                                      input.form-control(type='text', required='', placeholder='Last Name', autocomplete='off')
+                                                      .row
+                                                        .col-md-6
+                                                          input.form-control(type='text', required='', placeholder='First Name', autocomplete='off')
+                                                        .col-md-6    
+                                                          input.form-control(type='text', required='', placeholder='Last Name', autocomplete='off')
                                                     .form-group.col-md-12
                                                       label Email Address
                                                       input.form-control(type='text', required='', autocomplete='off')
-                                                    .form-group.col-md-6.mb-0
+                                                    .form-group.col-md-12
                                                       label Phone
-                                                      input.form-control(type='number', required='', autocomplete='off')
-                                                    .form-group.col-md-6.mb-0
-                                                      select.form-control
-                                                        option Mobile
-                                                        option Opt 2
-                                                        option Opt 3
-                                                  input#index_var(type='hidden', value='1' )
+                                                      .row
+                                                        .col-md-6
+                                                          input.form-control(type='number', required='', autocomplete='off')
+                                                        .col-md-6
+                                                          select.form-control
+                                                            option Mobile
+                                                            option Work
+                                                            option Others
+                                                  a.pl-0(href='#') Add more information
                                                   button.btn.btn-secondary(type='submit') Save
                                                   button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
                                       li.nav-item
@@ -90,15 +93,15 @@ html(lang='en')
                                         button.btn.btn-category(type='button', data-toggle='modal', data-target='#exampleModal1')
                                           span.title
                                             |  + Add Category
-                                        #exampleModal1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                                        #exampleModal1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel1', aria-hidden='true')
                                           .modal-dialog(role='document')
                                             .modal-content
                                               .modal-header
-                                                h5#exampleModalLabel.modal-title Add Category
+                                                h5#exampleModalLabel1.modal-title Add Category
                                                 button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                   span(aria-hidden='true') ×
                                               .modal-body
-                                                form.form-bookmark#bookmark-form.needs-validation(novalidate='')
+                                                form.form-bookmark.needs-validation(novalidate='')
                                                   .form-row
                                                     .form-group.col-md-12.mb-0
                                                       input.form-control(type='text', required='', placeholder='Enter category name', autocomplete='off')
@@ -110,22 +113,73 @@ html(lang='en')
                                           span.title
                                             |  Organization
                           .col-xl-9.col-md-12.box-col-12
-                            .email-right-aside.bookmark-tabcontent
+                            .email-right-aside.bookmark-tabcontent.contacts-tabs
                               .card.email-body.radius-left
                                 .pl-0
                                   .tab-content
                                     #pills-personal.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-personal-tab')
                                       .card.mb-0
                                         .card-header.d-flex
-                                          h6.mb-0 Created by me
-                                          ul
-                                            li
-                                              a.grid-bookmark-view(href='#')
-                                                i(data-feather='grid')
-                                            li
-                                              a.list-layout-view(href='#')
-                                                i(data-feather='list')
-                                        .card-body
+                                          h5 Personal
+                                        .card-body.p-0
+                                          .row.list-persons
+                                            .col-sm-4.col-xs-12
+                                              #v-pills-tab.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+                                                a#v-pills-user-tab.nav-link.active(data-toggle='pill', href='#v-pills-user', role='tab', aria-controls='v-pills-user', aria-selected='true')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/2.png' alt='')
+                                                    .media-body
+                                                      h6 Bucky Barnes
+                                                      p barnes@gmail.com
+                                                a#v-pills-profile-tab.nav-link(data-toggle='pill', href='#v-pills-profile', role='tab', aria-controls='v-pills-profile', aria-selected='false') 
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/8.jpg' alt='')
+                                                    .media-body
+                                                      h6 Comeren Diaz
+                                                      p comeren@gmail.com
+                                                a#v-pills-messages-tab.nav-link(data-toggle='pill', href='#v-pills-messages', role='tab', aria-controls='v-pills-messages', aria-selected='false')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/1.jpg' alt='')
+                                                    .media-body
+                                                      h6 Issa Bell
+                                                      p issabell@gmail.com
+                                                a#v-pills-settings-tab.nav-link(data-toggle='pill', href='#v-pills-settings', role='tab', aria-controls='v-pills-settings', aria-selected='false')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/14.png' alt='')
+                                                    .media-body
+                                                      h6 Andew Jon
+                                                      p andewjon@gmail.com
+                                            .col-sm-8.col-xs-12
+                                              #v-pills-tabContent.tab-content
+                                                #v-pills-user.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-user-tab')
+                                                  .profile-mail
+                                                    .media
+                                                      img.img-100.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/2.png' alt='')
+                                                      .media-body.mt-0
+                                                        h5 Bucky Barnes
+                                                        p barnes@gmail.com
+                                                        ul
+                                                          li
+                                                            a(href='#') Edit
+                                                          li
+                                                            a(href='#') Delete
+                                                          li
+                                                            a(href='#') History
+                                                          li
+                                                            a(href='#') Print
+                                                    .email-general
+                                                      h6 General
+                                                      p Email Address: 
+                                                        span.font-primary barnes@gmail.com 
+                                                #v-pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab')
+                                                  p
+                                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                                #v-pills-messages.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab')
+                                                  p
+                                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                                #v-pills-settings.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-settings-tab')
+                                                  p
+                                                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
                                     #pills-organization.fade.tab-pane(role='tabpanel', aria-labelledby='pills-organization-tab')
                                       .card.mb-0
                                         .card-header.d-flex

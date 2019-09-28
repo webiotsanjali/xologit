@@ -13,6 +13,64 @@
     }
   }
 }
+.list-persons {
+   p {
+        font-family: $font-roboto, $font-serif;
+   }
+  .profile-mail {
+    padding-top: 30px;
+    .media {
+      .media-body {
+        h5 {
+          margin-bottom: 5px;
+        }
+        ul {
+          margin-top: 5px;
+          li {
+            display: inline-block;
+            a {
+              font-size: 13px;
+            }
+            + li {
+              padding-left: 5px;
+              margin-left: 5px;
+              border-left: 2px solid $light-color;
+            }
+          }
+        }
+      }
+    }
+    .email-general {
+      padding-top: 50px;
+      p {
+        span {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+.contacts-tabs {
+  .nav-pills {
+    border-right: 1px solid $light-color;
+    .nav-link, .show {
+      &.active, >.nav-link {
+          background-color: rgba($primary-color, 0.05);
+          color: $theme-body-font-color;
+      }
+    }
+    .nav-link {
+      color: $theme-body-font-color;
+      padding: 0;
+      + .nav-link {
+          border-top: 1px solid $light-color;
+      }
+    }
+    .media {
+      padding: 20px;
+    }
+  }
+}
 /**=====================
     86. contacts CSS Ends
 ==========================**/
