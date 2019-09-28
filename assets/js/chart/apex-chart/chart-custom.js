@@ -1450,10 +1450,8 @@ var options = {
         type: 'area',
         zoom: {
             enabled: false
-        },
-        toolbar:{
-          show: false
         }
+
     },
     dataLabels: {
         enabled: false
@@ -1499,9 +1497,6 @@ var options1 = {
     chart: {
         height: 350,
         type: 'area',
-        toolbar:{
-          show: false
-        }
     },
     dataLabels: {
         enabled: false
@@ -1541,9 +1536,6 @@ var options2 = {
     chart: {
         height: 350,
         type: 'bar',
-        toolbar:{
-          show: false
-        }
     },
     plotOptions: {
         bar: {
@@ -1574,9 +1566,6 @@ var options3 = {
     chart: {
         height: 350,
         type: 'bar',
-        toolbar:{
-          show: false
-        }
     },
     plotOptions: {
         bar: {
@@ -1654,9 +1643,6 @@ var options = {
     chart: {
         height: 350,
         type: 'bubble',
-        toolbar:{
-          show: false
-        }
     },
     dataLabels: {
         enabled: false
@@ -1725,9 +1711,6 @@ var options4 = {
     chart: {
         height: 350,
         type: 'candlestick',
-        toolbar:{
-          show: false
-        }
     },
     plotOptions: {
         candlestick: {
@@ -2015,10 +1998,7 @@ for (var i = 0; i < 30; i++) {
 var options5 = {
     chart: {
         type: 'line',
-        height: 350,
-        toolbar:{
-          show: false
-        }
+        height: 350
     },
     stroke: {
         curve: 'stepline',
@@ -2132,10 +2112,7 @@ var options6 = {
     chart: {
         height: 350,
         type: 'line',
-        id: 'areachart-2',
-        toolbar:{
-          show: false
-        }
+        id: 'areachart-2'
     },
     dataLabels: {
         enabled: false
@@ -2176,9 +2153,6 @@ var options7 = {
         height: 350,
         type: 'line',
         stacked: false,
-        toolbar:{
-          show: false
-        }
     },
     stroke: {
         width: [0, 2, 5],
@@ -2314,9 +2288,6 @@ var options10 = {
     chart: {
         height: 350,
         type: 'radar',
-        toolbar:{
-          show: false
-        }
     },
     series: [{
         name: 'Series 1',

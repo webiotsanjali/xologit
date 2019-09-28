@@ -12,7 +12,7 @@
 }
 .page-wrapper{
     ul {
-      &.close_icon {
+      &.click-menu {
         > li {
           label {
             padding: 0;
@@ -288,7 +288,7 @@
     }
     .page-main-header {
       max-width: 1280px;
-      // padding-left: 250px;
+      padding-left: 250px;
       margin: 0 auto;
       left: 0;
       right: 0;
