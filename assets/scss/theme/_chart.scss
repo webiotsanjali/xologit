@@ -72,6 +72,11 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
     width: 79% !important;
   }
 }
+.all-chart{
+  .flot-chart-container{
+    height: 350px;
+  }
+}
 .flot-chart-placeholder {
   width: 100%;
   height: 100%;
@@ -961,7 +966,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   &.peity-chart-primary{
     svg{
       polygon{
-        fill: rgba(21, 141, 247, 0.5);
+        fill: rgba(101, 90, 243, 0.5);
       }
       polyline{
         stroke: $primary-color;

@@ -42,17 +42,17 @@ var barData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [{
         label: "My First dataset",
-        fillColor: "rgba(21, 141, 247, 0.4)",
-        strokeColor: "#158df7",
-        highlightFill: "rgba(84, 79, 255, 0.8)",
-        highlightStroke: "#544fff",
+        fillColor: "rgba(101, 90, 243, 0.4)",
+        strokeColor: "#655af3",
+        highlightFill: "rgba(101, 90, 243, 0.6)",
+        highlightStroke: "#655af3",
         data: [35, 59, 80, 81, 56, 55, 40]
     }, {
         label: "My Second dataset",
-        fillColor: "rgba(84, 79, 255, 0.4)",
-        strokeColor: "#544fff",
-        highlightFill: "rgba(84, 79, 255, 0.8)",
-        highlightStroke: "#544fff",
+        fillColor: "rgba(253, 46, 100, 0.4)",
+        strokeColor: "#fd2e64",
+        highlightFill: "rgba(253, 46, 100, 0.6)",
+        highlightStroke: "#fd2e64",
         data: [28, 48, 40, 19, 86, 27, 90]
     }]
 };
@@ -73,13 +73,13 @@ var myBarChart = new Chart(barCtx).Bar(barData, barOptions);
 var polarData = [
     {
         value: 300,
-        color: "#544fff",
-        highlight: "rgba(84, 79, 255, 1)",
+        color: "#7a15f7",
+        highlight: "rgba(122, 21, 247, 1)",
         label: "Yellow"
     }, {
         value: 50,
-        color: "#158df7",
-        highlight: "rgba(21, 141, 247, 1)",
+        color: "#148df6",
+        highlight: "rgba(20, 141, 246, 1)",
         label: "Sky"
     }, {
         value: 100,
@@ -88,12 +88,12 @@ var polarData = [
         label: "Black"
     }, {
         value: 40,
-        color: "#544fff",
-        highlight: "rgba(84, 79, 255, 1)",
+        color: "#655af3",
+        highlight: "rgba(101, 90, 243, 1)",
         label: "Grey"
     }, {
         value: 120,
-        color: "#fb2e63",
+        color: "#fd2e64",
         highlight: "#616774",
         label: "Dark Grey"
     }
@@ -120,18 +120,18 @@ var lineGraphData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [{
         label: "My First dataset",
-        fillColor: "rgba(84, 79, 255, 0.5)",
-        strokeColor: "#544fff",
-        pointColor: "#544fff",
+        fillColor: "rgba(101, 90, 243, 0.5)",
+        strokeColor: "#655af3",
+        pointColor: "#655af3",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "#000",
         data: [10, 59, 80, 81, 56, 55, 40]
     }, {
         label: "My Second dataset",
-        fillColor: "rgba(21, 141, 247, 0.3)",
-        strokeColor: "#158df7",
-        pointColor: "#158df7",
+        fillColor: "rgba(253, 43, 100, 0.3)",
+        strokeColor: "#fd2e64",
+        pointColor: "#fd2e64",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#000",
         pointHighlightStroke: "rgba(30, 166, 236, 1)",
@@ -161,11 +161,11 @@ var radarData = {
     labels: ["Ford", "Chevy", "Toyota", "Honda", "Mazda"],
     datasets: [{
         label: "My First dataset",
-        fillColor: "rgba(68, 102, 242, 0.4)",
-        strokeColor: "#544fff",
-        pointColor: "#544fff",
-        pointStrokeColor: "#544fff",
-        pointHighlightFill: "#544fff",
+        fillColor: "rgba(101, 90, 243, 0.4)",
+        strokeColor: "#655af3",
+        pointColor: "#655af3",
+        pointStrokeColor: "#655af3",
+        pointHighlightFill: "#655af3",
         pointHighlightStroke: "rgba(68, 102, 242, 0.4)",
         data: [12, 3, 5, 18, 7]
     }]
@@ -225,20 +225,20 @@ var pieOptions = {
 var doughnutData = [
     {
         value: 300,
-        color: "#544fff",
-        highlight: "#544fff",
+        color: "#655af3",
+        highlight: "#655af3",
         label: "Primary"
     },
     {
         value: 50,
-        color: "#158df7",
-        highlight: "#158df7",
+        color: "#fd2e64",
+        highlight: "#fd2e64",
         label: "Secondary"
     },
     {
         value: 100,
-        color: "#fb2e63",
-        highlight: "#fb2e63",
+        color: "#51bb25",
+        highlight: "#51bb25",
         label: "Success"
     }
 ];
@@ -258,19 +258,19 @@ var myDoughnutChart = new Chart(doughnutCtx).Doughnut(doughnutData, doughnutOpti
 var myLineChart = {
     labels: ["","10", "20", "30", "40", "50", "60", "70", "80"],
     datasets: [{
-        fillColor: "rgba(68, 102, 242, 0.2)",
-        strokeColor: "#544fff",
-        pointColor: "#544fff",
+        fillColor: "rgba(81, 187, 37, 0.2)",
+        strokeColor: "#51bb25",
+        pointColor: "#51bb25",
         data: [10, 20, 40, 30, 0, 20, 10, 30, 10]
     },{
-        fillColor: "rgba(30, 166, 236, 0.2)",
-        strokeColor: "#158df7",
-        pointColor: "#158df7",
+        fillColor: "rgba(255, 95, 36, 0.2)",
+        strokeColor: "#ff5f24",
+        pointColor: "#ff5f24",
         data: [20, 40, 10, 20, 40, 30, 40, 10, 20]
     }, {
-        fillColor: "rgb(64, 153, 255 , 0.2)",
-        strokeColor: "#fb2e63",
-        pointColor: "#fb2e63",
+        fillColor: "rgb(101, 90, 243, 0.2)",
+        strokeColor: "#655af3",
+        pointColor: "#655af3",
         data: [60, 10, 40, 30, 80, 30, 20, 90, 0]
     }]
 }
