@@ -13,7 +13,6 @@
           jQuery('.submenu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           jQuery('.submenu-title').click(function () {
               jQuery('.submenu-title').removeClass('active');
-              jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               jQuery('.submenu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
@@ -28,7 +27,6 @@
           jQuery('.menu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           jQuery('.menu-title').click(function () {
               jQuery('.menu-title').removeClass('active');
-              jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               jQuery('.menu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
@@ -45,7 +43,6 @@
             jQuery('.menu-title').append('<div class="according-menu">+</div>');
             jQuery('.menu-title').click(function () {
                 jQuery('.menu-title').removeClass('active');
-                jQuery('.menu-title').find('div').replaceWith('<div class="according-menu">+</div>');
                 jQuery('.menu-content').slideUp('normal');
                 if (jQuery(this).next().is(':hidden') == true) {
                     jQuery(this).addClass('active');
@@ -63,7 +60,6 @@
             jQuery('.submenu-title').append('<div class="according-menu">+</div>');
             jQuery('.submenu-title').click(function () {
                 jQuery('.submenu-title').removeClass('active');
-                jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu">+</div>');
                 jQuery('.submenu-content').slideUp('normal');
                 if (jQuery(this).next().is(':hidden') == true) {
                     jQuery(this).addClass('active');
