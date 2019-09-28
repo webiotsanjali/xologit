@@ -1,0 +1,145 @@
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var form_validation_custom= true;
+- var contact_page          = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.horizontal-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.horizontal-menu
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    h3
+                                      | Contacts
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         | Home
+                                      li.breadcrumb-item Apps   
+                                      li.breadcrumb-item.active Contacts
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .email-wrap.bookmark-wrap
+                        .row
+                          .col-xl-3.box-col-6
+                            .email-left-aside
+                              .card
+                                .card-body
+                                  .email-app-sidebar
+                                    .media
+                                      .media-size-email
+                                        img.mr-3.rounded-circle(src='../assets/images/user/user.png', alt='')
+                                      .media-body
+                                        h6.f-w-600 MARKJENCO
+                                        p Markjecno@gmail.com
+                                    ul.nav.main-menu(role='tablist').contact-options
+                                      li.nav-item
+                                        button.btn-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
+                                          i.mr-2(data-feather='users')
+                                          |  New Contacts
+                                        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                                          .modal-dialog.modal-lg(role='document')
+                                            .modal-content
+                                              .modal-header
+                                                h5#exampleModalLabel.modal-title Add Contact
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                  span(aria-hidden='true') ×
+                                              .modal-body
+                                                form.form-bookmark#bookmark-form.needs-validation(novalidate='')
+                                                  .form-row
+                                                    .form-group.col-md-6
+                                                      label Name
+                                                      input.form-control(type='text', required='', placeholder='First Name', autocomplete='off')
+                                                    .form-group.col-md-6
+                                                      label 
+                                                      input.form-control(type='text', required='', placeholder='Last Name', autocomplete='off')
+                                                    .form-group.col-md-12
+                                                      label Email Address
+                                                      input.form-control(type='text', required='', autocomplete='off')
+                                                    .form-group.col-md-6.mb-0
+                                                      label Phone
+                                                      input.form-control(type='number', required='', autocomplete='off')
+                                                    .form-group.col-md-6.mb-0
+                                                      select.form-control
+                                                        option Opt 1
+                                                        option Opt 2
+                                                        option Opt 3
+                                                  input#index_var(type='hidden', value='1' )
+                                                  button.btn.btn-secondary(type='submit') Save
+                                                  button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
+                                      li.nav-item
+                                        span.main-title
+                                          |  Views
+                                      li
+                                        a#pills-personal-tab(data-toggle='pill', href='#pills-personal', role='tab', aria-controls='pills-personal', aria-selected='true')
+                                          span.title
+                                            |  Personal
+                                      li
+                                        button.btn.btn-category(type='button', data-toggle='modal', data-target='#exampleModal1')
+                                          span.title
+                                            |  + Add Category
+                                        #exampleModal1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                                          .modal-dialog(role='document')
+                                            .modal-content
+                                              .modal-header
+                                                h5#exampleModalLabel.modal-title Add Category
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                  span(aria-hidden='true') ×
+                                              .modal-body
+                                                form.form-bookmark#bookmark-form.needs-validation(novalidate='')
+                                                  .form-row
+                                                    .form-group.col-md-12.mb-0
+                                                      input.form-control(type='text', required='', placeholder='Enter category name', autocomplete='off')
+                                                  input#index_var(type='hidden', value='1' )
+                                                  button.btn.btn-secondary(type='submit') Save
+                                                  button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
+                                      li
+                                        a#pills-organization-tab.show(data-toggle='pill', href='#pills-organization', role='tab', aria-controls='pills-organization', aria-selected='false')
+                                          span.title
+                                            |  Organization
+                          .col-xl-9.col-md-12.box-col-12
+                            .email-right-aside.bookmark-tabcontent
+                              .card.email-body.radius-left
+                                .pl-0
+                                  .tab-content
+                                    #pills-personal.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-personal-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Created by me
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                    #pills-organization.fade.tab-pane(role='tabpanel', aria-labelledby='pills-organization-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Shared with me
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            span No Bookmarks Found.
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

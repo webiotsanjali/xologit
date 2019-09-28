@@ -1,0 +1,285 @@
+/**=====================
+     85. bookmark app CSS Start
+==========================**/
+.bookmark-wrap {
+  .email-app-sidebar {
+    ul {
+      li {
+        button {
+          border: none;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+          }
+        >.main-title {
+          color: $primary-color;
+          font-weight: 600;
+          margin-bottom: 5px;
+          display: block;
+          svg {
+            color: $dark-gray;
+            stroke-width: 1px;
+          }
+        }
+        a {
+          >.title {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+.form-bookmark {
+  input {
+    &#index_var {
+      display: none;
+    }
+  }
+  .form-group {
+    .form-control {
+     border: none;
+     border-bottom: 1px solid $light-color;
+    }
+    .error {
+       margin: 0 !important;
+       font-size: 11px;
+       color: red !important;
+     }
+  }
+  button {
+    margin-top: 30px;
+  }
+}
+.bookmark-tabcontent {
+  .details-bookmark {
+    height: auto;
+    min-height: 359px;
+    .bookmark-card {
+      &.card {
+        .favourite-icon {
+        padding: 3px;
+        border-radius: 4px;
+        background-color: rgba($black, 0.2);
+        width: 30px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        opacity: 0;
+        i {
+          color: $white;
+          font-size: 16px;
+          vertical-align: text-bottom;
+        }
+        &.favourite {
+          i {
+            color: #fed112;
+          }
+        }
+      }
+      .title-bookmark {
+        text-align: left;
+        padding: 15px;
+        border-top: 1px solid $light-color;
+        .hover-block {
+          margin-top: 15px;
+          ul {
+            display: none;
+            li {
+              display: inline-block;
+              + li {
+                margin-left: 5px;
+              }
+              svg {
+                width: 16px;
+                height: 16px;
+                color: $dark-gray;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        box-shadow: 1px 4px 16px 3px rgba($black, 0.04);
+        .title-bookmark {
+          .hover-block {
+            p {
+              display: none;
+            }
+            ul {
+              display: block;
+            }
+          }
+        }
+        .favourite-icon {
+          opacity: 1;
+        }
+      }
+      }
+    }
+    &.list-bookmark {
+      .row {
+        .col-xl-3 {
+          flex: 0 0 100%;
+          max-width: 100%
+        }
+      }
+      .bookmark-card {
+        .details-website {
+          display: flex;
+          align-items: center;
+          &:hover {
+            .title-bookmark {
+              .hover-block {
+                p {
+                  display: block;
+                }
+                ul {
+                  position: absolute;
+                  right: 20%;
+                  top: 45%;
+                }
+              }
+            }
+          }
+        }
+        &.card {
+          .title-bookmark {
+            border-top: none;
+          }
+        }
+        img {
+          width: 20%;
+        }
+      }
+    }
+  }
+  .tab-content {
+    .card {
+      .d-flex {
+        justify-content: space-between;
+        ul {
+          li {
+            display: inline-block;
+            + li {
+              margin-left: 5px;
+            }
+            svg {
+              width: 18px;
+              height: 18px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1366px) {
+  .bookmark-wrap {
+    .email-app-sidebar {
+      ul {
+        li {
+          .btn-block {
+            svg {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .bookmark-tabcontent {
+    .details-bookmark {
+      &.list-bookmark {
+        .bookmark-card {
+          img {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .bookmark-tabcontent {
+    .details-bookmark {
+      min-height: auto;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .form-bookmark {
+    .form-row {
+      .form-group {
+        &:last-child {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .bookmark-tabcontent {
+    .details-bookmark {
+      &.list-bookmark {
+        .bookmark-card {
+          .details-website {
+            &:hover {
+              .title-bookmark {
+                .hover-block {
+                  p {
+                    display: none;
+                  }
+                  ul {
+                    position: relative;
+                    right: unset;
+                    top: unset;
+                  }
+                }
+              }
+            }
+          }
+          img {
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .bookmark-tabcontent {
+    .details-bookmark {
+      &.list-bookmark {
+        .bookmark-card {
+          .details-website {
+            &:hover {
+              .title-bookmark {
+                .hover-block {
+                  p {
+                    display: block;
+                  }
+                  ul {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/**=====================
+   85. bookmark app CSS Ends
+==========================**/

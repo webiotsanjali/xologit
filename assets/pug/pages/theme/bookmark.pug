@@ -1,0 +1,261 @@
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var form_validation_custom= true;
+- var bookmark_page         = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.horizontal-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.horizontal-menu
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    h3
+                                      | Bookmarks
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         | Home
+                                      li.breadcrumb-item Apps   
+                                      li.breadcrumb-item.active Bookmarks
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .email-wrap.bookmark-wrap
+                        .row
+                          .col-xl-3.box-col-6
+                            .email-left-aside
+                              .card
+                                .card-body
+                                  .email-app-sidebar
+                                    .media
+                                      .media-size-email
+                                        img.mr-3.rounded-circle(src='../assets/images/user/user.png', alt='')
+                                      .media-body
+                                        h6.f-w-600 MARKJENCO
+                                        p Markjecno@gmail.com
+                                    ul.nav.main-menu(role='tablist')
+                                      li.nav-item
+                                        button.btn-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
+                                          i.mr-2(data-feather='bookmark')
+                                          |  New Bookmark
+                                        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                                          .modal-dialog.modal-lg(role='document')
+                                            .modal-content
+                                              .modal-header
+                                                h5#exampleModalLabel.modal-title Add Bookmark
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                  span(aria-hidden='true') ×
+                                              .modal-body
+                                                form.form-bookmark#bookmark-form.needs-validation(novalidate='')
+                                                  .form-row
+                                                    .form-group.col-md-12
+                                                      label(for='bm-weburl') Web Url
+                                                      input#bm-weburl.form-control(type='text', required='', autocomplete='off')
+                                                    .form-group.col-md-12
+                                                      label(for='bm-title') Title
+                                                      input#bm-title.form-control(type='text', required='', autocomplete='off')
+                                                    .form-group.col-md-12
+                                                      label Description
+                                                      textarea#bm-desc.form-control(required='', autocomplete='off')
+                                                    .form-group.col-md-6.mb-0
+                                                      label Group
+                                                      input#bm-group.form-control(type='text', required='', autocomplete='off')
+                                                    .form-group.col-md-6.mb-0
+                                                      label Collection
+                                                      input#bm-collection.form-control(type='text', required='', autocomplete='off')
+                                                  input#index_var(type='hidden', value='1' )
+                                                  button#Bookmark.btn.btn-secondary(onclick='submitBookMark()', type='submit') Save
+                                                  button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
+                                      li.nav-item
+                                        span.main-title
+                                          |  Views
+                                      li
+                                        a#pills-created-tab(data-toggle='pill', href='#pills-created', role='tab', aria-controls='pills-created', aria-selected='true')
+                                          span.title
+                                            |  Created by me
+                                      li
+                                        a#pills-favourites-tab.show(data-toggle='pill', href='#pills-favourites', role='tab', aria-controls='pills-favourites', aria-selected='false')
+                                          span.title
+                                            |  Favourites
+                                      li
+                                        a#pills-shared-tab.show(data-toggle='pill', href='#pills-shared', role='tab', aria-controls='pills-shared', aria-selected='false')
+                                          span.title
+                                            |  Shared with me
+                                      li
+                                        a#pills-bookmark-tab.show(data-toggle='pill', href='#pills-bookmark', role='tab', aria-controls='pills-bookmark', aria-selected='false')
+                                          span.title
+                                            |  My bookmark
+                                      li
+                                        hr
+                                      li
+                                        span.main-title
+                                          |  Tags
+                                          span.pull-right
+                                            i(data-feather='plus-circle')
+                                      li
+                                        a#pills-notification-tab.show(data-toggle='pill', href='#pills-notification', role='tab', aria-controls='pills-notification', aria-selected='false')
+                                          span.title
+                                            |  Notification
+                                      li
+                                        a#pills-newsletter-tab.show(data-toggle='pill', href='#pills-newsletter', role='tab', aria-controls='pills-newsletter', aria-selected='false')
+                                          span.title
+                                            |  Newsletter
+                          .col-xl-9.col-md-12.box-col-12
+                            .email-right-aside.bookmark-tabcontent
+                              .card.email-body.radius-left
+                                .pl-0
+                                  .tab-content
+                                    #pills-created.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-created-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Created by me
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            .row#bookmarkData
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon#favourite_0(onclick='setFavourite(0)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .title-bookmark
+                                                      h6#title_0 Title Name
+                                                      .hover-block
+                                                        p#weburl_0 website link
+                                                        ul
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='edit-2')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='link')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='share-2')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='trash-2')
+                                                          li.pull-right.text-right
+                                                            a(href='#')
+                                                              i(data-feather='tag')
+                                    #pills-favourites.fade.tab-pane(role='tabpanel', aria-labelledby='pills-favourites-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Favourites
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            .row#favouriteData
+                                            .no-favourite
+                                              span No Bookmarks Found.
+                                    #pills-shared.fade.tab-pane(role='tabpanel', aria-labelledby='pills-shared-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Shared with me
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            span No Bookmarks Found.
+                                    #pills-bookmark.fade.tab-pane(role='tabpanel', aria-labelledby='pills-bookmark-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 My bookmark
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            .row#bookmarkData1
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .title-bookmark
+                                                      h6 Title Name
+                                                      .hover-block
+                                                        p website link
+                                                        ul
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='edit-2')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='link')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='share-2')
+                                                          li
+                                                            a(href='#')
+                                                              i(data-feather='trash-2')
+                                                          li.pull-right.text-right
+                                                            a(href='#')
+                                                              i(data-feather='tag')
+                                    #pills-notification.fade.tab-pane(role='tabpanel', aria-labelledby='pills-notification-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Notification
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            span No Bookmarks Found.
+                                    #pills-newsletter.fade.tab-pane(role='tabpanel', aria-labelledby='pills-newsletter-tab')
+                                      .card.mb-0
+                                        .card-header.d-flex
+                                          h6.mb-0 Newsletter
+                                          ul
+                                            li
+                                              a.grid-bookmark-view(href='#')
+                                                i(data-feather='grid')
+                                            li
+                                              a.list-layout-view(href='#')
+                                                i(data-feather='list')
+                                        .card-body
+                                          .details-bookmark.text-center
+                                            span No Bookmarks Found.
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files
