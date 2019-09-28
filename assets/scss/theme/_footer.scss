@@ -39,9 +39,10 @@ footer{
         }
     }
   }
-}
+  }
+
 .footer-fix{
-  width: calc(100% - 255px);
+  width: 100%;
   position: fixed;
 }
 .page-wrapper.horizontal-wrapper{

@@ -641,31 +641,37 @@
                                     <div class="modal-body">
                                       <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
                                         <div class="form-row">
-                                          <div class="form-group col-md-6">
+                                          <div class="form-group col-md-12">
                                             <label>Name</label>
-                                            <input class="form-control" type="text" required="" placeholder="First Name" autocomplete="off">
-                                          </div>
-                                          <div class="form-group col-md-6">
-                                            <label> </label>
-                                            <input class="form-control" type="text" required="" placeholder="Last Name" autocomplete="off">
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <input class="form-control" type="text" required="" placeholder="First Name" autocomplete="off">
+                                              </div>
+                                              <div class="col-md-6">   
+                                                <input class="form-control" type="text" required="" placeholder="Last Name" autocomplete="off">
+                                              </div>
+                                            </div>
                                           </div>
                                           <div class="form-group col-md-12">
                                             <label>Email Address</label>
                                             <input class="form-control" type="text" required="" autocomplete="off">
                                           </div>
-                                          <div class="form-group col-md-6 mb-0">
+                                          <div class="form-group col-md-12">
                                             <label>Phone</label>
-                                            <input class="form-control" type="number" required="" autocomplete="off">
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <input class="form-control" type="number" required="" autocomplete="off">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <select class="form-control">
+                                                  <option>Mobile</option>
+                                                  <option>Work</option>
+                                                  <option>Others</option>
+                                                </select>
+                                              </div>
+                                            </div>
                                           </div>
-                                          <div class="form-group col-md-6 mb-0">
-                                            <select class="form-control">
-                                              <option>Opt 1</option>
-                                              <option>Opt 2</option>
-                                              <option>Opt 3</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <input id="index_var" type="hidden" value="1">
+                                        </div><a class="pl-0" href="#">Add more information</a>
                                         <button class="btn btn-secondary" type="submit">Save</button>
                                         <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                       </form>
@@ -678,15 +684,15 @@
                             <li><a id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true"><span class="title"> Personal</span></a></li>
                             <li>
                               <button class="btn btn-category" type="button" data-toggle="modal" data-target="#exampleModal1"><span class="title"> + Add Category</span></button>
-                              <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel1">Add Category</h5>
                                       <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                      <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
+                                      <form class="form-bookmark needs-validation" novalidate="">
                                         <div class="form-row">
                                           <div class="form-group col-md-12 mb-0">
                                             <input class="form-control" type="text" required="" placeholder="Enter category name" autocomplete="off">
@@ -709,20 +715,79 @@
                   </div>
                 </div>
                 <div class="col-xl-9 col-md-12 box-col-12">
-                  <div class="email-right-aside bookmark-tabcontent">
+                  <div class="email-right-aside bookmark-tabcontent contacts-tabs">
                     <div class="card email-body radius-left">
                       <div class="pl-0">
                         <div class="tab-content">
                           <div class="tab-pane fade active show" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
                             <div class="card mb-0">
                               <div class="card-header d-flex">
-                                <h6 class="mb-0">Created by me</h6>
-                                <ul>
-                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
-                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
-                                </ul>
+                                <h5>Personal</h5>
                               </div>
-                              <div class="card-body"></div>
+                              <div class="card-body p-0">
+                                <div class="row list-persons">
+                                  <div class="col-sm-4 col-xs-12">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="nav-link active" id="v-pills-user-tab" data-toggle="pill" href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/2.png" alt="">
+                                          <div class="media-body">
+                                            <h6>Bucky Barnes</h6>
+                                            <p>barnes@gmail.com</p>
+                                          </div>
+                                        </div></a><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"> 
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/8.jpg" alt="">
+                                          <div class="media-body">
+                                            <h6>Comeren Diaz</h6>
+                                            <p>comeren@gmail.com</p>
+                                          </div>
+                                        </div></a><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/1.jpg" alt="">
+                                          <div class="media-body">
+                                            <h6>Issa Bell</h6>
+                                            <p>issabell@gmail.com</p>
+                                          </div>
+                                        </div></a><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/14.png" alt="">
+                                          <div class="media-body">
+                                            <h6>Andew Jon</h6>
+                                            <p>andewjon@gmail.com</p>
+                                          </div>
+                                        </div></a></div>
+                                  </div>
+                                  <div class="col-sm-8 col-xs-12">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                      <div class="tab-pane fade show active" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
+                                        <div class="profile-mail">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/2.png" alt="">
+                                            <div class="media-body mt-0">
+                                              <h5>Bucky Barnes</h5>
+                                              <p>barnes@gmail.com</p>
+                                              <ul>
+                                                <li><a href="#">Edit</a></li>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">History</a></li>
+                                                <li><a href="#">Print</a></li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div class="email-general">
+                                            <h6>General</h6>
+                                            <p>Email Address: <span class="font-primary">barnes@gmail.com </span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                                      </div>
+                                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                                      </div>
+                                      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fade tab-pane" id="pills-organization" role="tabpanel" aria-labelledby="pills-organization-tab">

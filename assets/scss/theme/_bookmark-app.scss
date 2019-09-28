@@ -37,12 +37,24 @@
   }
 }
 .form-bookmark {
+  a {
+    text-transform: capitalize !important;
+    color: $primary-color !important;
+    line-height: 1 !important;
+    font-weight: 500;
+    &:hover {
+      background-color: $transparent-color !important;
+    }
+  }
   input {
     &#index_var {
       display: none;
     }
   }
   .form-group {
+    input, select {
+      font-size: 14px;
+    }
     .form-control {
      border: none;
      border-bottom: 1px solid $light-color;
