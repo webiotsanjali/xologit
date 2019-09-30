@@ -1,8 +1,24 @@
 /**=====================
      85. bookmark app CSS Start
 ==========================**/
+.modal-bookmark {
+  .modal-body, .modal-header {
+    padding: 30px;
+  }
+}
 .bookmark-wrap {
-  .email-app-sidebar {
+  .btn-mail {
+    color: $primary-color !important;
+  }
+  .row {
+    .col-xl-3 {
+      +.col-xl-3 {
+        padding-right: 15px;
+      }
+    }
+  }
+  .left-bookmark {
+    height: 778px;
     ul {
       li {
         button {
@@ -22,6 +38,13 @@
           font-weight: 600;
           margin-bottom: 5px;
           display: block;
+          span {
+            a {
+              &:hover {
+                background-color: $transparent-color;
+              }
+            }
+          }
           svg {
             color: $dark-gray;
             stroke-width: 1px;
@@ -55,9 +78,13 @@
     input, select {
       font-size: 14px;
     }
-    .form-control {
-     border: none;
-     border-bottom: 1px solid $light-color;
+    .select2-container {
+      .select2-selection--single {
+        border-color: #ced4da !important;
+      }
+    }
+    .select2 {
+      width: 100% !important;
     }
     .error {
        margin: 0 !important;
@@ -69,11 +96,21 @@
     margin-top: 30px;
   }
 }
+@-webkit-keyframes displayTransition {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes displayTransition {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
 .bookmark-tabcontent {
   .details-bookmark {
     height: auto;
     min-height: 359px;
     .bookmark-card {
+      position: relative;
       &.card {
         .favourite-icon {
         padding: 3px;
@@ -95,14 +132,27 @@
           }
         }
       }
+      .desciption-data {
+        width: 100%;
+        .content-general {
+          display: none;
+        }
+      }
+      .favourite-icon {
+        transition: 0.5s;
+      }
       .title-bookmark {
         text-align: left;
         padding: 15px;
         border-top: 1px solid $light-color;
+        p {
+          margin-top: 15px;
+          animation: displayTransition 1s;
+        }
         .hover-block {
+          display: none;
           margin-top: 15px;
           ul {
-            display: none;
             li {
               display: inline-block;
               + li {
@@ -119,14 +169,14 @@
       }
       &:hover {
         box-shadow: 1px 4px 16px 3px rgba($black, 0.04);
+        transition: 0.5s;
         .title-bookmark {
+          p {
+            display: none;
+          }
           .hover-block {
-            p {
-              display: none;
-            }
-            ul {
-              display: block;
-            }
+            display: block;
+            animation: displayTransition 2s;
           }
         }
         .favourite-icon {
@@ -143,20 +193,30 @@
         }
       }
       .bookmark-card {
+        .desciption-data {
+          .content-general {
+            display: block;
+          }
+        }
         .details-website {
           display: flex;
           align-items: center;
+          .title-bookmark {
+            p {
+              display: block;
+            }
+            .hover-block {
+              position: absolute;
+              right: 30px;
+              display: block;
+              text-align: right;
+            }
+            }
           &:hover {
             .title-bookmark {
               .hover-block {
-                p {
-                  display: block;
-                }
-                ul {
-                  position: absolute;
-                  right: 20%;
-                  top: 45%;
-                }
+                display: block;
+                animation: displayTransition 0s;
               }
             }
           }
@@ -164,6 +224,27 @@
         &.card {
           .title-bookmark {
             border-top: none;
+            p, h6 {
+              margin-top: 0;
+              display: inline-block;
+            }
+            h6 {
+              position: relative;
+              padding-right: 15px;
+              &::after {
+                position: absolute;
+                content: '-';
+                right: 0;
+                color: $dark-gray;
+              }
+            }
+            .content-general {
+              margin-top: 5px;
+              p {
+                width: 68%;
+                margin-right: 20px;
+              }
+            }
           }
         }
         img {
@@ -195,9 +276,32 @@
 }
 
 // responsive 
+@media only screen and (max-width: 1660px) {
+  .bookmark-tabcontent {
+    .details-bookmark {
+      &.list-bookmark {
+        .bookmark-card {
+          &.card {
+            .title-bookmark {
+              padding-left: 5px;
+              .content-general {
+                p {
+                  display: none;
+                }
+              }
+              .hover-block {
+                margin-top: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (min-device-width: 1200px) and (max-device-width: 1366px) {
   .bookmark-wrap {
-    .email-app-sidebar {
+    .left-bookmark {
       ul {
         li {
           .btn-block {
@@ -224,9 +328,26 @@
   }
 }
 @media only screen and (max-width: 1199px) {
+  .bookmark-wrap {
+    .left-bookmark {
+      height: auto;
+    }
+  }
   .bookmark-tabcontent {
     .details-bookmark {
       min-height: auto;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .modal-bookmark {
+    .modal-body, .modal-header {
+      padding: 20px;
+    }
+  }
+  .form-bookmark {
+    button {
+      margin-top: 20px;
     }
   }
 }
@@ -245,6 +366,14 @@
       &.list-bookmark {
         .bookmark-card {
           .details-website {
+            .title-bookmark {
+              p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 172px;
+              }
+            }
             &:hover {
               .title-bookmark {
                 .hover-block {
@@ -268,24 +397,45 @@
     }
   }
 }
+@media only screen and (max-width: 575px) {
+  .bookmark-tabcontent {
+    .details-bookmark {
+      &.list-bookmark {
+        .bookmark-card {
+          img {
+              width: 46%;
+          }
+          .details-website {
+            .title-bookmark {
+              .hover-block {
+                position: relative;
+                right: unset;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal-bookmark {
+    .modal-body, .modal-header {
+      padding: 15px;
+    }
+  }
+  .form-bookmark {
+    button {
+      margin-top: 15px;
+    }
+  }
+}
 @media only screen and (max-width: 360px) {
   .bookmark-tabcontent {
     .details-bookmark {
       &.list-bookmark {
         .bookmark-card {
-          .details-website {
-            &:hover {
-              .title-bookmark {
-                .hover-block {
-                  p {
-                    display: block;
-                  }
-                  ul {
-                    display: none;
-                  }
-                }
-              }
-            }
+          img {
+              width: 28%;
           }
         }
       }

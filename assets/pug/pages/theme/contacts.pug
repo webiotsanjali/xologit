@@ -236,9 +236,109 @@ html(lang='en')
                                       .card.mb-0
                                         .card-header.d-flex
                                           h5 Organization
-                                        .card-body
-                                          .details-bookmark.text-center
-                                            span No Bookmarks Found.
+                                          span.f-14.pull-right 10 Contacts
+                                        .card-body.p-0
+                                          .row.list-persons
+                                            .col-sm-4.col-xs-12
+                                              #v-pills-tab1.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+                                                a#v-pills-iduser-tab.nav-link.active(data-toggle='pill', href='#v-pills-iduser', role='tab', aria-controls='v-pills-iduser', aria-selected='true')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/user.png' alt='')
+                                                    .media-body
+                                                      h6 Mark jecno
+                                                      p markjecno@gmail.com
+                                                a#v-pills-iduser1-tab.nav-link(data-toggle='pill', href='#v-pills-iduser1', role='tab', aria-controls='v-pills-iduser1', aria-selected='false') 
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/3.jpg' alt='')
+                                                    .media-body
+                                                      h6 Jason Borne
+                                                      p jasonb@gmail.com
+                                                a#v-pills-iduser2-tab.nav-link(data-toggle='pill', href='#v-pills-iduser2', role='tab', aria-controls='v-pills-iduser2', aria-selected='false')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/3.png' alt='')
+                                                    .media-body
+                                                      h6 Sarah Loren
+                                                      p barnes@gmail.com
+                                                a#v-pills-iduser3-tab.nav-link(data-toggle='pill', href='#v-pills-iduser3', role='tab', aria-controls='v-pills-iduser3', aria-selected='false')
+                                                  .media
+                                                    img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/10.jpg' alt='')
+                                                    .media-body
+                                                      h6 Andew Jon
+                                                      p andrewj@gmail.com
+                                            .col-sm-8.col-xs-12
+                                              #v-pills-tabContent1.tab-content
+                                                #v-pills-iduser.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-iduser-tab')
+                                                  .profile-mail
+                                                    .media
+                                                      img.img-100.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/user.png' alt='')
+                                                      .media-body.mt-0
+                                                        h5 Mark jecno
+                                                        p markjecno@gmail.com
+                                                        ul
+                                                          li
+                                                            a(href='#') Print
+                                                    .email-general
+                                                      h6 General
+                                                      p Email Address: 
+                                                        span.font-primary markjecno@gmail.com
+                                                      .gender
+                                                        h6 Personal
+                                                        p Gender: 
+                                                          span Male
+                                                #v-pills-iduser1.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser1-tab')
+                                                  .profile-mail
+                                                    .media
+                                                      img.img-100.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/3.jpg' alt='')
+                                                      .media-body.mt-0
+                                                        h5 Jason Borne
+                                                        p jasonb@gmail.com
+                                                        ul
+                                                          li
+                                                            a(href='#') Print
+                                                    .email-general
+                                                      h6 General
+                                                      p Email Address: 
+                                                        span.font-primary jasonb@gmail.com
+                                                      .gender
+                                                        h6 Personal
+                                                        p Gender: 
+                                                          span Male
+                                                #v-pills-iduser2.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser2-tab')
+                                                  .profile-mail
+                                                    .media
+                                                      img.img-100.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/3.png' alt='')
+                                                      .media-body.mt-0
+                                                        h5 Sarah Loren
+                                                        p barnes@gmail.com
+                                                        ul
+                                                          li
+                                                            a(href='#') Print
+                                                    .email-general
+                                                      h6 General
+                                                      p Email Address: 
+                                                        span.font-primary barnes@gmail.com
+                                                      .gender
+                                                        h6 Personal
+                                                        p Gender: 
+                                                          span Female
+                                                #v-pills-iduser3.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser3-tab')
+                                                  .profile-mail
+                                                    .media
+                                                      img.img-100.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/10.jpg' alt='')
+                                                      .media-body.mt-0
+                                                        h5 Andew Jon
+                                                        p andrewj@gmail.com
+                                                        ul
+                                                          li
+                                                            a(href='#') Print
+                                                    .email-general
+                                                      h6 General
+                                                      p Email Address: 
+                                                        span.font-primary andrewj@gmail.com
+                                                      .gender
+                                                        h6 Personal
+                                                        p Gender: 
+                                                          span Female
                     // Container-fluid Ends
                 include ../../components/footer
         include ../../components/footer-files
