@@ -103,6 +103,7 @@
   }
 }
 .form-inline{
+  display: -webkit-inline-box;
   .form-group{
     margin-right: 15px;
     .col-form-label
