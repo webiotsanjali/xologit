@@ -37,7 +37,7 @@ html(lang='en')
                             .email-left-aside
                               .card
                                 .card-body
-                                  .email-app-sidebar
+                                  .email-app-sidebar.left-bookmark
                                     .media
                                       .media-size-email
                                         img.mr-3.rounded-circle(src='../assets/images/user/user.png', alt='')
@@ -46,7 +46,7 @@ html(lang='en')
                                         p Markjecno@gmail.com
                                     ul.nav.main-menu(role='tablist').contact-options
                                       li.nav-item
-                                        button.btn-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
+                                        button.badge-light-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
                                           i.mr-2(data-feather='users')
                                           |  New Contacts
                                         #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
@@ -161,7 +161,7 @@ html(lang='en')
                                                         p barnes@gmail.com
                                                         ul
                                                           li
-                                                            a(href='#') Edit
+                                                            a.edit-contacts(href='#') Edit
                                                           li
                                                             a(href='#') Delete
                                                           li
