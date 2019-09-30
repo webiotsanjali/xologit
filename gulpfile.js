@@ -21,7 +21,7 @@ function style() {
 
 // pug to html
 function html() {
-  return gulp.src('assets/pug/pages/theme/contacts.pug')
+  return gulp.src('assets/pug/pages/theme/bookmark.pug')
   .pipe(pug({ pretty: true }))
   .on('error', console.error.bind(console))
   .pipe(gulp.dest('theme'))
@@ -60,7 +60,7 @@ function watch(){
       proxy: 'localhost/xologit/theme/index.html'
   });
   gulp.watch('assets/scss/**/*.scss', style);
-  gulp.watch('assets/pug/pages/theme/contacts.pug', html);
+  gulp.watch('assets/pug/pages/theme/bookmark.pug', html);
   gulp.watch('./*.html').on('change', browserSync.reload);
   gulp.watch('assets/css/*.css').on('change', browserSync.reload);
 }

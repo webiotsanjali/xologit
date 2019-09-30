@@ -1,6 +1,9 @@
 - var theme_customizer      = true;
 - var tooltip               = true;
+- var select2               = true;
+- var page_select2          = true;
 - var form_validation_custom= true;
+- var animate               = true;
 - var bookmark_page         = true;
 
 doctype html
@@ -37,7 +40,7 @@ html(lang='en')
                             .email-left-aside
                               .card
                                 .card-body
-                                  .email-app-sidebar
+                                  .email-app-sidebar.left-bookmark
                                     .media
                                       .media-size-email
                                         img.mr-3.rounded-circle(src='../assets/images/user/user.png', alt='')
@@ -46,10 +49,10 @@ html(lang='en')
                                         p Markjecno@gmail.com
                                     ul.nav.main-menu(role='tablist')
                                       li.nav-item
-                                        button.btn-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
+                                        button.badge-light-primary.btn-block.btn-mail(type='button', data-toggle='modal', data-target='#exampleModal')
                                           i.mr-2(data-feather='bookmark')
                                           |  New Bookmark
-                                        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                                        #exampleModal.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                                           .modal-dialog.modal-lg(role='document')
                                             .modal-content
                                               .modal-header
@@ -70,11 +73,14 @@ html(lang='en')
                                                       textarea#bm-desc.form-control(required='', autocomplete='off')
                                                     .form-group.col-md-6.mb-0
                                                       label Group
-                                                      input#bm-group.form-control(type='text', required='', autocomplete='off')
+                                                      select.js-example-basic-single#bm-group
+                                                          option(value='AL') My Bookmarks
                                                     .form-group.col-md-6.mb-0
                                                       label Collection
-                                                      input#bm-collection.form-control(type='text', required='', autocomplete='off')
-                                                  input#index_var(type='hidden', value='1' )
+                                                      select.js-example-disabled-results#bm-collection
+                                                        option(value='general') General
+                                                        option(value='fs') fs
+                                                  input#index_var(type='hidden', value='6' )
                                                   button#Bookmark.btn.btn-secondary(onclick='submitBookMark()', type='submit') Save
                                                   button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
                                       li.nav-item
@@ -102,7 +108,8 @@ html(lang='en')
                                         span.main-title
                                           |  Tags
                                           span.pull-right
-                                            i(data-feather='plus-circle')
+                                            a(href='#', data-toggle='modal', data-target='#createtag')
+                                              i(data-feather='plus-circle')
                                       li
                                         a#pills-notification-tab.show(data-toggle='pill', href='#pills-notification', role='tab', aria-controls='pills-notification', aria-selected='false')
                                           span.title
@@ -127,36 +134,195 @@ html(lang='en')
                                             li
                                               a.list-layout-view(href='#')
                                                 i(data-feather='list')
-                                        .card-body
+                                        .card-body.pb-0
                                           .details-bookmark.text-center
                                             .row#bookmarkData
                                               .col-xl-3.col-md-4.xl-50
                                                 .card.card-with-border.bookmark-card.o-hidden
                                                   .details-website
                                                     img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
-                                                    .favourite-icon#favourite_0(onclick='setFavourite(0)')
+                                                    .favourite-icon.favourite_0(onclick='setFavourite(0)')
                                                       a(href='#')
                                                         i.fa.fa-star
-                                                    .title-bookmark
-                                                      h6#title_0 Title Name
-                                                      .hover-block
-                                                        p#weburl_0 website link
-                                                        ul
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='edit-2')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='link')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='share-2')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='trash-2')
-                                                          li.pull-right.text-right
-                                                            a(href='#')
-                                                              i(data-feather='tag')
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_0 Admin Template
+                                                        p.weburl_0 http://admin.pixelstrap.com/endless/ltr/landing-page.html
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_0 Endless is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
+                                                          span.collection_0 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_1(onclick='setFavourite(1)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_1 Universal Template
+                                                        p.weburl_1 https://angular.pixelstrap.com/universal/landing
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_1 Universal is beautifully crafted, clean and modern designed admin theme
+                                                          span.collection_1 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_2(onclick='setFavourite(2)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_2 Angular Theme
+                                                        p.weburl_2 https://angular.pixelstrap.com/endless/landing
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_2 Endless is beautifully crafted, clean and modern designed admin theme
+                                                          span.collection_2 Fs
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_3(onclick='setFavourite(3)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_3 Multikart Admin
+                                                        p.weburl_3 http://themes.pixelstrap.com/multikart/back-end/index.html
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_3 Multikart Admin is modern designed admin theme
+                                                          span.collection_3 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_4(onclick='setFavourite(4)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_4 Ecommerece theme
+                                                        p.weburl_4 http://themes.pixelstrap.com/multikart
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_4 Multikart HTML template is an apparently simple but highly functional tempalate designed for creating a flourisahing online business.
+                                                          span.collection_4 General           
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_5(onclick='setFavourite(5)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_5 Tovo app landing page
+                                                        p.weburl_5 http://vue.pixelstrap.com/tovo/home-one
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_5 Amazing Landing Page With Easy Customization
+                                                          span.collection_5 Fs                      
                                     #pills-favourites.fade.tab-pane(role='tabpanel', aria-labelledby='pills-favourites-tab')
                                       .card.mb-0
                                         .card-header.d-flex
@@ -205,29 +371,188 @@ html(lang='en')
                                                 .card.card-with-border.bookmark-card.o-hidden
                                                   .details-website
                                                     img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
-                                                    .favourite-icon
+                                                    .favourite-icon.favourite_0(onclick='setFavourite(0)')
                                                       a(href='#')
                                                         i.fa.fa-star
-                                                    .title-bookmark
-                                                      h6 Title Name
-                                                      .hover-block
-                                                        p website link
-                                                        ul
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='edit-2')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='link')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='share-2')
-                                                          li
-                                                            a(href='#')
-                                                              i(data-feather='trash-2')
-                                                          li.pull-right.text-right
-                                                            a(href='#')
-                                                              i(data-feather='tag')
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_0 Admin Template
+                                                        p.weburl_0 http://admin.pixelstrap.com/endless/ltr/landing-page.html
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_0 Endless is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
+                                                          span.collection_0 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_1(onclick='setFavourite(1)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_1 Universal Template
+                                                        p.weburl_1 https://angular.pixelstrap.com/universal/landing
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_1 Universal is beautifully crafted, clean and modern designed admin theme
+                                                          span.collection_1 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_2(onclick='setFavourite(2)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_2 Angular Theme
+                                                        p.weburl_2 https://angular.pixelstrap.com/endless/landing
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_2 Endless is beautifully crafted, clean and modern designed admin theme
+                                                          span.collection_2 Fs
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_3(onclick='setFavourite(3)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_3 Multikart Admin
+                                                        p.weburl_3 http://themes.pixelstrap.com/multikart/back-end/index.html
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_3 Multikart Admin is modern designed admin theme
+                                                          span.collection_3 General
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_4(onclick='setFavourite(4)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_4 Ecommerece theme
+                                                        p.weburl_4 http://themes.pixelstrap.com/multikart
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_4 Multikart HTML template is an apparently simple but highly functional tempalate designed for creating a flourisahing online business.
+                                                          span.collection_4 General           
+                                              .col-xl-3.col-md-4.xl-50
+                                                .card.card-with-border.bookmark-card.o-hidden
+                                                  .details-website
+                                                    img.img-fluid(src='../assets/images/lightgallry/07.jpg', alt='')
+                                                    .favourite-icon.favourite_5(onclick='setFavourite(5)')
+                                                      a(href='#')
+                                                        i.fa.fa-star
+                                                    .desciption-data
+                                                      .title-bookmark
+                                                        h6.title_5 Tovo app landing page
+                                                        p.weburl_5 http://vue.pixelstrap.com/tovo/home-one
+                                                        .hover-block
+                                                          ul
+                                                            li
+                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                                i(data-feather='edit-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='link')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='share-2')
+                                                            li
+                                                              a(href='#')
+                                                                i(data-feather='trash-2')
+                                                            li.pull-right.text-right
+                                                              a(href='#')
+                                                                i(data-feather='tag')
+                                                        .content-general
+                                                          p.desc_5 Amazing Landing Page With Easy Customization
+                                                          span.collection_5 Fs                      
                                     #pills-notification.fade.tab-pane(role='tabpanel', aria-labelledby='pills-notification-tab')
                                       .card.mb-0
                                         .card-header.d-flex
@@ -256,6 +581,54 @@ html(lang='en')
                                         .card-body
                                           .details-bookmark.text-center
                                             span No Bookmarks Found.
+                                    #edit-bookmark.modal.fade.modal-bookmark(tabindex='-1', role='dialog' aria-hidden='true')
+                                       .modal-dialog.modal-lg(role='document')
+                                            .modal-content
+                                              .modal-header
+                                                h5.modal-title Edit Bookmark
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                  span(aria-hidden='true') ×
+                                              .modal-body
+                                                form.form-bookmark.needs-validation(novalidate='')
+                                                  .form-row
+                                                    .form-group.col-md-12
+                                                      label Web Url
+                                                      input.form-control(type='text', required='', autocomplete='off', placeholder='http://admin.pixelstrap.com/endless/ltr/landing-page.html')
+                                                    .form-group.col-md-12
+                                                      label Title
+                                                      input.form-control(type='text', required='', autocomplete='off', placeholder='Admin Template')
+                                                    .form-group.col-md-12
+                                                      label Description
+                                                      textarea.form-control(required='', autocomplete='off', placeholder='Endless is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.')
+                                                    .form-group.col-md-6.mb-0
+                                                      label Group
+                                                      select.js-example-basic-single
+                                                          option(value='AL') My Bookmarks
+                                                    .form-group.col-md-6.mb-0
+                                                      label Collection
+                                                      select.js-example-disabled-results
+                                                        option(value='general') General
+                                                        option(value='fs') fs
+                                                  button.btn.btn-secondary(type='button') Save
+                                                  button.btn.btn-primary(type='button', data-dismiss='modal') Cancel   
+                                    #createtag.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-hidden='true')
+                                      .modal-dialog.modal-lg(role='document')
+                                        .modal-content
+                                          .modal-header
+                                            h5.modal-title Create Tag
+                                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                              span(aria-hidden='true') ×
+                                          .modal-body
+                                            form.form-bookmark.needs-validation(novalidate='')
+                                              .form-row
+                                                .form-group.col-md-12
+                                                  label Tag Name
+                                                  input.form-control(type='text', required='', autocomplete='off')
+                                                .form-group.col-md-12.mb-0
+                                                  label Tag color
+                                                  input.form-control(type='color', value='#563d7c')
+                                              button.btn.btn-secondary(type='button') Save
+                                              button.btn.btn-primary(type='button', data-dismiss='modal') Cancel
                     // Container-fluid Ends
                 include ../../components/footer
         include ../../components/footer-files
