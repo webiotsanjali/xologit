@@ -84,9 +84,9 @@ function toggleFullScreen() {
         });
 })(jQuery, window, document);
 
+
+// active link
+
 $(".chat-menu-icons .toogle-bar").click(function(){
     $(".chat-menu").toggleClass("show");
 });
-
-
-// active link

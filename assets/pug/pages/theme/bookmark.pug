@@ -74,7 +74,7 @@ html(lang='en')
                                                     .form-group.col-md-6.mb-0
                                                       label Group
                                                       select.js-example-basic-single#bm-group
-                                                          option(value='AL') My Bookmarks
+                                                          option(value='bookmark') My Bookmarks
                                                     .form-group.col-md-6.mb-0
                                                       label Collection
                                                       select.js-example-disabled-results#bm-collection
@@ -151,7 +151,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(0)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -182,7 +182,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(1)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -213,7 +213,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(2)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -244,7 +244,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(3)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -275,7 +275,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(4)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -306,7 +306,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(5)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -381,7 +381,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(0)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -412,7 +412,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(1)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -443,7 +443,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(2)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -474,7 +474,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(3)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -505,7 +505,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(4)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -536,7 +536,7 @@ html(lang='en')
                                                         .hover-block
                                                           ul
                                                             li
-                                                              a(href='', data-toggle='modal', data-target='#edit-bookmark')
+                                                              a(href='', onclick='editBookmark(5)', data-toggle='modal', data-target='#edit-bookmark')
                                                                 i(data-feather='edit-2')
                                                             li
                                                               a(href='#')
@@ -593,13 +593,14 @@ html(lang='en')
                                                   .form-row
                                                     .form-group.col-md-12
                                                       label Web Url
-                                                      input.form-control(type='text', required='', autocomplete='off', placeholder='http://admin.pixelstrap.com/endless/ltr/landing-page.html')
+                                                      input.form-control#editurl(type='text', required='', autocomplete='off', value='http://admin.pixelstrap.com/endless/ltr/landing-page.html')
                                                     .form-group.col-md-12
                                                       label Title
-                                                      input.form-control(type='text', required='', autocomplete='off', placeholder='Admin Template')
+                                                      input.form-control#edittitle(type='text', required='', autocomplete='off', value='Admin Template')
                                                     .form-group.col-md-12
                                                       label Description
-                                                      textarea.form-control(required='', autocomplete='off', placeholder='Endless is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.')
+                                                      textarea.form-control#editdesc(required='', autocomplete='off')
+                                                        | Endless is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
                                                     .form-group.col-md-6.mb-0
                                                       label Group
                                                       select.js-example-basic-single

@@ -24,6 +24,8 @@
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
     <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/select2.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/sweetalert2.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
@@ -620,7 +622,7 @@
                   <div class="email-left-aside">
                     <div class="card">
                       <div class="card-body">
-                        <div class="email-app-sidebar">
+                        <div class="email-app-sidebar left-bookmark">
                           <div class="media">
                             <div class="media-size-email"><img class="mr-3 rounded-circle" src="../assets/images/user/user.png" alt=""></div>
                             <div class="media-body">
@@ -630,8 +632,8 @@
                           </div>
                           <ul class="nav main-menu contact-options" role="tablist">
                             <li class="nav-item">
-                              <button class="btn-primary btn-block btn-mail" type="button" data-toggle="modal" data-target="#exampleModal"><i class="mr-2" data-feather="users"></i> New Contacts</button>
-                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <button class="badge-light-primary btn-block btn-mail" type="button" data-toggle="modal" data-target="#exampleModal"><i class="mr-2" data-feather="users"></i> New Contacts</button>
+                              <div class="modal fade modal-bookmark" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
@@ -642,28 +644,28 @@
                                       <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
                                         <div class="form-row">
                                           <div class="form-group col-md-12">
-                                            <label>Name</label>
+                                            <label for="con-name">Name</label>
                                             <div class="row">
-                                              <div class="col-md-6">
-                                                <input class="form-control" type="text" required="" placeholder="First Name" autocomplete="off">
+                                              <div class="col-sm-6">
+                                                <input class="form-control" id="con-name" type="text" required="" placeholder="First Name" autocomplete="off">
                                               </div>
-                                              <div class="col-md-6">   
-                                                <input class="form-control" type="text" required="" placeholder="Last Name" autocomplete="off">
+                                              <div class="col-sm-6">   
+                                                <input class="form-control" id="con-last" type="text" required="" placeholder="Last Name" autocomplete="off">
                                               </div>
                                             </div>
                                           </div>
                                           <div class="form-group col-md-12">
-                                            <label>Email Address</label>
-                                            <input class="form-control" type="text" required="" autocomplete="off">
+                                            <label for="con-mail">Email Address</label>
+                                            <input class="form-control" id="con-mail" type="text" required="" autocomplete="off">
                                           </div>
-                                          <div class="form-group col-md-12">
-                                            <label>Phone</label>
+                                          <div class="form-group col-md-12 my-0">
+                                            <label for="con-phone">Phone</label>
                                             <div class="row">
-                                              <div class="col-md-6">
-                                                <input class="form-control" type="number" required="" autocomplete="off">
+                                              <div class="col-sm-6">
+                                                <input class="form-control" id="con-phone" type="number" required="" autocomplete="off">
                                               </div>
-                                              <div class="col-md-6">
-                                                <select class="form-control">
+                                              <div class="col-sm-6">
+                                                <select class="form-control" id="con-select">
                                                   <option>Mobile</option>
                                                   <option>Work</option>
                                                   <option>Others</option>
@@ -671,8 +673,9 @@
                                               </div>
                                             </div>
                                           </div>
-                                        </div><a class="pl-0" href="#">Add more information</a>
-                                        <button class="btn btn-secondary" type="submit">Save</button>
+                                        </div>
+                                        <input id="index_var" type="hidden" value="5">
+                                        <button class="btn btn-secondary" type="submit" onclick="submitContact()">Save</button>
                                         <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                       </form>
                                     </div>
@@ -692,14 +695,13 @@
                                       <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                      <form class="form-bookmark needs-validation" novalidate="">
+                                      <form class="form-bookmark">
                                         <div class="form-row">
-                                          <div class="form-group col-md-12 mb-0">
+                                          <div class="form-group col-md-12 my-0">
                                             <input class="form-control" type="text" required="" placeholder="Enter category name" autocomplete="off">
                                           </div>
                                         </div>
-                                        <input id="index_var" type="hidden" value="1">
-                                        <button class="btn btn-secondary" type="submit">Save</button>
+                                        <button class="btn btn-secondary" type="button">Save</button>
                                         <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                       </form>
                                     </div>
@@ -722,119 +724,307 @@
                           <div class="tab-pane fade active show" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
                             <div class="card mb-0">
                               <div class="card-header d-flex">
-                                <h5>Personal</h5><span class="f-14 pull-right">4 Contacts</span>
+                                <h5>Personal</h5><span class="f-14 pull-right mt-0">5 Contacts</span>
                               </div>
                               <div class="card-body p-0">
-                                <div class="row list-persons">
-                                  <div class="col-sm-4 col-xs-12">
-                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="nav-link active" id="v-pills-user-tab" data-toggle="pill" href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true">
-                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/2.png" alt="">
+                                <div class="row list-persons" id="addcon">
+                                  <div class="col-xl-4 xl-50 col-md-5">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="contact-tab-0 nav-link active" id="v-pills-user-tab" data-toggle="pill" onclick="activeDiv(0)" href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle update_img_0" src="../assets/images/user/2.png" alt="">
                                           <div class="media-body">
-                                            <h6>Bucky Barnes</h6>
-                                            <p>barnes@gmail.com</p>
+                                            <h6> <span class="first_name_0">Bucky </span><span class="last_name_0">Barnes</span></h6>
+                                            <p class="email_add_0">barnes@gmail.com</p>
                                           </div>
-                                        </div></a><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"> 
-                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/8.jpg" alt="">
+                                        </div></a><a class="contact-tab-1 nav-link" id="v-pills-profile-tab" data-toggle="pill" onclick="activeDiv(1)" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"> 
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle update_img_1" src="../assets/images/user/8.jpg" alt="">
                                           <div class="media-body">
-                                            <h6>Comeren Diaz</h6>
-                                            <p>comeren@gmail.com</p>
+                                            <h6> <span class="first_name_1">Comeren </span><span class="last_name_1">Diaz</span></h6>
+                                            <p class="email_add_1">comeren@gmail.com</p>
                                           </div>
-                                        </div></a><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/1.jpg" alt="">
+                                        </div></a><a class="contact-tab-2 nav-link" id="v-pills-messages-tab" data-toggle="pill" onclick="activeDiv(2)" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle update_img_2" src="../assets/images/user/1.jpg" alt="">
                                           <div class="media-body">
-                                            <h6>Issa Bell</h6>
-                                            <p>issabell@gmail.com</p>
+                                            <h6> <span class="first_name_2">Issa </span><span class="last_name_2">Bell</span></h6>
+                                            <p class="email_add_2">issabell@gmail.com</p>
                                           </div>
-                                        </div></a><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/14.png" alt="">
+                                        </div></a><a class="contact-tab-3 nav-link" id="v-pills-settings-tab" data-toggle="pill" onclick="activeDiv(3)" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle update_img_3" src="../assets/images/user/14.png" alt="">
                                           <div class="media-body">
-                                            <h6>Andew Jon</h6>
-                                            <p>andewjon@gmail.com</p>
+                                            <h6> <span class="first_name_3">Andew </span><span class="last_name_3">Jon</span></h6>
+                                            <p class="email_add_3">andewjon@gmail.com</p>
+                                          </div>
+                                        </div></a><a class="contact-tab-4 nav-link" id="v-pills-contact1-tab" data-toggle="pill" onclick="activeDiv(4)" href="#v-pills-contact1" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle update_img_4" src="../assets/images/user/5.jpg" alt="">
+                                          <div class="media-body">
+                                            <h6> <span class="first_name_4">Jason </span><span class="last_name_4">Borne</span></h6>
+                                            <p class="email_add_4">jasonb@gmail.com</p>
                                           </div>
                                         </div></a></div>
                                   </div>
-                                  <div class="col-sm-8 col-xs-12">
+                                  <div class="col-xl-8 xl-50 col-md-7">
                                     <div class="tab-content" id="v-pills-tabContent">
-                                      <div class="tab-pane fade show active" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
+                                      <div class="tab-pane contact-tab-0 tab-content-child fade show active" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/2.png" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_0" src="../assets/images/user/2.png" alt="">
+                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,0)">
                                             <div class="media-body mt-0">
-                                              <h5>Bucky Barnes</h5>
-                                              <p>barnes@gmail.com</p>
+                                              <h5><span class="first_name_0">Bucky </span><span class="last_name_0">Barnes</span></h5>
+                                              <p class="email_add_0">barnes@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Edit</a></li>
-                                                <li><a href="#">Delete</a></li>
-                                                <li><a href="#">History</a></li>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="editContact(0)">Edit</a></li>
+                                                <li><a href="#" onclick="deleteContact(0)">Delete</a></li>
+                                                <li><a href="#" onclick="history(0)">History</a></li>
+                                                <li><a href="#" onclick="printContact(0)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">barnes@gmail.com </span></p>
+                                            <p>Email Address: <span class="font-primary email_add_0">barnes@gmail.com </span></p>
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                      <div class="tab-pane contact-tab-1 tab-content-child fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/8.jpg" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_1" src="../assets/images/user/8.jpg" alt="">
+                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,1)">
                                             <div class="media-body mt-0">
-                                              <h5>Comeren Diaz</h5>
-                                              <p>comeren@gmail.com</p>
+                                              <h5><span class="first_name_1">Comeren </span><span class="last_name_1">Diaz</span></h5>
+                                              <p class="email_add_1">comeren@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Edit</a></li>
-                                                <li><a href="#">Delete</a></li>
-                                                <li><a href="#">History</a></li>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="editContact(1)">Edit</a></li>
+                                                <li><a href="#" onclick="deleteContact(1)">Delete</a></li>
+                                                <li><a href="#" onclick="history(1)">History</a></li>
+                                                <li><a href="#" onclick="printContact(1)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">comeren@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_1">comeren@gmail.com</span></p>
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                      <div class="tab-pane contact-tab-2 tab-content-child fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/1.jpg" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_2" src="../assets/images/user/1.jpg" alt="">
+                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,2)">
                                             <div class="media-body mt-0">
-                                              <h5>Issa Bell</h5>
-                                              <p>issabell@gmail.com</p>
+                                              <h5> <span class="first_name_2">Issa </span><span class="last_name_2">Bell</span></h5>
+                                              <p class="email_add_2">issabell@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Edit</a></li>
-                                                <li><a href="#">Delete</a></li>
-                                                <li><a href="#">History</a></li>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="editContact(2)">Edit</a></li>
+                                                <li><a href="#" onclick="deleteContact(2)">Delete</a></li>
+                                                <li><a href="#" onclick="history(2)">History</a></li>
+                                                <li><a href="#" onclick="printContact(2)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">issabell@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_2">issabell@gmail.com</span></p>
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                      <div class="tab-pane contact-tab-3 tab-content-child fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/14.png" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_3" src="../assets/images/user/14.png" alt="">
+                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,3)">
                                             <div class="media-body mt-0">
-                                              <h5>Andew Jon</h5>
-                                              <p>andewjon@gmail.com</p>
+                                              <h5> <span class="first_name_3">Andew </span><span class="last_name_3">Jon</span></h5>
+                                              <p class="email_add_3">andewjon@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Edit</a></li>
-                                                <li><a href="#">Delete</a></li>
-                                                <li><a href="#">History</a></li>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="editContact(3)">Edit</a></li>
+                                                <li><a href="#" onclick="deleteContact(3)">Delete</a></li>
+                                                <li><a href="#" onclick="history(3)">History</a></li>
+                                                <li><a href="#" onclick="printContact(3)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">andewjon@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_3">andewjon@gmail.com</span></p>
                                           </div>
                                         </div>
                                       </div>
+                                      <div class="tab-pane contact-tab-4 tab-content-child fade" id="v-pills-contact1" role="tabpanel" aria-labelledby="v-pills-contact1-tab">
+                                        <div class="profile-mail">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_4" src="../assets/images/user/5.jpg" alt="">
+                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,4)">
+                                            <div class="media-body mt-0">
+                                              <h5> <span class="first_name_4">Jason </span><span class="last_name_4">Borne</span></h5>
+                                              <p class="email_add_4">jasonb@gmail.com</p>
+                                              <ul>
+                                                <li><a href="#" onclick="editContact(4)">Edit</a></li>
+                                                <li><a href="#" onclick="deleteContact(4)">Delete</a></li>
+                                                <li><a href="#" onclick="history(4)">History</a></li>
+                                                <li><a href="#" onclick="printContact(4)" data-toggle="modal" data-target="#printModal">Print</a></li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div class="email-general">
+                                            <h6>General</h6>
+                                            <p>Email Address: <span class="font-primary email_add_4">jasonb@gmail.com</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="contact-editform pl-0">
+                                      <form>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-12">
+                                            <label>Name</label>
+                                            <div class="row">
+                                              <div class="col-sm-6">
+                                                <input class="form-control" id="first_name" type="text" required="" placeholder="First Name" value="first_name">
+                                              </div>
+                                              <div class="col-sm-6">   
+                                                <input class="form-control" id="last_name" type="text" required="" placeholder="Last Name" value="last_name">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group col-md-12">
+                                            <label>Email Address</label>
+                                            <input class="form-control" id="email_add" type="text" required="" autocomplete="off">
+                                          </div>
+                                          <div class="form-group col-md-12">
+                                            <label>Phone</label>
+                                            <div class="row">
+                                              <div class="col-sm-6">
+                                                <input class="form-control" type="number" required="" autocomplete="off">
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <select class="form-control">
+                                                  <option>Mobile</option>
+                                                  <option>Work</option>
+                                                  <option>Others</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="form-row more-data">
+                                          <div class="form-group col-md-12">
+                                            <label>URLS</label>
+                                            <div class="row">
+                                              <div class="col-lg-6 col-sm-6">
+                                                <input class="form-control" type="text" required="">
+                                              </div>
+                                              <div class="col-lg-4 col-sm-6">   
+                                                <select class="js-example-basic-single">
+                                                  <option value="pw">Personal web address</option>
+                                                  <option value="cw">Company web address</option>
+                                                  <option value="fb">Fabebook URL</option>
+                                                  <option value="tw">Twitter URL</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group col-md-12">
+                                            <label>Personal</label>
+                                            <div class="d-block">
+                                              <label class="mr-3" for="edo-ani">
+                                                <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani" checked="">Male
+                                              </label>
+                                              <label for="edo-ani1">
+                                                <input class="radio_animated" id="edo-ani1" type="radio" name="rdo-ani">Female
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div class="form-group col-md-12">
+                                            <div class="row">
+                                              <div class="col-lg-2 col-sm-4">
+                                                <select class="form-control">
+                                                  <option class="f-w-600">Day</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                                  <option>05</option>
+                                                  <option>06</option>
+                                                  <option>07</option>
+                                                  <option>08</option>
+                                                  <option>09</option>
+                                                  <option>10</option>
+                                                  <option>11</option>
+                                                  <option>12</option>
+                                                  <option>13</option>
+                                                  <option>14</option>
+                                                  <option>15</option>
+                                                  <option>16</option>
+                                                  <option>17</option>
+                                                  <option>18</option>
+                                                  <option>19</option>
+                                                  <option>20</option>
+                                                  <option>21</option>
+                                                  <option>22</option>
+                                                  <option>23</option>
+                                                  <option>24</option>
+                                                  <option>25</option>
+                                                  <option>26</option>
+                                                  <option>27</option>
+                                                  <option>28</option>
+                                                  <option>29</option>
+                                                  <option>30</option>
+                                                  <option>31</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-lg-3 col-sm-4">
+                                                <select class="form-control">
+                                                  <option class="f-w-600">Month</option>
+                                                  <option>January</option>
+                                                  <option>February</option>
+                                                  <option>March</option>
+                                                  <option>April</option>
+                                                  <option>May</option>
+                                                  <option>June</option>
+                                                  <option>July</option>
+                                                  <option>August</option>
+                                                  <option>September</option>
+                                                  <option>October</option>
+                                                  <option>November</option>
+                                                  <option>December</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-lg-3 col-sm-4">
+                                                <input class="form-control" type="text">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group col-md-12 mb-0">
+                                            <label>Home Address</label>
+                                            <div class="row">
+                                              <div class="col-12">
+                                                <div class="form-group">
+                                                  <input class="form-control" type="text" placeholder="Address">
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <div class="form-group">
+                                                  <input class="form-control" type="text" placeholder="City">
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <div class="form-group">
+                                                  <input class="form-control" type="text" placeholder="State">
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <div class="form-group mb-0">
+                                                  <input class="form-control" type="text" placeholder="Country">
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <div class="form-group mb-0">
+                                                  <input class="form-control" type="text" placeholder="Pin Code">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div><a class="pl-0 edit-information" href="#">Edit more information</a>
+                                        <button class="btn btn-secondary update-contact" type="button">Save</button>
+                                        <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
+                                      </form>
                                     </div>
                                   </div>
                                 </div>
@@ -844,11 +1034,11 @@
                           <div class="fade tab-pane" id="pills-organization" role="tabpanel" aria-labelledby="pills-organization-tab">
                             <div class="card mb-0">
                               <div class="card-header d-flex">
-                                <h5>Organization</h5><span class="f-14 pull-right">10 Contacts</span>
+                                <h5>Organization</h5><span class="f-14 pull-right mt-0">10 Contacts</span>
                               </div>
                               <div class="card-body p-0">
                                 <div class="row list-persons">
-                                  <div class="col-sm-4 col-xs-12">
+                                  <div class="col-xl-4 xl-50 col-md-5">
                                     <div class="nav flex-column nav-pills" id="v-pills-tab1" role="tablist" aria-orientation="vertical"><a class="nav-link active" id="v-pills-iduser-tab" data-toggle="pill" href="#v-pills-iduser" role="tab" aria-controls="v-pills-iduser" aria-selected="true">
                                         <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/user.png" alt="">
                                           <div class="media-body">
@@ -862,7 +1052,7 @@
                                             <p>jasonb@gmail.com</p>
                                           </div>
                                         </div></a><a class="nav-link" id="v-pills-iduser2-tab" data-toggle="pill" href="#v-pills-iduser2" role="tab" aria-controls="v-pills-iduser2" aria-selected="false">
-                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/3.png" alt="">
+                                        <div class="media"><img class="img-50 img-fluid m-r-20 rounded-circle" src="../assets/images/user/4.jpg" alt="">
                                           <div class="media-body">
                                             <h6>Sarah Loren</h6>
                                             <p>barnes@gmail.com</p>
@@ -875,22 +1065,22 @@
                                           </div>
                                         </div></a></div>
                                   </div>
-                                  <div class="col-sm-8 col-xs-12">
+                                  <div class="col-xl-8 xl-50 col-md-7">
                                     <div class="tab-content" id="v-pills-tabContent1">
                                       <div class="tab-pane fade show active" id="v-pills-iduser" role="tabpanel" aria-labelledby="v-pills-iduser-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/user.png" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_5" src="../assets/images/user/user.png" alt="">
                                             <div class="media-body mt-0">
-                                              <h5>Mark jecno</h5>
-                                              <p>markjecno@gmail.com</p>
+                                              <h5><span class="first_name_5">Mark </span><span class="last_name_5">jecno</span></h5>
+                                              <p class="email_add_5">markjecno@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="printContact(5)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">markjecno@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_5">markjecno@gmail.com</span></p>
                                             <div class="gender">
                                               <h6>Personal</h6>
                                               <p>Gender: <span>Male</span></p>
@@ -900,18 +1090,18 @@
                                       </div>
                                       <div class="tab-pane fade" id="v-pills-iduser1" role="tabpanel" aria-labelledby="v-pills-iduser1-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/3.jpg" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_6" src="../assets/images/user/3.jpg" alt="">
                                             <div class="media-body mt-0">
-                                              <h5>Jason Borne</h5>
-                                              <p>jasonb@gmail.com</p>
+                                              <h5><span class="first_name_6">Jason </span><span class="last_name_6">Borne</span></h5>
+                                              <p class="email_add_6">jasonb@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="printContact(6)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">jasonb@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_6">jasonb@gmail.com</span></p>
                                             <div class="gender">
                                               <h6>Personal</h6>
                                               <p>Gender: <span>Male</span></p>
@@ -921,18 +1111,18 @@
                                       </div>
                                       <div class="tab-pane fade" id="v-pills-iduser2" role="tabpanel" aria-labelledby="v-pills-iduser2-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/3.png" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_7" src="../assets/images/user/4.jpg" alt="">
                                             <div class="media-body mt-0">
-                                              <h5>Sarah Loren</h5>
-                                              <p>barnes@gmail.com</p>
+                                              <h5> <span class="first_name_7">Sarah </span><span class="last_name_7">Loren</span></h5>
+                                              <p class="email_add_7">barnes@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="printContact(7)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">barnes@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_7">barnes@gmail.com</span></p>
                                             <div class="gender">
                                               <h6>Personal</h6>
                                               <p>Gender: <span>Female</span></p>
@@ -942,18 +1132,18 @@
                                       </div>
                                       <div class="tab-pane fade" id="v-pills-iduser3" role="tabpanel" aria-labelledby="v-pills-iduser3-tab">
                                         <div class="profile-mail">
-                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" src="../assets/images/user/10.jpg" alt="">
+                                          <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_8" src="../assets/images/user/10.jpg" alt="">
                                             <div class="media-body mt-0">
-                                              <h5>Andew Jon</h5>
-                                              <p>andrewj@gmail.com</p>
+                                              <h5> <span class="first_name_8">Andew </span><span class="last_name_8">Jon</span></h5>
+                                              <p class="email_add_8">andrewj@gmail.com</p>
                                               <ul>
-                                                <li><a href="#">Print</a></li>
+                                                <li><a href="#" onclick="printContact(8)" data-toggle="modal" data-target="#printModal">Print</a></li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div class="email-general">
                                             <h6>General</h6>
-                                            <p>Email Address: <span class="font-primary">andrewj@gmail.com</span></p>
+                                            <p>Email Address: <span class="font-primary email_add_8">andrewj@gmail.com</span></p>
                                             <div class="gender">
                                               <h6>Personal</h6>
                                               <p>Gender: <span>Female</span></p>
@@ -963,6 +1153,48 @@
                                       </div>
                                     </div>
                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="right-history">
+                            <div class="modal-header p-l-20 p-r-20">
+                              <h6 class="modal-title w-100">Contact History<span class="pull-right"><a class="closehistory" href="#"><i class="icofont icofont-close"></i></a></span></h6>
+                            </div>
+                            <div class="history-details">
+                              <div class="text-center"><i class="icofont icofont-ui-edit"></i>
+                                <p>Contact has not been modified yet.</p>
+                              </div>
+                              <div class="media"><i class="icofont icofont-star mr-3"></i>
+                                <div class="media-body mt-0">
+                                  <h6 class="mt-0">Contact Created</h6>
+                                  <p class="mb-0">Contact is created via mail</p><span class="f-12">Sep 10, 2019 4:00</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal fade modal-bookmark" id="printModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Print preview</h5>
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                                <div class="modal-body list-persons">
+                                  <div class="profile-mail pt-0" id="DivIdToPrint">
+                                    <div class="media"><img class="img-100 img-fluid m-r-20 rounded-circle" id="updateimg" src="../assets/images/user/2.png" alt="">
+                                      <div class="media-body mt-0">
+                                        <h5><span id="printname">Bucky </span><span id="printlast">Barnes</span></h5>
+                                        <p id="printmail">barnes@gmail.com</p>
+                                      </div>
+                                    </div>
+                                    <div class="email-general">
+                                      <h6>General</h6>
+                                      <p>Email Address: <span class="font-primary" id="mailadd">barnes@gmail.com   </span></p>
+                                    </div>
+                                  </div>
+                                  <button class="btn btn-secondary" id="btnPrint" type="button" onclick="printDiv();">Print</button>
+                                  <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                 </div>
                               </div>
                             </div>
@@ -1004,8 +1236,13 @@
     <script src="../assets/js/sidebar-menu.js"></script>
     <script src="../assets/js/config.js"></script>
     <!-- Plugins JS start-->
-    <script src="../assets/js/contacts/custom.js"></script>
+    <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="../assets/js/sweet-alert/sweetalert.min.js"></script>
+    <script src="../assets/js/select2/select2.full.min.js"></script>
+    <script src="../assets/js/select2/select2-custom.js"></script>
     <script src="../assets/js/form-validation-custom.js"></script>
+    <script src="../assets/js/bookmark/jquery.validate.min.js"></script>
+    <script src="../assets/js/contacts/custom.js"></script>
     <script src="../assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->

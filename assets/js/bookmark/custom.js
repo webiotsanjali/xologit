@@ -58,6 +58,20 @@ function submitBookMark() {
     $('#bookmark-form').find('input[type="text"],textarea').val('');
 	}
 } 
+
+// edit contact
+
+function editBookmark(index_var){
+
+	var title = $(".title_"+index_var).html();
+	var weburl = $(".weburl_"+index_var).html();
+	var desc = $(".desc_"+index_var).html();
+	$("#edittitle").val(title);
+	$("#editurl").val(weburl);
+	$("#editdesc").val(desc);
+}
+
+
 // favourites bookmark
 
 var fav_arr = [];
