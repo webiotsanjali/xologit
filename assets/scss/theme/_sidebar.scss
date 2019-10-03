@@ -402,6 +402,13 @@
                 overflow: auto;
                 display: block !important;
                 .dropdown {
+                  .menu-title {
+                    &.active {
+                      ~ .menu-content {
+                        display: block !important;
+                      }
+                    }
+                  }
                   ul.nav-submenu {
                     li {
                       a {
