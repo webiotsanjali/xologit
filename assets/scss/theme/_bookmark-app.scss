@@ -253,16 +253,16 @@
     .card {
       .d-flex {
         justify-content: space-between;
+        svg {
+          width: 18px;
+          height: 18px;
+          vertical-align: middle;
+        }
         ul {
           li {
             display: inline-block;
             + li {
               margin-left: 5px;
-            }
-            svg {
-              width: 18px;
-              height: 18px;
-              vertical-align: middle;
             }
           }
         }

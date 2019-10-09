@@ -14,7 +14,7 @@
     font-weight: 500;
     text-transform: uppercase;
   }
-  .nav-material{
+  .border-tab{
     &.nav-tabs {
       .material-border {
         border-bottom-width: 1px;
@@ -36,7 +36,7 @@
       margin-top: 30px;
     }
   }
-  .nav-material.nav-tabs{
+  .border-tab.nav-tabs{
     align-items: left;
     justify-content: end;
     .nav-item{

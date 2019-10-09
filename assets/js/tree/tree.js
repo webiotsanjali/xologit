@@ -1,7 +1,7 @@
 'use strict';
 var tree_custom = {
     init: function() {
-        $('#basicTree').jstree({
+        $('#treeBasic').jstree({
             'core' : {
                 'themes' : {
                     'responsive': false
@@ -16,7 +16,7 @@ var tree_custom = {
                 }
             },
             'plugins' : ['types']
-        }), $('#checkTree').jstree({
+        }), $('#treecheckbox').jstree({
     		'core' : {
     			'themes' : {
     				'responsive': false

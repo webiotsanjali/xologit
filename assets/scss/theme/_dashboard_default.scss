@@ -571,65 +571,8 @@
     align-items: center;
     justify-content: center;
   }
-  &.radial-bar-5 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(108deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-10 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(126deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-15 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(144deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-20 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(162deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-25 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(180deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-30 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(198deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-35 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(216deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-40 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(234deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-45 {
-    background-image: linear-gradient(90deg, $light-color 50%, transparent 50%, transparent), linear-gradient(252deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-50 {
-    background-image: linear-gradient(270deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-55 {
-    background-image: linear-gradient(288deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-60 {
-    background-image: linear-gradient(306deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-65 {
-    background-image: linear-gradient(324deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
   &.radial-bar-70 {
     background-image: linear-gradient(342deg, $primary-color 50%, transparent 50%, transparent), linear-gradient(270deg, $primary-color 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-75 {
-    background-image: linear-gradient(360deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-80 {
-    background-image: linear-gradient(378deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-85 {
-    background-image: linear-gradient(396deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-90 {
-    background-image: linear-gradient(414deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-95 {
-    background-image: linear-gradient(432deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
-  }
-  &.radial-bar-100 {
-    background-image: linear-gradient(450deg, $light-gray 50%, transparent 50%, transparent), linear-gradient(270deg, $light-gray 50%, $light-color 50%, $light-color);
   }
 }
 .social-widget-card{

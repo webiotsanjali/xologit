@@ -37,7 +37,7 @@ html(lang='en')
                             .card-header
                               h5 Basic Tree
                             .card-body
-                              #basicTree
+                              #treeBasic
                                 ul
                                   li
                                     | Admin
@@ -45,33 +45,37 @@ html(lang='en')
                                       li(data-jstree='{"opened":true}')
                                         | Assets
                                         ul
-                                          li(data-jstree='{"type":"file"}') Css
-                                          li(data-jstree='{"opened":true}')
-                                            | Plugins
+                                          li(data-jstree='{"opened":false}')
+                                            | Css
                                             ul
-                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
-                                              li(data-jstree='{"type":"file"}') Plugin two
+                                              li(data-jstree='{"selected":false,"type":"file"}') Css one
+                                              li(data-jstree='{"type":"file"}') Css two
+                                          li(data-jstree='{"opened":true}')
+                                            | Js
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Js one
+                                              li(data-jstree='{"type":"file"}') Js two
+                                          li(data-jstree='{"opened":true}')
+                                            | Scss
+                                            ul
+                                              li(data-jstree='{"opened":false}')
+                                                | Sub Child
+                                                ul
+                                                  li(data-jstree='{"selected":false,"type":"file"}') Sub File
+                                                  li(data-jstree='{"type":"file"}') Sub File
+                                              li(data-jstree='{"type":"file"}') Scss two
                                       li(data-jstree='{"opened":true}')
-                                        | Email Template
+                                        | Default
                                         ul
-                                          li(data-jstree='{"type":"file"}') Email one
-                                          li(data-jstree='{"type":"file"}') Email two
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
-                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
-                                      li(data-jstree='{"opened":true}')
-                                        | User Interface
-                                        ul
-                                          li(data-jstree='{"type":"file"}') Buttons
-                                          li(data-jstree='{"type":"file"}') Cards
-                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
-                                  li(data-jstree='{"type":"file"}') Frontend
+                                          li(data-jstree='{"type":"file"}') Dashboard
+                                          li(data-jstree='{"type":"file"}') Typography
+                                  li(data-jstree='{"type":"file"}') index file
                         .col-sm-12.col-xl-6
                           .card
                             .card-header
                               h5 Checkbox Tree
                             .card-body
-                              #checkTree
+                              #treecheckbox
                                 ul
                                   li
                                     | Admin
@@ -79,27 +83,31 @@ html(lang='en')
                                       li(data-jstree='{"opened":true}')
                                         | Assets
                                         ul
-                                          li(data-jstree='{"type":"file"}') Css
-                                          li(data-jstree='{"opened":true}')
-                                            | Plugins
+                                          li(data-jstree='{"opened":false}')
+                                            | Css
                                             ul
-                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
-                                              li(data-jstree='{"type":"file"}') Plugin two
+                                              li(data-jstree='{"selected":false,"type":"file"}') Css one
+                                              li(data-jstree='{"type":"file"}') Css two
+                                          li(data-jstree='{"opened":true}')
+                                            | Js
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Js one
+                                              li(data-jstree='{"type":"file"}') Js two
+                                          li(data-jstree='{"opened":true}')
+                                            | Scss
+                                            ul
+                                              li(data-jstree='{"opened":false}')
+                                                | Sub Child
+                                                ul
+                                                  li(data-jstree='{"selected":false,"type":"file"}') Sub File
+                                                  li(data-jstree='{"type":"file"}') Sub File
+                                              li(data-jstree='{"type":"file"}') Scss two
                                       li(data-jstree='{"opened":true}')
-                                        | Email Template
+                                        | Default
                                         ul
-                                          li(data-jstree='{"type":"file"}') Email one
-                                          li(data-jstree='{"type":"file"}') Email two
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
-                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
-                                      li(data-jstree='{"opened":true}')
-                                        | User Interface
-                                        ul
-                                          li(data-jstree='{"type":"file"}') Buttons
-                                          li(data-jstree='{"type":"file"}') Cards
-                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
-                                  li(data-jstree='{"type":"file"}') Frontend
+                                          li(data-jstree='{"type":"file"}') Dashboard
+                                          li(data-jstree='{"type":"file"}') Typography
+                                  li(data-jstree='{"type":"file"}') index file
                         .col-sm-12.col-xl-6
                           .card
                             .card-header
@@ -113,27 +121,31 @@ html(lang='en')
                                       li(data-jstree='{"opened":true}')
                                         | Assets
                                         ul
-                                          li(data-jstree='{"type":"file"}') Css
-                                          li(data-jstree='{"opened":true}')
-                                            | Plugins
+                                          li(data-jstree='{"opened":false}')
+                                            | Css
                                             ul
-                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
-                                              li(data-jstree='{"type":"file"}') Plugin two
+                                              li(data-jstree='{"selected":false,"type":"file"}') Css one
+                                              li(data-jstree='{"type":"file"}') Css two
+                                          li(data-jstree='{"opened":true}')
+                                            | Js
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Js one
+                                              li(data-jstree='{"type":"file"}') Js two
+                                          li(data-jstree='{"opened":true}')
+                                            | Scss
+                                            ul
+                                              li(data-jstree='{"opened":false}')
+                                                | Sub Child
+                                                ul
+                                                  li(data-jstree='{"selected":false,"type":"file"}') Sub File
+                                                  li(data-jstree='{"type":"file"}') Sub File
+                                              li(data-jstree='{"type":"file"}') Scss two
                                       li(data-jstree='{"opened":true}')
-                                        | Email Template
+                                        | Default
                                         ul
-                                          li(data-jstree='{"type":"file"}') Email one
-                                          li(data-jstree='{"type":"file"}') Email two
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
-                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
-                                      li(data-jstree='{"opened":true}')
-                                        | User Interface
-                                        ul
-                                          li(data-jstree='{"type":"file"}') Buttons
-                                          li(data-jstree='{"type":"file"}') Cards
-                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
-                                  li(data-jstree='{"type":"file"}') Frontend
+                                          li(data-jstree='{"type":"file"}') Dashboard
+                                          li(data-jstree='{"type":"file"}') Typography
+                                  li(data-jstree='{"type":"file"}') index file
                         .col-sm-12.col-xl-6
                           .card
                             .card-header
@@ -147,27 +159,31 @@ html(lang='en')
                                       li(data-jstree='{"opened":true}')
                                         | Assets
                                         ul
-                                          li(data-jstree='{"type":"file"}') Css
-                                          li(data-jstree='{"opened":true}')
-                                            | Plugins
+                                          li(data-jstree='{"opened":false}')
+                                            | Css
                                             ul
-                                              li(data-jstree='{"selected":true,"type":"file"}') Plugin one
-                                              li(data-jstree='{"type":"file"}') Plugin two
+                                              li(data-jstree='{"selected":false,"type":"file"}') Css one
+                                              li(data-jstree='{"type":"file"}') Css two
+                                          li(data-jstree='{"opened":true}')
+                                            | Js
+                                            ul
+                                              li(data-jstree='{"selected":true,"type":"file"}') Js one
+                                              li(data-jstree='{"type":"file"}') Js two
+                                          li(data-jstree='{"opened":true}')
+                                            | Scss
+                                            ul
+                                              li(data-jstree='{"opened":false}')
+                                                | Sub Child
+                                                ul
+                                                  li(data-jstree='{"selected":false,"type":"file"}') Sub File
+                                                  li(data-jstree='{"type":"file"}') Sub File
+                                              li(data-jstree='{"type":"file"}') Scss two
                                       li(data-jstree='{"opened":true}')
-                                        | Email Template
+                                        | Default
                                         ul
-                                          li(data-jstree='{"type":"file"}') Email one
-                                          li(data-jstree='{"type":"file"}') Email two
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-dashboard"}') Dashboard
-                                      li(data-jstree='{"icon":"zmdi zmdi-format-underlined"}') Typography
-                                      li(data-jstree='{"opened":true}')
-                                        | User Interface
-                                        ul
-                                          li(data-jstree='{"type":"file"}') Buttons
-                                          li(data-jstree='{"type":"file"}') Cards
-                                      li(data-jstree='{"icon":"zmdi zmdi-collection-text"}') Forms
-                                      li(data-jstree='{"icon":"zmdi zmdi-view-list"}') Tables
-                                  li(data-jstree='{"type":"file"}') Frontend
+                                          li(data-jstree='{"type":"file"}') Dashboard
+                                          li(data-jstree='{"type":"file"}') Typography
+                                  li(data-jstree='{"type":"file"}') index file
 
                     // Container-fluid Ends
                 include ../../components/footer
