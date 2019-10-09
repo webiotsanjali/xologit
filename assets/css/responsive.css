@@ -197,7 +197,7 @@
     margin-right: 3px; }
   .chat-box .about {
     margin-top: 0; }
-  .chat-box .nav-material.nav-tabs .nav-item a {
+  .chat-box .border-tab.nav-tabs .nav-item a {
     padding: 13px 4px !important;
     color: #59667a !important;
     letter-spacing: 0;
@@ -474,7 +474,7 @@
     height: 45px; }
   .chat-box .about {
     margin-top: 0; }
-  .chat-box .nav-material.nav-tabs .nav-item a {
+  .chat-box .border-tab.nav-tabs .nav-item a {
     padding: 13px 4px !important;
     color: #59667a !important;
     letter-spacing: 0;
@@ -932,9 +932,9 @@
     font-size: 25px; }
   .chat-box .chat-history .row .col-sm-7 {
     padding-right: 0; }
-  .chat-box .nav-material.nav-tabs {
+  .chat-box .border-tab.nav-tabs {
     width: 100%; }
-    .chat-box .nav-material.nav-tabs .nav-item {
+    .chat-box .border-tab.nav-tabs .nav-item {
       margin-right: 5px; }
   .chat-box .chat-left-aside .people-list {
     height: 493px; }
@@ -1357,9 +1357,9 @@
     padding: 18px 15px; }
   .tabbed-card ul {
     top: -5px; }
-    .tabbed-card ul.nav-material.nav-tabs {
+    .tabbed-card ul.border-tab.nav-tabs {
       padding: 0; }
-      .tabbed-card ul.nav-material.nav-tabs .nav-item .nav-link {
+      .tabbed-card ul.border-tab.nav-tabs .nav-item .nav-link {
         padding: 18px 15px; }
   .tilt-showcase .tilt-image {
     text-align: center; }
@@ -1494,9 +1494,9 @@
   .wizard-4 ul.anchor {
     padding-right: 20px; }
   /*Form Wizard Four ends*/
-  .nav-material.nav-tabs {
+  .border-tab.nav-tabs {
     margin-bottom: 20px; }
-  .tab-content ~ .nav-tabs.nav-material {
+  .tab-content ~ .nav-tabs.border-tab {
     margin-top: 20px; }
   .dataTables_wrapper .dataTables_length {
     margin-bottom: 20px; }
@@ -1604,7 +1604,7 @@
     .user-profile .hovercard .user-image .share-icons li .social-icon {
       width: 35px;
       height: 35px; }
-  .tabs-scoial.nav-material.nav-tabs {
+  .tabs-scoial.border-tab.nav-tabs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -1656,7 +1656,7 @@
       font-size: 18px;
       top: 11px;
       left: 20px; }
-  .chat-box .nav-material.nav-tabs {
+  .chat-box .border-tab.nav-tabs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -1928,10 +1928,10 @@
     .blog-single .comment-box .comment-social li:first-child {
       padding-left: 0;
       padding-right: 15px; }
-  .nav-material.nav-tabs {
+  .border-tab.nav-tabs {
     display: inline-block;
     width: 100%; }
-    .nav-material.nav-tabs .nav-item {
+    .border-tab.nav-tabs .nav-item {
       float: left; }
   .search-page #image-links .info-block.m-t-30 {
     margin-top: 0 !important; }
@@ -2269,7 +2269,7 @@
       left: 0;
       right: 0;
       margin: 0 auto; }
-    .tabs-scoial.nav-material.nav-tabs .nav-item .nav-link {
+    .tabs-scoial.border-tab.nav-tabs .nav-item .nav-link {
       padding: 10px 18px; }
   .timeline-content p, .timeline-content .comments-box {
     margin-top: 15px; }
@@ -2392,28 +2392,28 @@
     .nav-tabs .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link:focus {
       border-top: 0;
       border-bottom: 0; }
-  .nav-material.nav-tabs .nav-item {
+  .border-tab.nav-tabs .nav-item {
     width: 100% !important; }
-  .nav-material .weather-widget-two .bottom-whetherinfo .whether-content {
+  .border-tab .weather-widget-two .bottom-whetherinfo .whether-content {
     top: 35px; }
-  .nav-material .social-widget-card .b-b-light {
+  .border-tab .social-widget-card .b-b-light {
     padding: 15px;
     margin-bottom: 15px; }
-  .nav-material .ecommerce-widget .progress-showcase {
+  .border-tab .ecommerce-widget .progress-showcase {
     margin-top: 15px; }
   .nav {
     display: inherit;
     text-align: center;
     border-bottom: none; }
-  .nav-material.nav-left .nav-link {
+  .border-tab.nav-left .nav-link {
     text-align: center;
     border-left: none; }
-  .nav-material.nav-right .nav-link {
+  .border-tab.nav-right .nav-link {
     text-align: center;
     border-right: none; }
-  .nav-material.nav-tabs {
+  .border-tab.nav-tabs {
     margin-bottom: 10px; }
-  .tab-content ~ .nav-tabs.nav-material {
+  .tab-content ~ .nav-tabs.border-tab {
     margin-top: 10px; }
   .nav-pills {
     text-align: center; }
@@ -2430,9 +2430,9 @@
     position: relative;
     width: 100%;
     left: 0; }
-    .tabbed-card ul.nav-material {
+    .tabbed-card ul.border-tab {
       margin-bottom: 15px; }
-      .tabbed-card ul.nav-material.nav-tabs .nav-item .nav-link {
+      .tabbed-card ul.border-tab.nav-tabs .nav-item .nav-link {
         padding: 5px 15px 10px; }
   .todo .action-box.large {
     height: 25px;
@@ -2947,7 +2947,7 @@
     top: 37px;
     width: 30%;
     right: 0; }
-  .tabs-scoial.nav-material.nav-tabs .nav-item .nav-link {
+  .tabs-scoial.border-tab.nav-tabs .nav-item .nav-link {
     padding: 10px 10px;
     font-size: 14px; }
   .user-profile .hovercard .user-image .share-icons {
@@ -3009,7 +3009,7 @@
   .button-builder-wrap .btn-lg {
     font-size: 18px; }
   /* responsive material tabs*/
-  .nav-material.nav-tabs .nav-item .nav-link {
+  .border-tab.nav-tabs .nav-item .nav-link {
     padding: 10px 0px; }
   .tabs-responsive-side {
     max-width: 100%; }

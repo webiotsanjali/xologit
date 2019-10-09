@@ -353,7 +353,7 @@
     .about {
       margin-top: 0;
     }
-    .nav-material.nav-tabs {
+    .border-tab.nav-tabs {
       .nav-item{
         a{
           padding: 13px 4px !important;
@@ -962,7 +962,7 @@
     .about {
       margin-top: 0;
     }
-    .nav-material.nav-tabs {
+    .border-tab.nav-tabs {
       .nav-item{
         a{
           padding: 13px 4px !important;
@@ -1871,7 +1871,7 @@
         }
       }
     }
-    .nav-material.nav-tabs {
+    .border-tab.nav-tabs {
       width: 100%;
       .nav-item{
         margin-right: 5px;
@@ -2723,7 +2723,7 @@
   .tabbed-card {
     ul {
       top: -5px;
-      &.nav-material{
+      &.border-tab{
         &.nav-tabs {
           padding: 0;
           .nav-item {
@@ -3017,12 +3017,12 @@
   }
   /*Form Wizard Four ends*/
   // tab material
-  .nav-material.nav-tabs{
+  .border-tab.nav-tabs{
     margin-bottom: 20px;
   }
   .tab-content{
     ~ .nav-tabs{
-      &.nav-material {
+      &.border-tab {
         margin-top: 20px;
       }
     }
@@ -3290,7 +3290,7 @@
     }
   }
   .tabs-scoial{
-    &.nav-material{
+    &.border-tab{
       &.nav-tabs{
         display: flex;
       }
@@ -3423,7 +3423,7 @@
         }
       }
     }
-    .nav-material{
+    .border-tab{
       &.nav-tabs{
         display: flex;
       }
@@ -4009,7 +4009,7 @@
   }
 
   //material tab
-  .nav-material.nav-tabs{
+  .border-tab.nav-tabs{
     display: inline-block;
     width:100%;
     .nav-item{
@@ -4743,7 +4743,7 @@
         margin: 0 auto;
       }
     }
-    &.nav-material {
+    &.border-tab {
       &.nav-tabs {
         .nav-item{
           .nav-link {
@@ -5019,7 +5019,7 @@
     }
   }
 
-  .nav-material {
+  .border-tab {
     &.nav-tabs {
       .nav-item {
         width: 100% !important;
@@ -5050,24 +5050,24 @@
     border-bottom: none;
   }
   // tab material start
-  .nav-material.nav-left {
+  .border-tab.nav-left {
     .nav-link {
       text-align: center;
       border-left: none;
     }
   }
-  .nav-material.nav-right {
+  .border-tab.nav-right {
     .nav-link {
       text-align: center;
       border-right: none;
     }
   }
-  .nav-material.nav-tabs {
+  .border-tab.nav-tabs {
     margin-bottom: 10px;
   }
   .tab-content {
     ~ .nav-tabs {
-      &.nav-material {
+      &.border-tab {
         margin-top: 10px;
       }
     }
@@ -5090,7 +5090,7 @@
   }
   .tabbed-card {
     ul {
-      &.nav-material {
+      &.border-tab {
         margin-bottom: 15px;
         &.nav-tabs {
           .nav-item {
@@ -6249,7 +6249,7 @@
   }
   // social app page css
   .tabs-scoial{
-    &.nav-material {
+    &.border-tab {
       &.nav-tabs {
         .nav-item{
           .nav-link {
@@ -6415,7 +6415,7 @@
     }
   }
   /* responsive material tabs*/
-  .nav-material.nav-tabs {
+  .border-tab.nav-tabs {
     .nav-item {
       .nav-link {
         padding: 10px 0px;
