@@ -2,6 +2,37 @@
     63. Box-layout CSS start
 ==========================**/
 [main-theme-layout= "box-layout"] {
+.page-wrapper{
+  &.compact-wrapper{
+    .page-body-wrapper{
+      &.sidebar-icon{
+        header{
+          &.main-nav{
+            position: fixed;
+            border-bottom: none;
+            top: 81px;
+            z-index: 3;
+            height: auto;
+            line-height: inherit;
+            background: $white;
+            width: 255px;
+            text-align: left;
+            transition: 0.5s;
+            &.close_icon{
+              width: 75px;
+              transform: translate(0px);
+              ~ footer {
+                  margin-left: 78px;
+                  width: 1200px;
+                  transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 //dashboard-04 CSS
 .project-card{
   .dashboard-btn-groups{

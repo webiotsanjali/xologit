@@ -79,6 +79,9 @@ var options = {
         axisTicks: {
             show: false,
         },
+        line:{
+          show: false,
+        }
     },
     yaxis: {
         low: 0,
