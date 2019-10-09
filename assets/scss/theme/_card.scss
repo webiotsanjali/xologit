@@ -5,7 +5,7 @@
 //Card css
 .card{
   margin-bottom: $card-margin-bottom;
-  border: none;
+  border: $card-border-color;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   border-radius: $card-border-radious;
@@ -61,7 +61,6 @@
     border-bottom-right-radius: $card-border-radious;
   }
   &.card-with-border {
-    border: $card-border-color;
     box-shadow: none;
     .card-header{
       border-bottom: $card-border-color;

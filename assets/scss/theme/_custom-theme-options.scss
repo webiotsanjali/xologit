@@ -1011,6 +1011,12 @@ body {
 						}
 						.profile-dropdown {
 							li {
+								&:first-child{
+									border-bottom:  1px solid $dark-card-border !important;
+								}
+								&:last-child{
+									border-top: 1px solid $dark-card-border !important
+								}
 								a {
 									color: $dark-all-font-color;
 									svg{
@@ -1117,6 +1123,51 @@ body {
 			/* Main Header ends */
 			.page-body-wrapper {
 				/* body start*/
+				&.horizontal-menu{
+					header{
+						&.main-nav{
+							background-color: $dark-card-background;
+							border-top: 1px solid $dark-card-border;
+							border-bottom: 1px solid $dark-card-border;
+							.nav-menu{
+								border-top: 1px solid $dark-card-border;
+								> li{
+									border-right: 1px solid $dark-card-border;
+									.nav-submenu{
+										background-color: $dark-card-background;
+										li{
+											a{
+												background-color: $dark-card-background;
+											}
+										}
+									}
+									&.dropdown {
+										ul{
+											&.nav-submenu{
+												li {
+													a {
+														&.active {
+															color: $dark-all-font-color;
+														}
+													}
+													.nav-sub-childmenu{
+														background-color: $dark-card-background;
+													}
+												}
+											}
+										}
+									}
+									> a{
+										color: $dark-all-font-color;
+									}
+									.mega-menu-container{
+										background-color: $dark-card-background;
+									}
+								}
+							}
+						}
+					}
+				}
 				.page-body{
 					.topper-lists{
 						table {
@@ -4717,13 +4768,13 @@ body {
 		    background-color: $transparent-color !important;
 		  }
 		}
-		.default-according {
-			.card {
-				.card-body {
-					border: 1px solid $dark-border-color;
-				}
-			}
-		}
+		// .default-according {
+		// 	.card {
+		// 		.card-body {
+		// 			border: 1px solid $dark-border-color;
+		// 		}
+		// 	}
+		// }
 		.dashboard-btn-groups{
 			background-color: $dark-card-background;
 			.btn-outline-light{
@@ -7813,6 +7864,22 @@ body {
 				}
 			}
 		}
+		.form-control{
+			background-color: $white !important;
+			border: 1px solid $light-semi-gray !important;
+		}
+		.theme-form{
+			color: $theme-body-font-color;
+		}
+		.mega-menu{
+			.default-according{
+				.card{
+					.card-body{
+						color: $theme-font-color;
+					}
+				}
+			}
+		}
 	}
 
 //=======================  Dark-Header-Sidebar-mix  ======================= //
@@ -7820,7 +7887,6 @@ body {
 		color: $dark-all-font-color;
 		.page-main-header{
 			.main-header-right{
-				 box-shadow: 0 0 18px 3px $dark-card-background;
 				.nav-right{
 					&.right-menu{
 						ul{
@@ -7885,16 +7951,20 @@ body {
 				}
 				.page-main-header{
 					border-bottom: none;
+					background-color: $dark-card-background;
+					.main-header-right{
+						box-shadow: none;
+					}
 				}
 			}
 		}
 		.page-wrapper.horizontal-wrapper,.compact-wrapper {
 			/* Main Header start */
 			.page-main-header {
-				background-color: $dark-body-background;
+				background-color: $dark-card-background;
 				.main-header-right {
 					background-color: $dark-card-background;
-					box-shadow: 0 0 18px 3px rgba(42, 50, 61, 1);
+					box-shadow: none;
 					li {
 						i {
 							color: $light-color;
@@ -8004,6 +8074,12 @@ body {
 						}
 						.profile-dropdown {
 							li {
+								&:first-child{
+									border-bottom:  1px solid $dark-card-border !important;
+								}
+								&:last-child{
+									border-top: 1px solid $dark-card-border !important
+								}
 								a {
 									color: $dark-all-font-color;
 									svg{
@@ -8125,6 +8201,27 @@ body {
 						em{
 							display: none;
 						}
+					}
+				}
+			}
+		}
+		.col-form-label{
+			color: $theme-body-font-color;
+			i{
+				color: $theme-body-font-color !important;
+			}
+		}
+		.vertical-menu-main{
+			background-color: $dark-card-background;
+			.has-submenu{
+				color: $dark-all-font-color;
+			}
+		}
+		.mega-menu{
+			.default-according{
+				.card{
+					.card-body{
+						color: $theme-font-color;
 					}
 				}
 			}
@@ -9936,13 +10033,13 @@ body {
 		    background-color: $transparent-color !important;
 		  }
 		}
-		.default-according {
-			.card {
-				.card-body {
-					border: 1px solid $dark-border-color;
-				}
-			}
-		}
+		// .default-according {
+		// 	.card {
+		// 		.card-body {
+		// 			border: 1px solid $dark-border-color;
+		// 		}
+		// 	}
+		// }
 		.options {
 			> div {
 				border: 1px solid $dark-body-background;
@@ -11500,6 +11597,22 @@ body {
 					border: 1px solid $dark-card-border;
 					a {
 						color: $dark-all-font-color;
+					}
+				}
+			}
+		}
+		.form-control{
+			background-color: $white !important;
+			border: 1px solid $light-semi-gray !important;
+		}
+		.theme-form{
+			color: $theme-body-font-color;
+		}
+		.mega-menu{
+			.default-according{
+				.card{
+					.card-body{
+						color: $theme-font-color;
 					}
 				}
 			}

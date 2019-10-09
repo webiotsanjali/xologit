@@ -93,8 +93,8 @@
  */
 
 @import "theme/variables";
-$primary-color: #4c2fbf;
-$secondary-color :#2e9de4;
+$primary-color: #7a15f7;
+$secondary-color :#fd2e64;
 $gradient-primary: linear-gradient($secondary-color, $primary-color);
 $gradient-primary-direction: linear-gradient(to right, lighten($primary-color, 10%), darken($primary-color, 8%));
 $gradient-secondary-direction: linear-gradient(to right, lighten($secondary-color, 10%),  darken($secondary-color, 5%));

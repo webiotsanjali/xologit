@@ -4,10 +4,10 @@
 doctype html
 html(lang='en')
     include ../../components/header-files
-    body(data-spy='scroll', data-target='#myScrollspy', data-offset='1')
+    body(data-spy='scroll', data-target='#myScrollspy', data-offset='1').document
         include ../../components/loader
         // page-wrapper Start
-      .page-wrapper.document
+        .page-wrapper.document
             include ../../components/document-header
             // Page Body Start
             .page-body-wrapper.document-content
@@ -155,7 +155,9 @@ html(lang='en')
                                         td
                                           | Dark Sidebar layout
                                         td
-                                          | -
+                                          | class:
+                                          br
+                                          | dark-sidebar  
                                       tr
                                         td
                                           | Compact Sidebar layout

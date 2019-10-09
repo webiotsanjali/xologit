@@ -1,23 +1,22 @@
 // Page Header Start
-- var status = (sidebar_open ? 'open' : '');
-- var header_status = (vertical_menu ? 'd-none' : '');
-
-.page-main-header.document-header(class=status)
-                    .nav-right.col.document-right-nav
+- var status_toggle = (sidebar_open ? undefined : 'checked');
+.page-main-header
+                .main-header-right
+                    .main-header-left
+                        .logo-wrapper
+                            a(href='index.html')
+                                img(src='../assets/images/logo/logo.png', alt='')
+                    .mobile-sidebar
+                        .media-body.text-right.switch-sm
+                            label.switch
+                                input#sidebar-toggle(type='checkbox', data-toggle='.container', checked=status_toggle)
+                                span.switch-state
+                    .d-xl-none.mobile-vertical-sidebar.pull-right.toggle-nav
+                        i(data-feather='align-justify')                
+                    .nav-right.col.pull-right.right-menu
                         nav.navbar.navbar-expand-md
-                            .row
+                            .row            
                                 .main-header-left.d-lg-none
-                                    .logo-wrapper
-                                        a.navbar-brand(href='index.html')
-                                            img(src='../assets/images/Xolo-logo.png', alt='')
-                                .mobile-sidebar(class=header_status)
-                                    .media-body.text-right.switch-sm
-                                        label.switch
-                                            a(href='#')
-                                                i#sidebar-toggle(data-feather='align-left')
-                            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
-                                span
-                                    i(data-feather='align-justify')
                             #collapsibleNavbar.collapse.navbar-collapse
                                 ul.navbar-nav
                                   li.nav-item
@@ -27,5 +26,5 @@
                                   li.nav-item
                                     a.nav-link(href='review.html', data-original-title='', title='') Reviews
                                   li.nav-item
-                                    a.nav-link(href='change-log.html', data-original-title='', title='') Changelog            
+                                    a.nav-link(href='change-log.html', data-original-title='', title='') Changelog
 // Page Header Ends                              

@@ -558,7 +558,7 @@
                             font-size: 13px;
                             color: $light-semi-font;
                             position: relative;
-                            border-top: $card-border-color;
+                            border-top: 1px solid $dark-card-border;
                             &:after {
                               left: 30px;
                               @extend  %sidebar-after;

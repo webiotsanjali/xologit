@@ -4,14 +4,23 @@
             toolbar: {
                 show: false
             },
-            height: 170,
-            type: 'area'
+            dropShadow: {
+              enabled: true,
+              top: 5,
+              left: 0,
+              blur: 8,
+              opacity: 0.4,
+              color: '#655af3'
+            },
+            height: 120,
+            type: 'line'
         },
         dataLabels: {
             enabled: false
         },
         stroke: {
-            curve: 'smooth'
+            curve: 'smooth',
+            width: [ 3 ]
         },
         xaxis: {
             show: false,
@@ -26,31 +35,13 @@
         },
         grid: {
             show: false,
-            padding: {
-                left: 0,
-                right: 0,
-                bottom: -40
-            }
         },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                type: 'vertical',
-                shadeIntensity: 0.4,
-                inverseColors: false,
-                opacityFrom: 0.8,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            },
 
-        },
-        colors:[XoloAdminConfig.primary],
-
-
+        colors:['#655af3'],
         series: [
             {
-                data: [1.2, 2.3, 1.7, 3.2, 1.8, 3.2, 1]
+                name: 'series1',
+                data: [1.5, 2.3, 1.7, 3.2, 1.8, 3.2, 1]
             }
         ],
         tooltip: {
@@ -67,19 +58,28 @@
     chartlinechart.render();
 
     /*Line chart2*/
-    var optionslinechart2 = {
+    var optionslinechart = {
         chart: {
             toolbar: {
                 show: false
             },
-            height: 170,
-            type: 'area'
+            dropShadow: {
+              enabled: true,
+              top: 5,
+              left: 0,
+              blur: 8,
+              opacity: 0.4,
+              color: '#fd2e64'
+            },
+            height: 120,
+            type: 'line'
         },
         dataLabels: {
             enabled: false
         },
         stroke: {
-            curve: 'smooth'
+            curve: 'smooth',
+            width: [ 3 ]
         },
         xaxis: {
             show: false,
@@ -94,32 +94,12 @@
         },
         grid: {
             show: false,
-            padding: {
-                left: 0,
-                right: 0,
-                bottom: -40
-            }
         },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                type: 'vertical',
-                shadeIntensity: 0.4,
-                inverseColors: false,
-                opacityFrom: 0.8,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            }
-
-        },
-        colors:[XoloAdminConfig.secondary],
-
-
+        colors:['#fd2e64'],
         series: [
             {
                 name: 'series1',
-                data: [12, 5, 10, 5, 16, 11, 20]
+                data: [1.2, 2.3, 1.7, 3.2, 1.8, 3.2, 1]
             }
         ],
         tooltip: {
@@ -129,27 +109,36 @@
         }
     };
 
-    var chartlinechart2 = new ApexCharts(
+    var chartlinechart = new ApexCharts(
         document.querySelector("#chart-widget2"),
-        optionslinechart2
+        optionslinechart
     );
-    chartlinechart2.render();
+    chartlinechart.render();
 
 
     /*Line chart3*/
-    var optionslinechart3 = {
+    var optionslinechart = {
         chart: {
             toolbar: {
                 show: false
             },
-            height: 170,
-            type: 'area'
+            dropShadow: {
+              enabled: true,
+              top: 5,
+              left: 0,
+              blur: 8,
+              opacity: 0.4,
+              color: '#51bb25'
+            },
+            height: 120,
+            type: 'line'
         },
         dataLabels: {
             enabled: false
         },
         stroke: {
-            curve: 'smooth'
+            curve: 'smooth',
+            width: [ 3 ]
         },
         xaxis: {
             show: false,
@@ -164,31 +153,12 @@
         },
         grid: {
             show: false,
-            padding: {
-                left: 0,
-                right: 0,
-                bottom: -40
-            }
-        },
-        fill: {
-            colors:['#51bb25'],
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                type: 'vertical',
-                shadeIntensity: 0.4,
-                inverseColors: false,
-                opacityFrom: 0.8,
-                opacityTo: 0.2,
-                stops: [0, 100]
-            },
-
         },
         colors:['#51bb25'],
-
         series: [
             {
-                data: [24, 55, 21, 67, 22, 43, 21]
+                name: 'series1',
+                data: [1.2, 2.3, 1.7, 3.2, 1.8, 3.2, 1]
             }
         ],
         tooltip: {
@@ -198,221 +168,463 @@
         }
     };
 
-    var chartlinechart3 = new ApexCharts(
+    var chartlinechart = new ApexCharts(
         document.querySelector("#chart-widget3"),
-        optionslinechart3
+        optionslinechart
     );
-    chartlinechart3.render();
+    chartlinechart.render();
 
+
+    /*Line chart4*/
+    var optionslinechart = {
+        chart: {
+            toolbar: {
+                show: false
+            },
+            dropShadow: {
+              enabled: true,
+              top: 5,
+              left: 0,
+              blur: 8,
+              opacity: 0.4,
+              color: '#7a15f7'
+            },
+            height: 120,
+            type: 'line'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: [ 3 ]
+        },
+        xaxis: {
+            show: false,
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],
+            labels: {
+                show: false,
+            },
+            axisBorder: {
+                show: false,
+            },
+        },
+        grid: {
+            show: false,
+        },
+        colors:['#7a15f7'],
+        series: [
+            {
+                name: 'series1',
+                data: [1.2, 2.3, 1.7, 3.2, 1.8, 3.2, 1]
+            }
+        ],
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            }
+        }
+    };
+
+    var chartlinechart = new ApexCharts(
+        document.querySelector("#chart-widget4"),
+        optionslinechart
+    );
+    chartlinechart.render();
 
 // column chart
 
-var optionscolumnchart = {
-    legend: {
-        show: false
-    },
-    chart: {
-        height: 350,
-        type: 'bar'
-    },
-    plotOptions: {
-        bar: {
-            radius: 10,
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded',
+var colors = ['#655af3', '#fd2e64'];
+        var options = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                toolbar: {
+                    show: false
+                },
+            },
+            colors: colors,
+            plotOptions: {
+                bar: {
+                    columnWidth: '35%',
+                    distributed: true
+                }
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            series: [{
+                data: [21, 22, 10, 28, 16, 21, 13, 30, 24, 26, 28]
+            }],
+            xaxis: {
+                categories: ['John', 'Joe', 'Jake', 'Amber', 'Peter', 'Mary', 'David', 'Lily', 'Wilson', 'Calvin', 'Ronny'],
+                labels: {
+                    style: {
+                        colors: colors,
+                        fontSize: '14px'
+                    }
+                }
+            },
         }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        show: true,
-        colors: ['transparent'],
-        curve: 'smooth',
-        lineCap: 'butt'
-    },
-    grid: {
-        show: false,
-        padding: {
-            left: 0,
-            right: 0
-        }
-    },
-    series: [{
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-    }, {
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    }, {
-    }],
-    xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    },
-    yaxis: {
-        title: {
-            text: '$ (thousands)'
-        }
-    },
-    fill: {
-        colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary],
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            type: 'vertical',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-        }
-    },
 
+        var chart = new ApexCharts(
+            document.querySelector("#chart-widget5"),
+            options
+        );
 
-    tooltip: {
-        y: {
-            formatter: function (val) {
-                return "$ " + val + " thousands"
-            }
-        }
-    }
-}
+        chart.render();
 
-var chartcolumnchart = new ApexCharts(
-    document.querySelector("#chart-widget4"),
-    optionscolumnchart
-);
-chartcolumnchart.render();
 
 
 // earning chart
 
-var optionsearningchart = {
+var options = {
     chart: {
-        height: 360,
-        type: 'radialBar',
+        width: 350,
+        type: 'donut',
     },
-    plotOptions: {
-        radialBar: {
-            startAngle: -135,
-            endAngle: 135,
-            dataLabels: {
-                name: {
-                    fontSize: '16px',
-                    color: '#000000',
-                    offsetY: 120
-                },
-                value: {
-                    offsetY: 76,
-                    fontSize: '22px',
-                    color: '#000000',
-                    formatter: function (val) {
-                        return val + "%";
-                    }
-                }
+    dataLabels: {
+        enabled: false
+    },
+    series: [44, 55, 13],
+    responsive: [{
+        breakpoint: 200,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                show: false
             }
         }
+    }],
+    legend: {
+        position: 'bottom'
     },
-
     fill: {
         opacity: 1
     },
-    colors:['#fb2e63'],
-
-    stroke: {
-        dashArray: 4
-    },
-    series: [67],
-    labels: ['Median Ratio'],
+    colors:['#655af3', '#fd2e64', '#51bb25'],
 
 }
 
-var chartearningchart = new ApexCharts(
-    document.querySelector("#chart-widget5"),
-    optionsearningchart
+var chart = new ApexCharts(
+    document.querySelector("#chart-widget6"),
+    options
 );
-chartearningchart.render();
+
+chart.render()
+
+
 
 // product chart
-var optionsproductchart = {
-    chart: {
-        height: 320,
-        type: 'line'
+var optionsLine = {
+  chart: {
+    height: 360,
+    type: 'line',
+    zoom: {
+      enabled: false
     },
-    stroke: {
-        curve: 'smooth'
+    toolbar: {
+        show: false
     },
-
-    series: [{
-        name: 'TEAM A',
-        type: 'area',
-        data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33]
-    }, {
-        name: 'TEAM B',
-        type: 'line',
-        data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43]
-    }],
-    fill: {
-        colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary],
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            type: 'vertical',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 0.9,
-            opacityTo: 0.8,
-            stops: [0, 100]
-        }
+    dropShadow: {
+      enabled: true,
+      top: 5,
+      left: 0,
+      blur: 8,
+      opacity: 0.4,
+      color: 'colors'
     },
-
-    colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary],
-    labels: ['01', '02','03','04','05','06','07','08','09 ','10','11', '12'],
-    markers: {
-        size: 0
+  },
+  stroke: {
+    curve: 'smooth',
+    width: 2
+  },
+  colors: ["#655af3", '#fd2e64', '#51bb25'],
+  series: [{
+      name: "Music",
+      data: [1, 15, 26, 20, 33, 27]
     },
-    yaxis: [
-        {
-            title: {
-                text: 'Series A'
-            }
-        },
-        {
-            opposite: true,
-            title: {
-                text: 'Series B'
-            }
-        }
-    ],
-    tooltip: {
-        shared: true,
-        intersect: false,
-        y: {
-            formatter: function (y) {
-                if(typeof y !== "undefined") {
-                    return  y.toFixed(0) + " points";
-                }
-                return y;
-
-            }
-        }
+    {
+      name: "Photos",
+      data: [3, 33, 21, 42, 19, 32]
+    },
+    {
+      name: "Files",
+      data: [0, 39, 52, 11, 29, 43]
     }
-
+  ],
+  markers: {
+    size: 6,
+    strokeWidth: 0,
+    hover: {
+      size: 9
+    }
+  },
+  grid: {
+    show: true
+  },
+  labels: ['01/15/2002', '01/16/2002', '01/17/2002', '01/18/2002', '01/19/2002', '01/20/2002'],
+  xaxis: {
+    tooltip: {
+      enabled: false
+    }
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'right',
+    offsetY: -20
+  }
 }
 
-var chartproductchart = new ApexCharts(
-    document.querySelector("#chart-widget6"),
-    optionsproductchart
-);
-chartproductchart.render();
+var chartLine = new ApexCharts(document.querySelector('#chart-widget7'), optionsLine);
+chartLine.render();
 
-// Turnover chart
-var optionsturnoverchart= {
+
+// small-widget-chart-1
+var options = {
     chart: {
-        height: 320,
-        type: 'area',
-        zoom: {
-            enabled: false
+        height: 150,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          top: 5,
+          left: 0,
+          blur: 8,
+          opacity: 0.4,
+          color: '#655af3'
+        },
+        toolbar: {
+            show: false
         }
+    },
+    colors: ['#655af3'],
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+        width: 3.5
+    },
+    series: [{
+            name: "High - 2013",
+            data: [20, 25, 20, 36, 32]
+        },
+    ],
+    grid: {
+        show: false
+    },
+    markers: {
+        size: 5
+    },
+    xaxis: {
+        tooltip: {
+            enabled: false
+        },
+        axisBorder: {
+            show: false
+        },
+        labels: {
+            show: false
+        }
+    },
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#smallchart-widget1"),
+    options
+);
+
+chart.render();
+
+// small-widget-chart-2
+var options = {
+    chart: {
+        height: 150,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          top: 5,
+          left: 0,
+          blur: 8,
+          opacity: 0.4,
+          color: '#fd517d'
+        },
+        toolbar: {
+            show: false
+        }
+    },
+    colors: ['#fd517d'],
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+        width: 3.5
+    },
+    series: [{
+            name: "High - 2013",
+            data: [30, 20, 40, 28, 36]
+        },
+    ],
+    grid: {
+        show: false
+    },
+    markers: {
+        size: 5
+    },
+    xaxis: {
+        tooltip: {
+            enabled: false
+        },
+        axisBorder: {
+            show: false
+        },
+        labels: {
+            show: false
+        }
+    },
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#smallchart-widget2"),
+    options
+);
+
+chart.render();
+
+// small-widget-chart-3
+var options = {
+    chart: {
+        height: 150,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          top: 5,
+          left: 0,
+          blur: 8,
+          opacity: 0.4,
+          color: '#51bb25'
+        },
+        toolbar: {
+            show: false
+        }
+    },
+    colors: ['#51bb25'],
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+        width: 3.5
+    },
+    series: [{
+            name: "High - 2013",
+            data: [10, 30, 22, 36, 24]
+        },
+    ],
+    grid: {
+        show: false
+    },
+    markers: {
+        size: 5
+    },
+    xaxis: {
+        tooltip: {
+            enabled: false
+        },
+        axisBorder: {
+            show: false
+        },
+        labels: {
+            show: false
+        }
+    },
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#smallchart-widget3"),
+    options
+);
+
+chart.render();
+
+// small-widget-chart-4
+var options = {
+    chart: {
+        height: 150,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          top: 5,
+          left: 0,
+          blur: 8,
+          opacity: 0.4,
+          color: '#148df6'
+        },
+        toolbar: {
+            show: false
+        }
+    },
+    colors: ['#148df6'],
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+        width: 3.5
+    },
+    series: [{
+            name: "High - 2013",
+            data: [20, 35, 20, 26, 20]
+        },
+    ],
+    grid: {
+        show: false
+    },
+    markers: {
+        size: 5
+    },
+    xaxis: {
+        tooltip: {
+            enabled: false
+        },
+        axisBorder: {
+            show: false
+        },
+        labels: {
+            show: false
+        }
+    },
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#smallchart-widget4"),
+    options
+);
+
+chart.render();
+
+
+// area spaline chart
+var colors = ['#655af3', '#fd2e64']
+var options1 = {
+    chart: {
+        height: 380,
+        type: 'line',
+        toolbar:{
+          show: false
+        },
+        dropShadow: {
+          enabled: true,
+          top: 5,
+          left: 0,
+          blur: 8,
+          opacity: 0.4,
+          color: 'colors'
+        },
     },
     dataLabels: {
         enabled: false
@@ -420,471 +632,35 @@ var optionsturnoverchart= {
     stroke: {
         curve: 'straight'
     },
-    fill: {
-        colors:[XoloAdminConfig.primary],
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            type: 'vertical',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 0.9,
-            opacityTo: 0.8,
-            stops: [0, 100]
-        }
-    },
-
-
     series: [{
-        name: "STOCK ABC",
-        data: series.monthDataSeries1.prices
+        name: 'series1',
+        data: [31, 40, 28, 51, 42, 109, 100]
+    }, {
+        name: 'series2',
+        data: [11, 32, 45, 32, 34, 52, 41]
     }],
-    title: {
-        text: 'Fundamental Analysis of Stocks',
-        align: 'left'
-    },
-   colors:[XoloAdminConfig.primary],
-    labels: series.monthDataSeries1.dates,
+
     xaxis: {
-        type: 'datetime'
+        type: 'datetime',
+        categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],
     },
-    yaxis: {
-        opposite: false
+    tooltip: {
+        x: {
+            format: 'dd/MM/yy HH:mm'
+        },
     },
-    legend: {
-        horizontalAlign: 'left'
-    }
 }
 
-var chartturnoverchart = new ApexCharts(
-    document.querySelector("#chart-widget7"),
-    optionsturnoverchart
-);
-chartturnoverchart.render();
-
-// sales chart
-var optionssaleschart = {
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'dark',
-            type: 'Reflected',
-            shadeIntensity: 0.1,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.8,
-            stops: [0, 100]
-        }
-    },
-    colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary, '#51bb25'],
-    chart: {
-        height: 300,
-        type: 'radar',
-        dropShadow: {
-            enabled: true,
-            blur: 1,
-            left: 1,
-            top: 1
-        }
-    },
-    series: [{
-        name: 'Series 1',
-        data: [80, 50, 30, 40, 100, 20],
-    }, {
-        name: 'Series 2',
-        data: [20, 30, 40, 80, 20, 80],
-    }, {
-        name: 'Series 3',
-        data: [44, 76, 78, 13, 43, 10],
-    }],
-    title: {
-        text: 'Radar Chart - Multi Series'
-    },
-    stroke: {
-        width: 0
-    },
-    markers: {
-        size: 0
-    },
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-}
-
-var chartsaleschart = new ApexCharts(
+var chart1 = new ApexCharts(
     document.querySelector("#chart-widget8"),
-    optionssaleschart
+    options1
 );
-chartsaleschart.render();
+
+chart1.render();
 
 
-// user chart
-function generateData(baseval, count, yrange) {
-    var i = 0;
-    var series = [];
-    while (i < count) {
-        var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;;
-        var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-        var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-
-        series.push([x, y, z]);
-        baseval += 86400000;
-        i++;
-    }
-    return series;
-}
-var optionsuserchart = {
-    chart: {
-        toolbar: {
-            show: false
-        },
-        height: 320,
-        type: 'bubble',
-    },
-    dataLabels: {
-        enabled: false
-    },
-    series: [{
-        name: 'Bubble1',
-        data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-            min: 10,
-            max: 60
-        })
-    },
-        {
-            name: 'Bubble2',
-            data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                min: 10,
-                max: 60
-            })
-        },
-        {
-            name: 'Bubble3',
-            data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                min: 10,
-                max: 60
-            })
-        },
-        {
-            name: 'Bubble4',
-            data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                min: 10,
-                max: 60
-            })
-        }
-    ],
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'dark',
-            type: 'horizontal',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.7,
-            stops: [0, 100]
-        }
-    },
-    colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary, '#51bb25', '#544fff'],
-    title: {
-        text: 'Simple Bubble Chart'
-    },
-    xaxis: {
-        tickAmount: 12,
-        type: 'category',
-    },
-    yaxis: {
-        max: 70
-    }
-}
-var chartuserchart = new ApexCharts(
-    document.querySelector("#chart-widget9"),
-    optionsuserchart
-);
-    chartuserchart.render();
 
 
-// browser-candlestick chart
-    var optionscandlestickchart = {
-        chart: {
-            toolbar: {
-                show: false
-            },
-            height: 500,
-            type: 'candlestick',
-        },
-        plotOptions: {
-            candlestick: {
-                colors: {
-                    upward: XoloAdminConfig.primary,
-                    downward: XoloAdminConfig.secondary
-                }
-            }
-        },
-        fill: {
-            opacity: 0.9,
-            colors:['#fb2e63'],},
-
-        series: [{
-            data: [{
-                x: new Date(1538778600000),
-                y: [6629.81, 6650.5, 6623.04, 6633.33]
-            },
-                {
-                    x: new Date(1538780400000),
-                    y: [6632.01, 6643.59, 6620, 6630.11]
-                },
-                {
-                    x: new Date(1538782200000),
-                    y: [6630.71, 6648.95, 6623.34, 6635.65]
-                },
-                {
-                    x: new Date(1538784000000),
-                    y: [6635.65, 6651, 6629.67, 6638.24]
-                },
-                {
-                    x: new Date(1538785800000),
-                    y: [6638.24, 6640, 6620, 6624.47]
-                },
-                {
-                    x: new Date(1538787600000),
-                    y: [6624.53, 6636.03, 6621.68, 6624.31]
-                },
-                {
-                    x: new Date(1538789400000),
-                    y: [6624.61, 6632.2, 6617, 6626.02]
-                },
-                {
-                    x: new Date(1538791200000),
-                    y: [6627, 6627.62, 6584.22, 6603.02]
-                },
-                {
-                    x: new Date(1538793000000),
-                    y: [6605, 6608.03, 6598.95, 6604.01]
-                },
-                {
-                    x: new Date(1538794800000),
-                    y: [6604.5, 6614.4, 6602.26, 6608.02]
-                },
-                {
-                    x: new Date(1538796600000),
-                    y: [6608.02, 6610.68, 6601.99, 6608.91]
-                },
-                {
-                    x: new Date(1538798400000),
-                    y: [6608.91, 6618.99, 6608.01, 6612]
-                },
-                {
-                    x: new Date(1538800200000),
-                    y: [6612, 6615.13, 6605.09, 6612]
-                },
-                {
-                    x: new Date(1538802000000),
-                    y: [6612, 6624.12, 6608.43, 6622.95]
-                },
-                {
-                    x: new Date(1538803800000),
-                    y: [6623.91, 6623.91, 6615, 6615.67]
-                },
-                {
-                    x: new Date(1538805600000),
-                    y: [6618.69, 6618.74, 6610, 6610.4]
-                },
-                {
-                    x: new Date(1538807400000),
-                    y: [6611, 6622.78, 6610.4, 6614.9]
-                },
-                {
-                    x: new Date(1538809200000),
-                    y: [6614.9, 6626.2, 6613.33, 6623.45]
-                },
-                {
-                    x: new Date(1538811000000),
-                    y: [6623.48, 6627, 6618.38, 6620.35]
-                },
-                {
-                    x: new Date(1538812800000),
-                    y: [6619.43, 6620.35, 6610.05, 6615.53]
-                },
-                {
-                    x: new Date(1538814600000),
-                    y: [6615.53, 6617.93, 6610, 6615.19]
-                },
-                {
-                    x: new Date(1538816400000),
-                    y: [6615.19, 6621.6, 6608.2, 6620]
-                },
-                {
-                    x: new Date(1538818200000),
-                    y: [6619.54, 6625.17, 6614.15, 6620]
-                },
-                {
-                    x: new Date(1538820000000),
-                    y: [6620.33, 6634.15, 6617.24, 6624.61]
-                },
-                {
-                    x: new Date(1538821800000),
-                    y: [6625.95, 6626, 6611.66, 6617.58]
-                },
-                {
-                    x: new Date(1538823600000),
-                    y: [6619, 6625.97, 6595.27, 6598.86]
-                },
-                {
-                    x: new Date(1538825400000),
-                    y: [6598.86, 6598.88, 6570, 6587.16]
-                },
-                {
-                    x: new Date(1538827200000),
-                    y: [6588.86, 6600, 6580, 6593.4]
-                },
-                {
-                    x: new Date(1538829000000),
-                    y: [6593.99, 6598.89, 6585, 6587.81]
-                },
-                {
-                    x: new Date(1538830800000),
-                    y: [6587.81, 6592.73, 6567.14, 6578]
-                },
-                {
-                    x: new Date(1538832600000),
-                    y: [6578.35, 6581.72, 6567.39, 6579]
-                },
-                {
-                    x: new Date(1538834400000),
-                    y: [6579.38, 6580.92, 6566.77, 6575.96]
-                },
-                {
-                    x: new Date(1538836200000),
-                    y: [6575.96, 6589, 6571.77, 6588.92]
-                },
-                {
-                    x: new Date(1538838000000),
-                    y: [6588.92, 6594, 6577.55, 6589.22]
-                },
-                {
-                    x: new Date(1538839800000),
-                    y: [6589.3, 6598.89, 6589.1, 6596.08]
-                },
-                {
-                    x: new Date(1538841600000),
-                    y: [6597.5, 6600, 6588.39, 6596.25]
-                },
-                {
-                    x: new Date(1538843400000),
-                    y: [6598.03, 6600, 6588.73, 6595.97]
-                },
-                {
-                    x: new Date(1538845200000),
-                    y: [6595.97, 6602.01, 6588.17, 6602]
-                },
-                {
-                    x: new Date(1538847000000),
-                    y: [6602, 6607, 6596.51, 6599.95]
-                },
-                {
-                    x: new Date(1538848800000),
-                    y: [6600.63, 6601.21, 6590.39, 6591.02]
-                },
-                {
-                    x: new Date(1538850600000),
-                    y: [6591.02, 6603.08, 6591, 6591]
-                },
-                {
-                    x: new Date(1538852400000),
-                    y: [6591, 6601.32, 6585, 6592]
-                },
-                {
-                    x: new Date(1538854200000),
-                    y: [6593.13, 6596.01, 6590, 6593.34]
-                },
-                {
-                    x: new Date(1538856000000),
-                    y: [6593.34, 6604.76, 6582.63, 6593.86]
-                },
-                {
-                    x: new Date(1538857800000),
-                    y: [6593.86, 6604.28, 6586.57, 6600.01]
-                },
-                {
-                    x: new Date(1538859600000),
-                    y: [6601.81, 6603.21, 6592.78, 6596.25]
-                },
-                {
-                    x: new Date(1538861400000),
-                    y: [6596.25, 6604.2, 6590, 6602.99]
-                },
-                {
-                    x: new Date(1538863200000),
-                    y: [6602.99, 6606, 6584.99, 6587.81]
-                },
-                {
-                    x: new Date(1538865000000),
-                    y: [6587.81, 6595, 6583.27, 6591.96]
-                },
-                {
-                    x: new Date(1538866800000),
-                    y: [6591.97, 6596.07, 6585, 6588.39]
-                },
-                {
-                    x: new Date(1538868600000),
-                    y: [6587.6, 6598.21, 6587.6, 6594.27]
-                },
-                {
-                    x: new Date(1538870400000),
-                    y: [6596.44, 6601, 6590, 6596.55]
-                },
-                {
-                    x: new Date(1538872200000),
-                    y: [6598.91, 6605, 6596.61, 6600.02]
-                },
-                {
-                    x: new Date(1538874000000),
-                    y: [6600.55, 6605, 6589.14, 6593.01]
-                },
-                {
-                    x: new Date(1538875800000),
-                    y: [6593.15, 6605, 6592, 6603.06]
-                },
-                {
-                    x: new Date(1538877600000),
-                    y: [6603.07, 6604.5, 6599.09, 6603.89]
-                },
-                {
-                    x: new Date(1538879400000),
-                    y: [6604.44, 6604.44, 6600, 6603.5]
-                },
-                {
-                    x: new Date(1538881200000),
-                    y: [6603.5, 6603.99, 6597.5, 6603.86]
-                },
-                {
-                    x: new Date(1538883000000),
-                    y: [6603.85, 6605, 6600, 6604.07]
-                },
-                {
-                    x: new Date(1538884800000),
-                    y: [6604.98, 6606, 6604.07, 6606]
-                },
-            ]
-        }],
-        title: {
-            text: 'CandleStick Chart',
-            align: 'left'
-        },
-        xaxis: {
-            type: 'datetime'
-        },
-        yaxis: {
-            tooltip: {
-                enabled: true
-            }
-        }
-    }
-
-    var chartcandlestickchart = new ApexCharts(
-        document.querySelector("#chart-widget13"),
-        optionscandlestickchart
-    );
-    chartcandlestickchart.render();
 
 
     var trigoStrength = 3
@@ -1142,434 +918,204 @@ var chartuserchart = new ApexCharts(
     chartLine.render()
 
 
-    var optionsCircle = {
+//small-column-chart-1
+    var options = {
         chart: {
-            type: 'radialBar',
-            height: 350,
-            offsetY: -30,
-            offsetX: 20
+            height: 200,
+            type: 'bar',
+            toolbar:{
+              show: false
+            }
         },
         plotOptions: {
-            radialBar: {
-                size: undefined,
-                inverseOrder: false,
-                hollow: {
-                    margin: 5,
-                    size: '48%',
-                    background: 'transparent',
+            bar: {
+              columnWidth: '15%',
+                dataLabels: {
+                    position: 'bottom', // top, center, bottom
                 },
-                track: {
-                    show: true,
-                    background: '#f2f2f2',
-                    strokeWidth: '10%',
-                    opacity: 1,
-                    margin: 3
-                },
-            },
+            }
         },
-        series: [71, 63],
-        labels: ['Device 1', 'Device 2'],
-        legend: {
+        colors:['#655af3'],
+        dataLabels: {
+            enabled: false,
+        },
+        series: [{
+            name: 'Inflation',
+            data: [2.0, 3.5, 1.5, 3.5, 2.2, 1.4, 4.0, 1.5, 2.8, 3.8, 1.8, 3.8]
+        }],
+        xaxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            position: 'top',
+            labels: {
+                offsetY: 60,
+
+            },
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false
+            },
+            tooltip: {
+                enabled: true,
+                offsetY: -50,
+
+            }
+        },
+        yaxis: {
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false,
+            },
+            labels: {
+                show: false,
+                formatter: function (val) {
+                    return val + "%";
+                }
+            }
+        },
+    }
+
+    var chart = new ApexCharts(
+        document.querySelector("#chart-widget9"),
+        options
+    );
+
+    chart.render();
+
+
+//small-column-chart-2
+    var options = {
+        chart: {
+            height: 200,
+            type: 'bar',
+            toolbar:{
+              show: false
+            }
+        },
+        plotOptions: {
+            bar: {
+              columnWidth: '15%',
+                dataLabels: {
+                    position: 'bottom', // top, center, bottom
+                },
+            }
+        },
+        colors:['#fd2e64'],
+        dataLabels: {
+            enabled: false,
+        },
+        series: [{
+            name: 'Inflation',
+            data: [2.0, 3.5, 1.5, 3.5, 2.2, 1.4, 4.0, 1.5, 2.8, 3.8, 1.8, 3.8]
+        }],
+        xaxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            position: 'top',
+            labels: {
+                offsetY: 60,
+
+            },
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false
+            },
+            tooltip: {
+                enabled: true,
+                offsetY: -50,
+
+            }
+        },
+        yaxis: {
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false,
+            },
+            labels: {
+                show: false,
+                formatter: function (val) {
+                    return val + "%";
+                }
+            }
+        },
+    }
+
+    var chart = new ApexCharts(
+        document.querySelector("#chart-widget10"),
+        options
+    );
+
+    chart.render();
+
+//small-column-chart3
+var options = {
+    chart: {
+        height: 200,
+        type: 'bar',
+        toolbar:{
+          show: false
+        }
+    },
+    plotOptions: {
+        bar: {
+          columnWidth: '15%',
+            dataLabels: {
+                position: 'bottom', // top, center, bottom
+            },
+        }
+    },
+    colors:['#51bb25'],
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Inflation',
+        data: [2.0, 3.5, 1.5, 3.5, 2.2, 1.4, 4.0, 1.5, 2.8, 3.8, 1.8, 3.8]
+    }],
+    xaxis: {
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        position: 'top',
+        labels: {
+            offsetY: 60,
+
+        },
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+        tooltip: {
+            enabled: true,
+            offsetY: -50,
+
+        }
+    },
+    yaxis: {
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
             show: false,
         },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                type: 'horizontal',
-                shadeIntensity: 0.5,
-                inverseColors: true,
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100]
+        labels: {
+            show: false,
+            formatter: function (val) {
+                return val + "%";
             }
-        },
-        colors:[XoloAdminConfig.primary, XoloAdminConfig.secondary]
-    }
-
-    var chartCircle = new ApexCharts(document.querySelector('#circlechart'), optionsCircle);
-    chartCircle.render();
-
-
-
-    var optionsProgress1 = {
-        chart: {
-            height: 70,
-            type: 'bar',
-            stacked: true,
-            sparkline: {
-                enabled: true
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-                barHeight: '20%',
-                colors: {
-                    backgroundBarColors: ['#f2f2f2']
-                }
-            },
-        },
-        colors: [XoloAdminConfig.primary],
-        stroke: {
-            width: 0,
-        },
-        fill: {
-            colors:[XoloAdminConfig.primary],
-            type: 'gradient',
-            gradient: {
-                gradientToColors: [XoloAdminConfig.primary]
-            }
-        },
-        series: [{
-            name: 'Process 1',
-            data: [44]
-        }],
-        title: {
-            floating: true,
-            offsetX: -10,
-            offsetY: 5,
-            text: 'Process 1'
-        },
-        subtitle: {
-            floating: true,
-            align: 'right',
-            offsetY: 0,
-            text: '44%',
-            style: {
-                fontSize: '20px'
-            }
-        },
-        tooltip: {
-            enabled: false
-        },
-        xaxis: {
-            categories: ['Process 1'],
-        },
-        yaxis: {
-            max: 100
-        },
-        fill: {
-            opacity: 1
         }
-    }
-
-    var chartProgress1 = new ApexCharts(document.querySelector('#progress1'), optionsProgress1);
-    chartProgress1.render();
-
-
-
-    var optionsProgress2 = {
-        chart: {
-            height: 70,
-            type: 'bar',
-            stacked: true,
-            sparkline: {
-                enabled: true
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-                barHeight: '20%',
-                colors: {
-                    backgroundBarColors: ['#f2f2f2']
-                }
-            },
-        },
-        colors: ['#fb2e63'],
-        stroke: {
-            width: 0,
-        },
-        series: [{
-            name: 'Process 2',
-            data: [80]
-        }],
-        title: {
-            floating: true,
-            offsetX: -10,
-            offsetY: 5,
-            text: 'Process 2'
-        },
-        subtitle: {
-            floating: true,
-            align: 'right',
-            offsetY: 0,
-            text: '80%',
-            style: {
-                fontSize: '20px'
-            }
-        },
-        tooltip: {
-            enabled: false
-        },
-        xaxis: {
-            categories: ['Process 2'],
-        },
-        yaxis: {
-            max: 100
-        },
-        fill: {
-            colors:['#fb2e63'],
-            type: 'gradient',
-            gradient: {
-                inverseColors: false,
-                gradientToColors: ['#fb2e63']
-            }
-        },
-    }
-
-    var chartProgress2 = new ApexCharts(document.querySelector('#progress2'), optionsProgress2);
-    chartProgress2.render();
-
-
-    var optionsProgress3 = {
-        chart: {
-            height: 70,
-            type: 'bar',
-            stacked: true,
-            sparkline: {
-                enabled: true
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-                barHeight: '20%',
-                colors: {
-                    backgroundBarColors: ['#f2f2f2']
-                }
-            },
-        },
-        colors: ['#51bb25'],
-        stroke: {
-            width: 0,
-        },
-        series: [{
-            name: 'Process 3',
-            data: [74]
-        }],
-        fill: {
-            colors:['#51bb25'],
-            type: 'gradient',
-            gradient: {
-                gradientToColors: ['#51bb25']
-            }
-        },
-        title: {
-            floating: true,
-            offsetX: -10,
-            offsetY: 5,
-            text: 'Process 3'
-        },
-        subtitle: {
-            floating: true,
-            align: 'right',
-            offsetY: 0,
-            text: '74%',
-            style: {
-                fontSize: '20px'
-            }
-        },
-        tooltip: {
-            enabled: false
-        },
-        xaxis: {
-            categories: ['Process 3'],
-        },
-        yaxis: {
-            max: 100
-        },
-    }
-
-    var chartProgress3 = new ApexCharts(document.querySelector('#progress3'), optionsProgress3);
-    chartProgress3.render();
-
-
-    var optionsProgress4 = {
-        chart: {
-            height: 70,
-            type: 'bar',
-            stacked: true,
-            sparkline: {
-                enabled: true
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-                barHeight: '20%',
-                colors: {
-                    backgroundBarColors: ['#f2f2f2']
-                }
-            },
-        },
-        colors: ['#544fff'],
-        stroke: {
-            width: 0,
-        },
-        series: [{
-            name: 'Process 4',
-            data: [74]
-        }],
-        fill: {
-            colors:['#544fff'],
-            type: 'gradient',
-            gradient: {
-                gradientToColors: ['#544fff']
-            }
-        },
-        title: {
-            floating: true,
-            offsetX: -10,
-            offsetY: 5,
-            text: 'Process 4'
-        },
-        subtitle: {
-            floating: true,
-            align: 'right',
-            offsetY: 0,
-            text: '74%',
-            style: {
-                fontSize: '20px'
-            }
-        },
-        tooltip: {
-            enabled: false
-        },
-        xaxis: {
-            categories: ['Process 4'],
-        },
-        yaxis: {
-            max: 100
-        },
-    }
-
-    var chartProgress4 = new ApexCharts(document.querySelector('#progress4'), optionsProgress4);
-    chartProgress4.render();
-
-
-    var optionsProgress5 = {
-        chart: {
-            height: 70,
-            type: 'bar',
-            stacked: true,
-            sparkline: {
-                enabled: true
-            }
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-                barHeight: '20%',
-                colors: {
-                    backgroundBarColors: ['#f2f2f2']
-                }
-            },
-        },
-        colors: ['#fb740d'],
-        stroke: {
-            width: 0,
-        },
-        series: [{
-            name: 'Process 5',
-            data: [74]
-        }],
-        fill: {
-            colors:['#fb740d'],
-            type: 'gradient',
-            gradient: {
-                gradientToColors: ['#fb740d']
-            }
-        },
-        title: {
-            floating: true,
-            offsetX: -10,
-            offsetY: 5,
-            text: 'Process 5'
-        },
-        subtitle: {
-            floating: true,
-            align: 'right',
-            offsetY: 0,
-            text: '74%',
-            style: {
-                fontSize: '20px'
-            }
-        },
-        tooltip: {
-            enabled: false
-        },
-        xaxis: {
-            categories: ['Process 5'],
-        },
-        yaxis: {
-            max: 100
-        },
-    }
-
-    var chartProgress5 = new ApexCharts(document.querySelector('#progress5'), optionsProgress5);
-    chartProgress5.render();
-
-    window.setInterval(function () {
-
-        iteration++;
-
-        chartColumn.updateSeries([{
-            data: [...chartColumn.w.config.series[0].data,
-            [
-            chartColumn.w.globals.maxX + 210000,
-            getRandom(),
-        ],
-        ]
-    }]),
-
-        chartLine.updateSeries([{
-            data: [...chartLine.w.config.series[0].data,
-            [
-            chartLine.w.globals.maxX + 300000,
-            getRandom()
-        ]
-        ]
     },
-    {
-        data: [...chartLine.w.config.series[1].data,
-            [
-                chartLine.w.globals.maxX + 300000,
-                getRandom()
-            ]
-    ]
-    }])
+}
 
-        chartCircle.updateSeries([getRangeRandom({ min: 10, max: 100 }), getRangeRandom({ min: 10, max: 100 })])
+var chart = new ApexCharts(
+    document.querySelector("#chart-widget11"),
+    options
+);
 
-        var p1Data = getRangeRandom({ min: 10, max: 100 });
-        chartProgress1.updateOptions({
-            series: [{
-                data: [p1Data]
-            }],
-            subtitle: {
-                text: p1Data + "%"
-            }
-        })
-
-        var p2Data = getRangeRandom({ min: 10, max: 100 });
-        chartProgress2.updateOptions({
-            series: [{
-                data: [p2Data]
-            }],
-            subtitle: {
-                text: p2Data + "%"
-            }
-        })
-
-        var p3Data = getRangeRandom({ min: 10, max: 100 });
-        chartProgress3.updateOptions({
-            series: [{
-                data: [p3Data]
-            }],
-            subtitle: {
-                text: p3Data + "%"
-            }
-        })
-    }, 3000)
+chart.render();

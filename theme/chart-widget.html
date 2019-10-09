@@ -24,6 +24,7 @@
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
     <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
@@ -220,7 +221,7 @@
                       <li><a class="submenu-title" href="#">Cards<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
                         <ul class="nav-sub-childmenu submenu-content">
                           <li><a href="basic-card.html">Basic Card</a></li>
-                          <li><a href="creative-card.html">Xolo Card</a></li>
+                          <li><a href="creative-card.html">Creative Card</a></li>
                           <li><a href="tabbed-card.html">Tabbed Card</a></li>
                           <li><a href="dragable-card.html">Draggable Card</a></li>
                         </ul>
@@ -616,14 +617,13 @@
           </div>
           <!-- Container-fluid starts-->
           <div class="container-fluid">
-            <!-- Chart widget top Start-->
             <div class="row">
-              <div class="col-xl-4 col-md-12 box-col-12">
+              <div class="col-xl-3 col-md-12 box-col-12">
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
-                    <div class="row card-body">
+                    <div class="row card-body pb-0 font-primary">
                       <div class="col-5">
-                        <h6 class="f-w-600 font-primary">SALE</h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                        <h6 class="f-w-400">Monthly Sale</h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
                       <div class="col-7 text-right">
                         <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
@@ -635,117 +635,78 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-md-12 box-col-12">
+              <div class="col-xl-3 col-md-12 box-col-12">
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
-                    <div class="row card-body">
-                      <div class="col-7">
-                        <h6 class="f-w-600 font-secondary">PROJECTS</h6><span class="num"><span class="counter">30</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                    <div class="row card-body pb-0 font-danger">
+                      <div class="col-5">
+                        <h6 class="f-w-400">Yearly Sale</h6><span class="num"><span class="counter">80</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
-                      <div class="col-5 text-right">
-                        <h4 class="num total-value counter">12569</h4>
+                      <div class="col-7 text-right">
+                        <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
                       </div>
                     </div>
-                    <div id="chart-widget2">
+                    <div>
+                      <div id="chart-widget2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-12 box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body pb-0 font-success">
+                      <div class="col-7">
+                        <h6 class="f-w-400">Active Users</h6><span class="num"><span class="counter">30</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-5 text-right">
+                        <h4 class="num total-value counter">125,690</h4>
+                      </div>
+                    </div>
+                    <div id="chart-widget3">
                       <div class="flot-chart-placeholder" id="chart-widget-top-second"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-md-12 box-col-12">
+              <div class="col-xl-3 col-md-12 box-col-12">
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
-                    <div class="row card-body">
+                    <div class="row card-body pb-0 font-info">
                       <div class="col-8">
-                        <h6 class="f-w-600 font-success">PRODUCTS</h6><span class="num"><span class="counter">68</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                        <h6 class="f-w-400">New Users</h6><span class="num"><span class="counter">68</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
                       <div class="col-4 text-right">
                         <h4 class="num total-value"><span class="counter">93</span>M</h4>
                       </div>
                     </div>
-                    <div id="chart-widget3">
+                    <div id="chart-widget4">
                       <div class="flot-chart-placeholder" id="chart-widget-top-third"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Chart widget top Ends-->
-            <!-- Chart widget with bar chart Start-->
-            <div class="row">
               <div class="col-xl-7 col-md-12 box-col-12">
                 <div class="card o-hidden">
                   <div class="card-header">
-                    <h5>Marketin Expenses</h5>
+                    <h5>Users chart</h5>
                   </div>
-                  <div class="bar-chart-widget">
-                    <div class="bottom-content card-body">
-                      <div class="row">
-                        <div class="col-12">
-                          <div id="chart-widget4"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 p-b-10">
-                          <h6>Total sales</h6>
-                          <div class="progress-showcase row">
-                            <div class="col">
-                              <div class="progress" style="height: 5px;">
-                                <div class="progress-bar-animated bg-primary progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 p-t-10">
-                          <h6>Total purchase</h6>
-                          <div class="progress-showcase row">
-                            <div class="col">
-                              <div class="progress" style="height: 5px;">
-                                <div class="progress-bar-animated bg-secondary progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="card-body">
+                    <div id="chart-widget5"></div>
                   </div>
                 </div>
               </div>
               <div class="col-xl-5 col-md-12 box-col-12">
                 <div class="card o-hidden">
                   <div class="card-header">
-                    <h5>Total Earning</h5>
+                    <h5>Department sale</h5>
                   </div>
-                  <div class="bar-chart-widget">
-                    <div class="top-content bg-primary"></div>
-                    <div class="bottom-content card-body">
-                      <div class="row">
-                        <div class="col-12">
-                          <div id="chart-widget5"> </div>
-                        </div>
-                      </div>
-                      <div class="row text-center f-w-600">
-                        <div class="col-4 b-r-light">
-                          <div><span class="num font-primary">12%<i class="icon-angle-up f-12 ml-1"></i></span><span class="text-muted mt-2 mb-2 block-bottom">Year</span>
-                            <h4 class="num m-0"><span class="counter color-bottom">3659</span>M</h4>
-                          </div>
-                        </div>
-                        <div class="col-4 b-r-light">
-                          <div><span class="num font-primary">15%<i class="icon-angle-up f-12 ml-1"></i></span><span class="text-muted mt-2 mb-2 block-bottom">Month</span>
-                            <h4 class="num m-0"><span class="counter color-bottom">698</span>M</h4>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <div><span class="num font-primary">34%<i class="icon-angle-up f-12 ml-1"></i></span><span class="text-muted mt-2 mb-2 block-bottom">Today</span>
-                            <h4 class="num m-0"><span class="counter color-bottom">9361</span>M</h4>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="card-body d-flex justify-content-center">
+                    <div id="chart-widget6"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-lg-12 box-col-6 xl-50">
+              <div class="col-xl-12 col-lg-12 box-col-6 xl-50">
                 <div class="card">
                   <div class="card-header">
                     <div class="row">
@@ -756,251 +717,68 @@
                     </div>
                   </div>
                   <div class="card-body">
-                    <div class="chart-container">
-                      <div id="circlechart"></div>
+                    <div id="chart-widget7"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card o-hidden">
+                      <div id="smallchart-widget1"></div>
+                      <div class="card-body px-0 p-t-0">
+                        <div class="p-l-25 font-primary">
+                          <h4>$50,567</h4><span class="p-b-10">Monthly Profit</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card o-hidden">
+                      <div id="smallchart-widget2"></div>
+                      <div class="card-body px-0 p-t-0">
+                        <div class="p-l-25 font-danger">
+                          <h4>$500,567</h4><span class="p-b-10">yearly Profit</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card o-hidden">
+                      <div id="smallchart-widget3"></div>
+                      <div class="card-body px-0 p-t-0">
+                        <div class="p-l-25 font-warning">
+                          <h4>11k</h4><span class="p-b-10">Monthly Project</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card o-hidden">
+                      <div id="smallchart-widget4"></div>
+                      <div class="card-body px-0 p-t-0">
+                        <div class="p-l-25 font-secondary">
+                          <h4>90k</h4><span class="p-b-10">Yearly Project</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-8 col-lg-12 box-col-6 xl-50">
-                <div class="card">
+              <div class="col-xl-6 col-md-12 box-col-12">
+                <div class="card o-hidden">
                   <div class="card-header">
-                    <div class="row">
-                      <div class="col-9">
-                        <h5>Order Status</h5>
-                      </div>
-                      <div class="col-3 text-right"><i class="text-muted" data-feather="shopping-bag"></i></div>
-                    </div>
+                    <h5>Market Value</h5>
                   </div>
                   <div class="card-body">
-                    <div class="chart-container">
-                      <div id="progress1"></div>
-                      <div id="progress2"></div>
-                      <div id="progress3"></div>
-                      <div id="progress4"></div>
-                      <div id="progress5">               </div>
-                    </div>
+                    <div id="chart-widget8"></div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Chart widget with bar chart Ends-->
-            <!-- small widgets Start-->
-            <div class="row">
-              <!-- Live Product chart widget Start-->
-              <div class="xl-50 col-md-7">
-                <div class="small-chart-widget chart-widgets-small">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Live Products</h5>
-                      <div class="card-header-right">
-                        <ul class="list-unstyled card-option">
-                          <li><i class="icofont icofont-double-left"></i></li>
-                          <li><i class="view-html fa fa-code"></i></li>
-                          <li><i class="icofont icofont-maximize full-card"></i></li>
-                          <li><i class="icofont icofont-minus minimize-card"></i></li>
-                          <li><i class="icofont icofont-refresh reload-card"></i></li>
-                          <li><i class="icofont icofont-error close-card"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="chart-container">
-                        <div class="row">
-                          <div class="col-12">
-                            <div id="chart-widget6"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code-box-copy">
-                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                        <pre><code class="language-html" id="example-head">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div class="chart-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-      &lt;div id="chart-widget6"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Live Product chart widget Ends-->
-              <!-- Turnover chart widget Start-->
-              <div class="xl-50 col-md-5">
-                <div class="small-chart-widget chart-widgets-small">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Turnover</h5>
-                      <div class="card-header-right">
-                        <ul class="list-unstyled card-option">
-                          <li><i class="icofont icofont-double-left"></i></li>
-                          <li><i class="view-html fa fa-code"></i></li>
-                          <li><i class="icofont icofont-maximize full-card"></i></li>
-                          <li><i class="icofont icofont-minus minimize-card"></i></li>
-                          <li><i class="icofont icofont-refresh reload-card"></i></li>
-                          <li><i class="icofont icofont-error close-card"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="chart-container">
-                        <div class="row">
-                          <div class="col-12">
-                            <div id="chart-widget7"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code-box-copy">
-                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head1" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                        <pre><code class="language-html" id="example-head1">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div class="chart-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-      &lt;div id="chart-widget7"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Turnover chart widget Ends-->
-              <!-- Monthly Sale chart widget Start-->
-              <div class="xl-50 col-md-5">
-                <div class="small-chart-widget chart-widgets-small">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Monthly Sales</h5>
-                      <div class="card-header-right">
-                        <ul class="list-unstyled card-option">
-                          <li><i class="icofont icofont-double-left"></i></li>
-                          <li><i class="view-html fa fa-code"></i></li>
-                          <li><i class="icofont icofont-maximize full-card"></i></li>
-                          <li><i class="icofont icofont-minus minimize-card"></i></li>
-                          <li><i class="icofont icofont-refresh reload-card"></i></li>
-                          <li><i class="icofont icofont-error close-card"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="chart-container">
-                        <div class="row">
-                          <div class="col-12">
-                            <div id="chart-widget8"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code-box-copy">
-                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head2" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                        <pre><code class="language-html" id="example-head2">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div class="chart-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-      &lt;div id="chart-widget8"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Monthly Sale chart widget Ends-->
-              <!-- Uses chart widget Start-->
-              <div class="xl-50 col-md-7">
-                <div class="small-chart-widget chart-widgets-small">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Uses</h5>
-                      <div class="card-header-right">
-                        <ul class="list-unstyled card-option">
-                          <li><i class="icofont icofont-double-left"></i></li>
-                          <li><i class="view-html fa fa-code"></i></li>
-                          <li><i class="icofont icofont-maximize full-card"></i></li>
-                          <li><i class="icofont icofont-minus minimize-card"></i></li>
-                          <li><i class="icofont icofont-refresh reload-card"></i></li>
-                          <li><i class="icofont icofont-error close-card"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="chart-container">
-                        <div class="row">
-                          <div class="col-12">
-                            <div id="chart-widget9"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code-box-copy">
-                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head3" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                        <pre><code class="language-html" id="example-head3">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div class="chart-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col-12"&gt;
-      &lt;div id="chart-widget9"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Uses chart widget Ends-->
-            </div>
-            <!-- small widgets Ends-->
-            <!-- Browser uses and website visiter widget Start-->
-            <div class="row">
-              <!-- browser uses widget chart Start-->
-              <div class="col-sm-12 box-col-12">
-                <div class="donut-chart-widget">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Browser Uses</h5>
-                      <div class="card-header-right">
-                        <ul class="list-unstyled card-option">
-                          <li><i class="icofont icofont-double-left"></i></li>
-                          <li><i class="view-html fa fa-code"></i></li>
-                          <li><i class="icofont icofont-maximize full-card"></i></li>
-                          <li><i class="icofont icofont-minus minimize-card"></i></li>
-                          <li><i class="icofont icofont-refresh reload-card"></i></li>
-                          <li><i class="icofont icofont-error close-card"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div id="chart-widget13"></div>
-                      <div class="code-box-copy">
-                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head4" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                        <pre><code class="language-html" id="example-head4">&lt;!-- Cod Box Copy begin --&gt;
-&lt;div id="#chart-widget13"&gt;&lt;/div&gt;
-&lt;!-- Cod Box Copy end --&gt;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- browser uses widget chart Endss-->
-            </div>
-            <!-- status widget Start-->
-            <div class="row">
               <div class="col-xl-5 col-lg-12 box-col-12">
                 <div class="card">
                   <div class="card-header">
-                    <div class="row">
-                      <div class="col-9">
-                        <h5>Finance</h5>
-                      </div>
-                      <div class="col-3 text-right"><i class="text-muted" data-feather="navigation"></i></div>
-                    </div>
+                    <h5>Finance</h5>
                   </div>
                   <div class="card-body">
                     <div class="chart-container">
@@ -1012,12 +790,7 @@
               <div class="col-xl-7 col-lg-12 box-col-6">
                 <div class="card">
                   <div class="card-header">
-                    <div class="row">
-                      <div class="col-9">
-                        <h5>Order Status</h5>
-                      </div>
-                      <div class="col-3 text-right"><i class="text-muted" data-feather="shopping-bag"></i></div>
-                    </div>
+                    <h5>Order Status</h5>
                   </div>
                   <div class="card-body">
                     <div class="chart-container">
@@ -1026,8 +799,58 @@
                   </div>
                 </div>
               </div>
+              <div class="col-xl-4 col-md-12 box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body pb-0 font-primary">
+                      <div class="col-5">
+                        <h6 class="f-w-400">Monthly Sale</h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-7 text-right">
+                        <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
+                      </div>
+                    </div>
+                    <div>
+                      <div id="chart-widget9">   </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-12 box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body pb-0 font-danger">
+                      <div class="col-5">
+                        <h6 class="f-w-400">Monthly Sale</h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-7 text-right">
+                        <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
+                      </div>
+                    </div>
+                    <div>
+                      <div id="chart-widget10"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-12 box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body pb-0 font-success">
+                      <div class="col-5">
+                        <h6 class="f-w-400">Monthly Sale</h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-7 text-right">
+                        <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
+                      </div>
+                    </div>
+                    <div>
+                      <div id="chart-widget11">        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- status widget Ends-->
           </div>
           <!-- Container-fluid Ends-->
         </div>
@@ -1058,6 +881,8 @@
     <script src="../assets/js/sidebar-menu.js"></script>
     <script src="../assets/js/config.js"></script>
     <!-- Plugins JS start-->
+    <script src="../assets/js/chart/chartist/chartist.js"></script>
+    <script src="../assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
     <script src="../assets/js/chart/apex-chart/moment.min.js"></script>
     <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
     <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>

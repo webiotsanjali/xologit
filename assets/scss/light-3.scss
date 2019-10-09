@@ -93,10 +93,10 @@
  */
 
 @import "theme/variables";
-$primary-color: #d64dcf;
-$secondary-color :#8e24aa;
+$primary-color: #fd2e64;
+$secondary-color :#7a15f7;
 $gradient-primary: linear-gradient($secondary-color, $primary-color);
-$gradient-primary-direction: linear-gradient(to right, lighten($primary-color, 10%), darken($primary-color, 8%));
+$gradient-primary-direction: linear-gradient(to right, lighten($primary-color, 10%), darken($primary-color, 10%));
 $gradient-secondary-direction: linear-gradient(to right, lighten($secondary-color, 10%),  darken($secondary-color, 5%));
 $all-focus-outline-color: $primary-color;
 $code-tag-color: $primary-color;
